@@ -1,0 +1,19 @@
+{
+  "name": "rep_concepts",
+  "version": "1.0.0",
+  "description": "This project is organized as a library containing various functionalities and utilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khuongsatou/rep_concepts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khuongsatou/rep_concepts/issues"
+  },
+  "homepage": "https://github.com/khuongsatou/rep_concepts#readme"
+}
