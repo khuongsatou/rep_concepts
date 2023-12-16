@@ -23,7 +23,7 @@
 - Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện
 
 # Cấu trúc thư mục
-```
+```javascript
 library/
 |-- optimized-list/
 |   |-- crud-operations/
