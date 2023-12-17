@@ -107,7 +107,7 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "checkJs": true, // Kiểm tra lỗi trong các tệp JavaScript
-    // "outDir": "./dist"
+    "outDir": "./dist"
   },
   "include": ["**/*.test.ts"],
   "exclude": ["node_modules"] // Thư mục không được biên dịch
