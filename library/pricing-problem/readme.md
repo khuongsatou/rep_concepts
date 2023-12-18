@@ -1,1 +1,1 @@
-![alt](http://~)
+![alt](https://github.com/khuongsatou/rep_concepts/blob/dev_1/library/pricing-problem/discount.png)
