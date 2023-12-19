@@ -17,11 +17,11 @@ export class RoomRentCalculator {
     };
   
     calculateRoomRent(area: string, amenities: string[], location: string): number {
-      const basePrice = this.areaPrices[area] || 0;
-      const amenitiesPrice = amenities.reduce((acc, amenity) => acc + (this.amenitiesPrices[amenity] || 0), 0);
-      const locationPrice = this.locationPrices[location] || 0;
+      const basePrice = this.areaPrices[area] || 0; // important
+      const amenitiesPrice = amenities.reduce((acc, amenity) => acc + (this.amenitiesPrices[amenity] || 0), 0); // important
+      const locationPrice = this.locationPrices[location] || 0; // important
   
-      return basePrice + amenitiesPrice + locationPrice;
+      return basePrice + amenitiesPrice + locationPrice; // important
     }
   }
   

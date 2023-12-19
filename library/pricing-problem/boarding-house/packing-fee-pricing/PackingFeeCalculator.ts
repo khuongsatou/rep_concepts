@@ -8,12 +8,12 @@ export class ParkingFeeCalculator {
       const rate = this.vehicleRates[vehicleType] || 0;
       
       // Calculate hourly fee
-      const hourlyFee = rate * hoursParked;
+      const hourlyFee = rate * hoursParked; // important
   
       // Apply fixed fee for parking over 3 hours
-      const fixedFee = hoursParked >= 3 ? 10000 : 0;
+      const fixedFee = hoursParked >= 3 ? 10000 : 0; // important
   
       // Sum hourly fee and fixed fee
-      return hourlyFee + fixedFee;
+      return hourlyFee + fixedFee; // important
     }
   }

@@ -8,11 +8,11 @@ export class PriceCalculator {
   }
 
   calculateTotal(): number {
-    return this.items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return this.items.reduce((total, item) => total + item.price * item.quantity, 0); // important
   }
 
   applyDiscount(discountRate: number): number {
     const total = this.calculateTotal();
-    return total - total * discountRate;
+    return total - total * discountRate; // important
   }
 }

@@ -8,23 +8,23 @@ export class BillingCalculator {
     }
   
     addAmount(amount: number): void {
-      this.totalAmount += amount;
+      this.totalAmount += amount; // important
     }
   
     calculateTax(taxRate: number): number {
-      return this.totalAmount * (taxRate / 100);
+      return this.totalAmount * (taxRate / 100); // important
     }
   
     applyDiscount(discount: number): void {
-      this.totalAmount -= discount;
+      this.totalAmount -= discount; // important
     }
   
     addFee(fee: number): void {
-        this.fees += fee;
+        this.fees += fee; // important
       }
     
     calculateTotalAmount(): number {
-    return this.totalAmount + this.fees;
+    return this.totalAmount + this.fees; // important
     }
   }
   

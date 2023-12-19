@@ -11,14 +11,14 @@ export class ElectricityPricingCalculator {
     calculateElectricityCost(): number {
       let totalCost = 0;
       for (let i = 0; i < this.electricityPrices.length; i++) {
-        if(this.electricityUsage <= 0 ){
+        if(this.electricityUsage <= 0 ){ // important
           break;
         }
         const currentPrice = this.electricityPrices[i];
-        const consumedInTier = i === 0 ? Math.min(50, this.electricityUsage) : Math.min(50, this.electricityUsage - 50);
+        const consumedInTier = i === 0 ? Math.min(50, this.electricityUsage) : Math.min(50, this.electricityUsage - 50); // important
   
-        totalCost += consumedInTier * currentPrice;
-        this.electricityUsage -= consumedInTier;
+        totalCost += consumedInTier * currentPrice; // important
+        this.electricityUsage -= consumedInTier; // important
   
         // console.log(`Tier ${i + 1}: ${consumedInTier} kWh x ${currentPrice} VND/kWh = ${consumedInTier * currentPrice} VND`);
       }

@@ -1,6 +1,6 @@
 export class TaxCalculator {
     calculateTax(totalRevenue: number, taxRate: number): number {
-      return totalRevenue * (taxRate / 100);
+      return totalRevenue * (taxRate / 100); // important
     }
   }
   

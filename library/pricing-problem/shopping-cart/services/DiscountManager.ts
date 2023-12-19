@@ -11,7 +11,7 @@ export class DiscountManager {
     const appliedDiscount = this.getDiscountByCode(discountCode);
 
     if (appliedDiscount) {
-      const discountedAmount = totalAmount * (1 - appliedDiscount.percentage);
+      const discountedAmount = totalAmount * (1 - appliedDiscount.percentage); // important
       return discountedAmount;
     } else {
       return totalAmount; // No discount applied

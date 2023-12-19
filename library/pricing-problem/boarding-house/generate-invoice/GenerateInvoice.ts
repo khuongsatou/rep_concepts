@@ -81,7 +81,7 @@ export  class RentalProperty {
       const parkingFee = this.parkingFeeCalculator.calculateParkingFee(vehicleType, parkingDuration);
       const additionalServiceCost = this.additionalServiceCalculator.calculateServiceCost(additionalServiceType, additionalServiceUsage);
   
-      return rentCost + electricityCost + waterCost + parkingFee + additionalServiceCost;
+      return rentCost + electricityCost + waterCost + parkingFee + additionalServiceCost; // important
     }
   
     generateInvoiceAndSave(months: number, electricityUsage: number, waterUsage: number, vehicleType: string, parkingDuration: number, additionalServiceType: string, additionalServiceUsage: number): void {
