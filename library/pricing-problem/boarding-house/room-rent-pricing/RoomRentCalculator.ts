@@ -37,12 +37,12 @@ export class RoomRentCalculator {
   const room1Amenities = ['airConditioner', 'tv'];
   const room1Location = 'cityCenter';
   const room1Rent = roomCalculator.calculateRoomRent(room1Area, room1Amenities, room1Location);
-  console.log(`Room 1 rent: ${room1Rent} VND`); // Expected result: 3,100,000 VND
+  // console.log(`Room 1 rent: ${room1Rent} VND`); // Expected result: 3,100,000 VND
   
   // Test case 2
   const room2Area = 'medium';
   const room2Amenities = ['tv', 'kitchen'];
   const room2Location = 'suburb';
   const room2Rent = roomCalculator.calculateRoomRent(room2Area, room2Amenities, room2Location);
-  console.log(`Room 2 rent: ${room2Rent} VND`); // Expected result: 1,900,000 VND
+  // console.log(`Room 2 rent: ${room2Rent} VND`); // Expected result: 1,900,000 VND
   

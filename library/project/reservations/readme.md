@@ -15,3 +15,6 @@ Sử dụng cấu trúc dữ liệu như danh sách hoặc từ điển để l�
 Tạo hàm hoặc lớp để thực hiện các chức năng cụ thể (ví dụ: đặt vé, hiển thị thông tin).
 Cân nhắc sử dụng điều kiện và vòng lặp để kiểm soát luồng chương trình.
 Lưu ý: Bạn có thể tùy chỉnh yêu cầu của bài tập để phản ánh thêm chức năng hoặc phức tạp hóa chương trình theo mong muốn của bạn.
+
+
+https://chat.openai.com/share/db78dbe7-119b-46b5-a15e-c7e3ffbc2fa4
