@@ -1,5 +1,5 @@
 import { Discount } from '../models/Discount';
-
+// Tính giá khuyến mãi
 export class DiscountManager {
   private discounts: Discount[] = [];
 
@@ -11,7 +11,7 @@ export class DiscountManager {
     const appliedDiscount = this.getDiscountByCode(discountCode);
 
     if (appliedDiscount) {
-      const discountedAmount = totalAmount * (1 - appliedDiscount.percentage); // important
+      const discountedAmount = totalAmount * (1 - appliedDiscount.percentage); // important Lấy tổng tiền - tổng tiền * % giảm giá
       return discountedAmount;
     } else {
       return totalAmount; // No discount applied

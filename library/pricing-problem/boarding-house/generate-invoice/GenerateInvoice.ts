@@ -1,3 +1,5 @@
+// Tạo ra hóa đơn từ các chi phí
+// Tính tổng tiền các chi phí
 class RentCalculator {
     calculateRentCost(months: number): number {
       // Logic tính phí thuê nhà dựa trên số tháng thuê
@@ -39,8 +41,8 @@ class RentCalculator {
   }
   
   class Invoice {
-    private details: string[];
-    private totalAmount: number;
+    private details: string[];// Chi tiết
+    private totalAmount: number;// tổng tiền
   
     constructor() {
       this.details = [];
@@ -54,7 +56,7 @@ class RentCalculator {
   
     printInvoice(): void {
       console.log('Invoice Details:');
-      this.details.forEach((detail, index) => console.log(`${index + 1}. ${detail}`));
+      this.details.forEach((detail, index) => console.log(`${index + 1}. ${detail}`));// Hiển thị danh sách từng sản phẩm
       console.log(`Total Amount: ${this.totalAmount} VND`);
     }
   }

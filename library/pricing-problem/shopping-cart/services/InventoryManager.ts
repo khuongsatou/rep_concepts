@@ -1,3 +1,4 @@
+// Tính chi phí tồn kho
 export class InventoryManager {
     private items: { name: string; costPerItem: number; quantity: number }[] = [];
   

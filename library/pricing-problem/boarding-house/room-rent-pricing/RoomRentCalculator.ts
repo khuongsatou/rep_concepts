@@ -1,3 +1,7 @@
+// Bài toán về tính tiền nhà trọ
+// Loại nhà thuê: nhỏ, vừa, lớn
+// Các tiện nghi: máy lạnh, tv, nhà bếp
+// Vị trí nhà trọ: trung tâm thành phố, ngoại ô
 export class RoomRentCalculator {
     private areaPrices: Record<string, number> = {
       'small': 1500000,
@@ -18,7 +22,7 @@ export class RoomRentCalculator {
   
     calculateRoomRent(area: string, amenities: string[], location: string): number {
       const basePrice = this.areaPrices[area] || 0; // important
-      const amenitiesPrice = amenities.reduce((acc, amenity) => acc + (this.amenitiesPrices[amenity] || 0), 0); // important
+      const amenitiesPrice = amenities.reduce((acc, amenity) => acc + (this.amenitiesPrices[amenity] || 0), 0); // important Tính tổng tiền trong danh sách dịch vụ
       const locationPrice = this.locationPrices[location] || 0; // important
   
       return basePrice + amenitiesPrice + locationPrice; // important

@@ -1,3 +1,4 @@
+// Tính tiền nước sử dụng
 export class WaterPricingCalculator {
     private waterPrices: number[];
   
