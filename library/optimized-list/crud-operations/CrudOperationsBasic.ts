@@ -35,13 +35,13 @@ crud.create("Item 2");
 crud.create("Item 3");
 
 // Hiển thị danh sách
-console.log("Danh sách ban đầu:", crud.read());
+//console.log("Danh sách ban đầu:", crud.read());
 
 // Cập nhật một mục
 crud.update(1, "Item 2 Updated");
-console.log("Danh sách sau khi cập nhật:", crud.read());
+//console.log("Danh sách sau khi cập nhật:", crud.read());
 
 // Xóa một mục
 crud.delete(0);
-console.log("Danh sách sau khi xóa:", crud.read());
+//console.log("Danh sách sau khi xóa:", crud.read());
   

@@ -60,9 +60,9 @@ export class SimpleCrudAdvance<T extends { id: number }> {
   
   // Cập nhật một mục
   crudAdvance.update(1, { id: 1, name: "Item 1 Updated" });
-  console.log("Danh sách sau khi cập nhật:", crudAdvance.read());
+  // console.log("Danh sách sau khi cập nhật:", crudAdvance.read());
   
   // Xóa một mục
   crudAdvance.delete(0);
-  console.log("Danh sách sau khi xóa:", crudAdvance.read());
+  // console.log("Danh sách sau khi xóa:", crudAdvance.read());
   

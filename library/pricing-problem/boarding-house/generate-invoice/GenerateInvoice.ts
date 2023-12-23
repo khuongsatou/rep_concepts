@@ -55,9 +55,9 @@ class RentCalculator {
     }
   
     printInvoice(): void {
-      console.log('Invoice Details:');
-      this.details.forEach((detail, index) => console.log(`${index + 1}. ${detail}`));// Hiển thị danh sách từng sản phẩm
-      console.log(`Total Amount: ${this.totalAmount} VND`);
+      // console.log('Invoice Details:');
+      // this.details.forEach((detail, index) => console.log(`${index + 1}. ${detail}`));// Hiển thị danh sách từng sản phẩm
+      // console.log(`Total Amount: ${this.totalAmount} VND`);
     }
   }
   

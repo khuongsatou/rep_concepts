@@ -1,0 +1,2 @@
+
+Công nợ trong ngữ cảnh của hãng bay thường được hiểu là tổng số tiền mà hãng bay phải thanh toán cho các đối tác, như những đơn vị cung cấp dịch vụ, đối tác hợp tác, hay các khoản nợ khác mà hãng bay đã tích luỹ theo thời gian.

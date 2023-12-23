@@ -109,6 +109,6 @@
     "checkJs": true, // Kiểm tra lỗi trong các tệp JavaScript
     "outDir": "./dist"
   },
-  "include": ["**/*.test.ts"],
+  "include": ["**/*.test.ts", "library/task/airline/debt-services/DebtServices.ts"],
   "exclude": ["node_modules"] // Thư mục không được biên dịch
 }
