@@ -48,7 +48,7 @@ export class SimpleCrudAdvance<T extends { id: number }> {
   crudAdvance.create({ id: 3, name: "Item 3" });
   
   // Hiển thị danh sách
-  console.log("Danh sách ban đầu:", crudAdvance.read());
+  // console.log("Danh sách ban đầu:", crudAdvance.read());
   
   // Lấy danh sách theo ID
   const listById = crudAdvance.getListById([1, 3]);

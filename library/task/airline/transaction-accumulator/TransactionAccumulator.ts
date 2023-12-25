@@ -59,6 +59,6 @@ interface Transaction {
   const accountBalance = transactionAccumulator.getAccountBalance();
   const transactionHistory = transactionAccumulator.getTransactionHistory();
   
-  console.log('Account Balance:', accountBalance);
-  console.log('Transaction History:', transactionHistory);
+  // console.log('Account Balance:', accountBalance);
+  // console.log('Transaction History:', transactionHistory);
   
