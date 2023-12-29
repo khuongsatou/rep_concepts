@@ -46,6 +46,11 @@ export class Validator {
   private static readonly OTP_REGEX = /^\d{6}$/;
   private static readonly TAG_REGEX = /^[a-zA-Z0-9]+(?:,[a-zA-Z0-9]+)*$/;
 
+  static isRequired(value: any): boolean {
+    // Kiểm tra xem giá trị có tồn tại và không phải là null hoặc undefined không
+    return value !== null && value !== undefined && value !== '';
+  }
+
   private static isLengthValid(value: string, maxLength: number): boolean {
     return value.length <= maxLength;
   }
@@ -165,6 +170,7 @@ export class Validator {
       return false;
     }
 
+
     // Kiểm tra loại bỏ HTML/Script (ví dụ đơn giản)
     const hasHtmlOrScript = /<[^>]+>|script/gi.test(note);
     if (hasHtmlOrScript) {
@@ -265,6 +271,11 @@ export class Validator {
     // Tất cả các kiểm tra đều qua, mật khẩu được coi là hợp lệ
 
     return true;
+  }
+
+  static isPasswordMatch(password: string, rePassword: string): boolean {
+    // Kiểm tra xem mật khẩu nhập lại có khớp với mật khẩu gốc không
+    return password === rePassword;
   }
 
   static isOptionValid(options: Option[]): boolean {
@@ -572,6 +583,102 @@ export class Validator {
     return true;
   }
 
+  static isValueInRange(value: number, min: number = 0, max: number = 100): boolean {
+    // Kiểm tra xem value, min và max có phải là số không
+    if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
+      return false;
+    }
+
+    // Kiểm tra giá trị nằm trong khoảng
+    return value >= min && value <= max;
+  }
+
+  static isBankAccountNumberValid(accountNumber: string): boolean {
+    // Kiểm tra định dạng số tài khoản ngân hàng (ví dụ: có thể kiểm tra chiều dài, loại ký tự...)
+    // Đây chỉ là một ví dụ đơn giản, bạn có thể cần thực hiện kiểm tra chi tiết hơn tùy thuộc vào quy định cụ thể.
+    return /^[0-9]{10,20}$/.test(accountNumber);
+  }
+
+  static isVisaCardNumberValid(cardNumber: string): boolean {
+    // Kiểm tra định dạng số thẻ Visa (ví dụ: chiều dài và định dạng chữ số)
+    // Đây chỉ là một ví dụ đơn giản, bạn có thể cần thực hiện kiểm tra chi tiết hơn tùy thuộc vào quy định cụ thể.
+    return /^4[0-9]{12}(?:[0-9]{3})?$/.test(cardNumber);
+  }
+
+  static isCreditCardNumberValid(cardNumber: string): boolean {
+    // Kiểm tra định dạng số thẻ tín dụng (ví dụ: chiều dài và định dạng chữ số)
+    // Đây chỉ là một ví dụ đơn giản, bạn có thể cần thực hiện kiểm tra chi tiết hơn tùy thuộc vào quy định cụ thể.
+    return /^[0-9]{16}$/.test(cardNumber);
+  }
+
+  static isKeyExists(obj: Record<string, any>, key: string): boolean {
+    try {
+      // Kiểm tra xem key có tồn tại trong object không
+      if (obj === null || obj === undefined) {
+        throw new Error('Object is null or undefined.');
+      }
+
+      return obj.hasOwnProperty(key);
+    } catch (error:any) {
+      console.error(`Error in isKeyExists: ${error.message}`);
+      return false;
+    }
+  }
+
+  static isAtLeastOneInputFilled(inputs: Record<string, any>): boolean {
+    try {
+      // Kiểm tra xem ít nhất một input có giá trị không
+      if (!Object.values(inputs).some((value) => !!value)) {
+        throw new Error('At least one input must be filled.');
+      }
+
+      return true;
+    } catch (error:any) {
+      console.error(`Error in isAtLeastOneInputFilled: ${error.message}`);
+      return false;
+    }
+  }
+
+  static areAllInputsFilled(inputs: Record<string, any>): boolean {
+    try {
+      // Kiểm tra xem tất cả các input đều có giá trị không
+      if (!Object.values(inputs).every((value) => !!value)) {
+        throw new Error('All inputs must be filled.');
+      }
+
+      return true;
+    } catch (error :any) {
+      console.error(`Error in areAllInputsFilled: ${error.message}`);
+      return false;
+    }
+  }
+
+  static areOptionalPropertiesFilled(inputs: Record<string, any>, optionalProperties: string[] = []): boolean {
+    try {
+      // Kiểm tra xem tất cả các thuộc tính bắt buộc có giá trị không
+      if (!Object.keys(inputs).every((key) => !optionalProperties.includes(key) || !!inputs[key])) {
+        throw new Error('All non-optional properties must be filled.');
+      }
+
+      return true;
+    } catch (error:any) {
+      console.error(`Error in areOptionalPropertiesFilled: ${error.message}`);
+      return false;
+    }
+  }
+
+  static validateWithError(inputs: Record<string, any>, validationFunction: (inputs: Record<string, any>) => boolean): { isValid: boolean, error?: { message: string, code: string } } {
+    try {
+      if (validationFunction(inputs)) {
+        return { isValid: true };
+      } else {
+        return { isValid: false, error: { message: 'Validation failed', code: 'VALIDATION_FAILED' } };
+      }
+    } catch (error:any) {
+      return { isValid: false, error: { message: error.message || 'An error occurred', code: 'UNKNOWN_ERROR' } };
+    }
+  }
+  
 }
 
 // const testDocumentsDir = path.join(__dirname, 'test_documents');

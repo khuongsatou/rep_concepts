@@ -24,3 +24,12 @@
 # Video/ Videos
 # Document/ Documents
 # File
+# Range
+# Credit
+# Visa
+# Bank
+# Check Key Object
+# Nhập Ít nhất 1 input
+# Nhập Tất cả input
+# Nhập Tùy chọn input
+# Trả mã lỗi

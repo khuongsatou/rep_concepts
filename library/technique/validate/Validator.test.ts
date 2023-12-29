@@ -1241,8 +1241,6 @@ describe("Validator", () => {
     // Thêm các test khác tùy thuộc vào yêu cầu của bạn
   });
 
-
-
   describe("Validator - isVideoValid", () => {
     const testVideosDir = path.join(__dirname, "test_videos");
 
@@ -1328,12 +1326,10 @@ describe("Validator", () => {
       expect(isValid).toBe(false);
     });
 
-  
-
     it("should return false for a video exceeding the maximum size", async () => {
       const filePath = path.join(testVideosDir, "large_video.mp4");
       // const isValid = await Validator.isVideoValid(filePath, 50 * 1024 * 1024);
-      const isValid = await Validator.isVideoValid(filePath, 5);// Test với 5kb thay vì 50mb
+      const isValid = await Validator.isVideoValid(filePath, 5); // Test với 5kb thay vì 50mb
       expect(isValid).toBe(false);
     });
 
@@ -1356,159 +1352,678 @@ describe("Validator", () => {
       // const isValid = await Validator.isVideoValid(filePath, 50 * 1024 * 1024, [
       //   "avi",
       // ]);
-      const isValid = await Validator.isVideoValid(filePath, 1, [
-        "avi",
-      ]);// Test với 1 kb thay vì 50 mb
+      const isValid = await Validator.isVideoValid(filePath, 1, ["avi"]); // Test với 1 kb thay vì 50 mb
       expect(isValid).toBe(false);
     });
 
     // Thêm các test khác tùy thuộc vào yêu cầu của bạn
   });
 
-  describe('Validator - isDocumentValid', () => {
-    const testDocumentsDir = path.join(__dirname, 'test_documents');
-  
-    it('should return true for a valid text file', async () => {
-      const filePath = path.join(testDocumentsDir, 'valid_text.txt');
+  describe("Validator - isDocumentValid", () => {
+    const testDocumentsDir = path.join(__dirname, "test_documents");
+
+    it("should return true for a valid text file", async () => {
+      const filePath = path.join(testDocumentsDir, "valid_text.txt");
       const isValid = await Validator.isDocumentValid(filePath);
       expect(isValid).toBe(true);
     });
-  
-    it('should return false for a non-text file', async () => {
-      const filePath = path.join(testDocumentsDir, 'non_text.jpg');
+
+    it("should return false for a non-text file", async () => {
+      const filePath = path.join(testDocumentsDir, "non_text.jpg");
       const isValid = await Validator.isDocumentValid(filePath);
       expect(isValid).toBe(false);
     });
-  
-    it('should return false for an invalid document format', async () => {
-      const filePath = path.join(testDocumentsDir, 'invalid_format.xls');
+
+    it("should return false for an invalid document format", async () => {
+      const filePath = path.join(testDocumentsDir, "invalid_format.xls");
       const isValid = await Validator.isDocumentValid(filePath);
       expect(isValid).toBe(false);
     });
-  
-    it('should return false for a document exceeding the maximum size', async () => {
-      const filePath = path.join(testDocumentsDir, 'large_document.docx');
+
+    it("should return false for a document exceeding the maximum size", async () => {
+      const filePath = path.join(testDocumentsDir, "large_document.docx");
       // const isValid = await Validator.isDocumentValid(filePath, 10 * 1024 * 1024);
       const isValid = await Validator.isDocumentValid(filePath, 19); // Test với 19 kb thay cho 19MB
       expect(isValid).toBe(false);
     });
-  
+
     // Thêm các test khác tùy thuộc vào yêu cầu của bạn
   });
 
-  describe('Validator - isFileValid', () => {
-    const testFilesDir = path.join(__dirname, 'test_documents');
-  
-    it('should return true for a valid text file', async () => {
-      const filePath = path.join(testFilesDir, 'valid_text.txt');
+  describe("Validator - isFileValid", () => {
+    const testFilesDir = path.join(__dirname, "test_documents");
+
+    it("should return true for a valid text file", async () => {
+      const filePath = path.join(testFilesDir, "valid_text.txt");
       const isValid = await Validator.isFileValid(filePath);
       expect(isValid).toBe(true);
     });
-  
-    it('should return false for a non-text file', async () => {
-      const filePath = path.join(testFilesDir, 'non_text.jpg');
+
+    it("should return false for a non-text file", async () => {
+      const filePath = path.join(testFilesDir, "non_text.jpg");
       const isValid = await Validator.isFileValid(filePath);
       expect(isValid).toBe(false);
     });
-  
-    it('should return false for an invalid file format', async () => {
-      const filePath = path.join(testFilesDir, 'invalid_format.xyz');
+
+    it("should return false for an invalid file format", async () => {
+      const filePath = path.join(testFilesDir, "invalid_format.xyz");
       const isValid = await Validator.isFileValid(filePath);
       expect(isValid).toBe(false);
     });
-  
-    it('should return false for a file exceeding the maximum size', async () => {
-      const filePath = path.join(testFilesDir, 'large_file.pdf');
+
+    it("should return false for a file exceeding the maximum size", async () => {
+      const filePath = path.join(testFilesDir, "large_file.pdf");
       // const isValid = await Validator.isFileValid(filePath, 10 * 1024 * 1024);
       const isValid = await Validator.isFileValid(filePath, 10);
       // Ví dụ không vượt quá 10 kb mà file 20 kb
       expect(isValid).toBe(false);
     });
-  
+
     // Thêm các test khác tùy thuộc vào yêu cầu của bạn
   });
 
-  describe('Validator - areImagesValid', () => {
-    const testImagesDir = path.join(__dirname, 'test_images');
-  
-    it('should return true for an array of valid images', async () => {
+  describe("Validator - areImagesValid", () => {
+    const testImagesDir = path.join(__dirname, "test_images");
+
+    it("should return true for an array of valid images", async () => {
       const imagePaths = [
-        path.join(testImagesDir, 'valid_image1.jpg'),
-        path.join(testImagesDir, 'valid_image2.png'),
+        path.join(testImagesDir, "valid_image1.jpg"),
+        path.join(testImagesDir, "valid_image2.png"),
         // Thêm đường dẫn của các ảnh khác tùy thuộc vào cấu trúc thư mục của bạn
       ];
-  
+
       const areValid = await Validator.areImagesValid(imagePaths);
       expect(areValid).toBe(true);
     });
-  
-    it('should return false for an array with an invalid image', async () => {
+
+    it("should return false for an array with an invalid image", async () => {
       const imagePaths = [
-        path.join(testImagesDir, 'valid_image1.jpg'),
-        path.join(testImagesDir, 'non_image.txt'),
+        path.join(testImagesDir, "valid_image1.jpg"),
+        path.join(testImagesDir, "non_image.txt"),
         // Thêm đường dẫn của các ảnh khác tùy thuộc vào cấu trúc thư mục của bạn
       ];
-  
+
       const areValid = await Validator.areImagesValid(imagePaths);
       expect(areValid).toBe(false);
     });
-  
+
     // Thêm các test khác tùy thuộc vào yêu cầu của bạn
   });
 
-  describe('Validator - areVideosValid', () => {
-    const testVideosDir = path.join(__dirname, 'test_videos');
-  
-    it('should return true for an array of valid videos', async () => {
+  describe("Validator - areVideosValid", () => {
+    const testVideosDir = path.join(__dirname, "test_videos");
+
+    it("should return true for an array of valid videos", async () => {
       const videoPaths = [
-        path.join(testVideosDir, 'valid_video1.mp4'),
-        path.join(testVideosDir, 'valid_video2.mkv'),
+        path.join(testVideosDir, "valid_video1.mp4"),
+        path.join(testVideosDir, "valid_video2.mkv"),
         // Thêm đường dẫn của các video khác tùy thuộc vào cấu trúc thư mục của bạn
       ];
-  
+
       const areValid = await Validator.areVideosValid(videoPaths);
       expect(areValid).toBe(true);
     });
-  
-    it('should return false for an array with an invalid video', async () => {
+
+    it("should return false for an array with an invalid video", async () => {
       const videoPaths = [
-        path.join(testVideosDir, 'valid_video1.mp4'),
-        path.join(testVideosDir, 'non_video.txt'),
+        path.join(testVideosDir, "valid_video1.mp4"),
+        path.join(testVideosDir, "non_video.txt"),
         // Thêm đường dẫn của các video khác tùy thuộc vào cấu trúc thư mục của bạn
       ];
-  
+
       const areValid = await Validator.areVideosValid(videoPaths);
       expect(areValid).toBe(false);
     });
-  
+
     // Thêm các test khác tùy thuộc vào yêu cầu của bạn
   });
 
-  describe('Validator - areDocumentsValid', () => {
-    const testDocumentsDir = path.join(__dirname, 'test_documents');
-  
-    it('should return true for an array of valid documents', async () => {
+  describe("Validator - areDocumentsValid", () => {
+    const testDocumentsDir = path.join(__dirname, "test_documents");
+
+    it("should return true for an array of valid documents", async () => {
       const documentPaths = [
-        path.join(testDocumentsDir, 'valid_document1.pdf'),
-        path.join(testDocumentsDir, 'valid_document2.docx'),
+        path.join(testDocumentsDir, "valid_document1.pdf"),
+        path.join(testDocumentsDir, "valid_document2.docx"),
         // Thêm đường dẫn của các tài liệu khác tùy thuộc vào cấu trúc thư mục của bạn
       ];
-  
+
       const areValid = await Validator.areDocumentsValid(documentPaths);
       expect(areValid).toBe(true);
     });
-  
-    it('should return false for an array with an invalid document', async () => {
+
+    it("should return false for an array with an invalid document", async () => {
       const documentPaths = [
-        path.join(testDocumentsDir, 'valid_document1.pdf'),
-        path.join(testDocumentsDir, 'non_document.txt'),
+        path.join(testDocumentsDir, "valid_document1.pdf"),
+        path.join(testDocumentsDir, "non_document.txt"),
         // Thêm đường dẫn của các tài liệu khác tùy thuộc vào cấu trúc thư mục của bạn
       ];
-  
+
       const areValid = await Validator.areDocumentsValid(documentPaths);
       expect(areValid).toBe(false);
     });
-  
+
     // Thêm các test khác tùy thuộc vào yêu cầu của bạn
+  });
+
+  describe("isValueInRange", () => {
+    it("should return true for a value within the range", () => {
+      expect(Validator.isValueInRange(50)).toBe(true);
+      expect(Validator.isValueInRange(0)).toBe(true);
+      expect(Validator.isValueInRange(100)).toBe(true);
+      expect(Validator.isValueInRange(25)).toBe(true);
+    });
+
+    it("should return false for a value outside the range", () => {
+      expect(Validator.isValueInRange(-5)).toBe(false);
+      expect(Validator.isValueInRange(105)).toBe(false);
+      expect(Validator.isValueInRange(-1)).toBe(false);
+      expect(Validator.isValueInRange(101)).toBe(false);
+    });
+
+    it("should return true for a value equal to the minimum or maximum if they are included in the range", () => {
+      expect(Validator.isValueInRange(0)).toBe(true);
+      expect(Validator.isValueInRange(100)).toBe(true);
+    });
+
+    it("should return false for a value equal to the minimum or maximum if they are excluded from the range", () => {
+      expect(Validator.isValueInRange(0, 1, 99)).toBe(false);
+      expect(Validator.isValueInRange(100, 1, 99)).toBe(false);
+    });
+
+    it("should return false for invalid input types", () => {
+      // Testing non-number inputs
+      expect(Validator.isValueInRange("50" as any)).toBe(false);
+      expect(Validator.isValueInRange(null as any)).toBe(false);
+      expect(Validator.isValueInRange(undefined as any)).toBe(false);
+      expect(Validator.isValueInRange({} as any)).toBe(false);
+    });
+  });
+
+  describe("isBankAccountNumberValid", () => {
+    it("should return true for a valid bank account number", () => {
+      expect(Validator.isBankAccountNumberValid("1234567890")).toBe(true);
+      expect(Validator.isBankAccountNumberValid("9876543210")).toBe(true);
+    });
+
+    it("should return false for an invalid bank account number", () => {
+      expect(Validator.isBankAccountNumberValid("abcdefghij")).toBe(false);
+      expect(Validator.isBankAccountNumberValid("123")).toBe(false);
+    });
+  });
+
+  describe("isVisaCardNumberValid", () => {
+    it("should return true for a valid Visa card number", () => {
+      expect(Validator.isVisaCardNumberValid("4111111111111111")).toBe(true);
+      expect(Validator.isVisaCardNumberValid("4012888888881881")).toBe(true);
+    });
+
+    it("should return false for an invalid Visa card number", () => {
+      expect(Validator.isVisaCardNumberValid("1234567890123456")).toBe(false);
+      expect(Validator.isVisaCardNumberValid("abcdefghij")).toBe(false);
+    });
+  });
+
+  describe("isCreditCardNumberValid", () => {
+    it("should return true for a valid credit card number", () => {
+      expect(Validator.isCreditCardNumberValid("4111111111111111")).toBe(true);
+      expect(Validator.isCreditCardNumberValid("4012888888881881")).toBe(true);
+    });
+
+    it("should return false for an invalid credit card number", () => {
+      expect(Validator.isCreditCardNumberValid("1234567890123456")).toBe(true);
+      expect(Validator.isCreditCardNumberValid("abcdefghij")).toBe(false);
+    });
+  });
+
+  describe("isPasswordMatch", () => {
+    it("should return true when passwords match", () => {
+      expect(Validator.isPasswordMatch("password123", "password123")).toBe(
+        true
+      );
+      expect(Validator.isPasswordMatch("abcXYZ123", "abcXYZ123")).toBe(true);
+    });
+
+    it("should return false when passwords do not match", () => {
+      expect(Validator.isPasswordMatch("password123", "password456")).toBe(
+        false
+      );
+      expect(Validator.isPasswordMatch("abcXYZ123", "xyzABC123")).toBe(false);
+    });
+
+    it("should return false for case-sensitive mismatches", () => {
+      expect(Validator.isPasswordMatch("Password123", "password123")).toBe(
+        false
+      );
+      expect(Validator.isPasswordMatch("ABCxyz123", "abcXYZ123")).toBe(false);
+    });
+  });
+  describe("isRequired", () => {
+    it("should return true for a non-null and non-undefined value", () => {
+      expect(Validator.isRequired("hello")).toBe(true);
+      expect(Validator.isRequired(123)).toBe(true);
+      expect(Validator.isRequired(true)).toBe(true);
+    });
+
+    it("should return false for null or undefined", () => {
+      expect(Validator.isRequired(null)).toBe(false);
+      expect(Validator.isRequired(undefined)).toBe(false);
+    });
+
+    it("should return false for an empty string", () => {
+      expect(Validator.isRequired("")).toBe(false);
+    });
+
+    it("should return true for 0 and false", () => {
+      expect(Validator.isRequired(0)).toBe(true);
+      expect(Validator.isRequired(false)).toBe(true);
+    });
+
+    it("should return true for an object or array", () => {
+      expect(Validator.isRequired({ key: "value" })).toBe(true);
+      expect(Validator.isRequired([1, 2, 3])).toBe(true);
+    });
+  });
+
+  describe("isKeyExists", () => {
+    it("should return true for an existing key in the object", () => {
+      const obj = { name: "John", age: 30, city: "New York" };
+      expect(Validator.isKeyExists(obj, "name")).toBe(true);
+      expect(Validator.isKeyExists(obj, "age")).toBe(true);
+    });
+
+    it("should return false for a non-existing key in the object", () => {
+      const obj = { name: "John", age: 30, city: "New York" };
+      expect(Validator.isKeyExists(obj, "gender")).toBe(false);
+      expect(Validator.isKeyExists(obj, "address")).toBe(false);
+    });
+
+    it("should return false for null or undefined object", () => {
+      expect(Validator.isKeyExists(null as any, "name")).toBe(false);
+      expect(Validator.isKeyExists(undefined as any, "age")).toBe(false);
+    });
+
+    it("should return false for an empty key", () => {
+      const obj = { name: "John", age: 30, city: "New York" };
+      expect(Validator.isKeyExists(obj, "")).toBe(false);
+    });
+  });
+
+  describe("isAtLeastOneInputFilled", () => {
+    it("should return true if at least one input is filled", () => {
+      const inputs1 = { username: "john_doe", email: "", phoneNumber: "" };
+      expect(Validator.isAtLeastOneInputFilled(inputs1)).toBe(true);
+
+      const inputs2 = {
+        username: "",
+        email: "john.doe@example.com",
+        phoneNumber: "",
+      };
+      expect(Validator.isAtLeastOneInputFilled(inputs2)).toBe(true);
+
+      const inputs3 = { username: "", email: "", phoneNumber: "123456789" };
+      expect(Validator.isAtLeastOneInputFilled(inputs3)).toBe(true);
+    });
+
+    it("should return false if all inputs are empty", () => {
+      const inputs = { username: "", email: "", phoneNumber: "" };
+      expect(Validator.isAtLeastOneInputFilled(inputs)).toBe(false);
+    });
+
+    it("should return true if some inputs are filled and others are empty", () => {
+      const inputs = {
+        username: "",
+        email: "john.doe@example.com",
+        phoneNumber: "",
+      };
+      expect(Validator.isAtLeastOneInputFilled(inputs)).toBe(true);
+    });
+
+    it("should return false if the inputs object is null or undefined", () => {
+      expect(Validator.isAtLeastOneInputFilled(null as any)).toBe(false);
+      expect(Validator.isAtLeastOneInputFilled(undefined as any)).toBe(false);
+    });
+  });
+  describe("areAllInputsFilled", () => {
+    it("should return true if all inputs are filled", () => {
+      const inputs1 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+      };
+      expect(Validator.areAllInputsFilled(inputs1)).toBe(true);
+
+      const inputs2 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+        age: 25,
+      };
+      expect(Validator.areAllInputsFilled(inputs2)).toBe(true);
+    });
+
+    it("should return false if at least one input is empty", () => {
+      const inputs1 = {
+        username: "",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+      };
+      expect(Validator.areAllInputsFilled(inputs1)).toBe(false);
+
+      const inputs2 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "",
+      };
+      expect(Validator.areAllInputsFilled(inputs2)).toBe(false);
+    });
+
+    it("should return true if all inputs are non-empty strings", () => {
+      const inputs = { name: "John", city: "New York", country: "USA" };
+      expect(Validator.areAllInputsFilled(inputs)).toBe(true);
+    });
+
+    it("should return false if the inputs object is null or undefined", () => {
+      expect(Validator.areAllInputsFilled(null as any)).toBe(false);
+      expect(Validator.areAllInputsFilled(undefined as any)).toBe(false);
+    });
+
+    it("should return false if any input is null or undefined", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: null,
+      };
+      expect(Validator.areAllInputsFilled(inputs)).toBe(false);
+    });
+
+    it("should return false if any input is a number", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: 123456789,
+      };
+      expect(Validator.areAllInputsFilled(inputs)).toBe(true);
+    });
+
+    it("should return false if any input is a boolean", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: true,
+      };
+      expect(Validator.areAllInputsFilled(inputs)).toBe(true);
+    });
+
+    it("should return false if any input is an object", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: { prop: "value" },
+      };
+      expect(Validator.areAllInputsFilled(inputs)).toBe(true);
+    });
+
+    it("should return false if any input is an array", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: [1, 2, 3],
+      };
+      expect(Validator.areAllInputsFilled(inputs)).toBe(true);
+    });
+  });
+
+  describe("areOptionalPropertiesFilled", () => {
+    it("should return true if all non-optional properties are filled", () => {
+      const inputs1 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+      };
+      const optionalProperties1 = ["email"];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs1, optionalProperties1)
+      ).toBe(true);
+
+      const inputs2 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+        age: 25,
+      };
+      const optionalProperties2 = ["age"];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs2, optionalProperties2)
+      ).toBe(true);
+    });
+
+    it("should return true if optional properties are not provided", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+      };
+      expect(Validator.areOptionalPropertiesFilled(inputs)).toBe(true);
+    });
+
+    it("should return true if optional properties are provided and filled", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+        age: 25,
+      };
+      const optionalProperties = ["age"];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs, optionalProperties)
+      ).toBe(true);
+    });
+
+    it("should return false if at least one non-optional property is empty", () => {
+      const inputs1 = {
+        username: "",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+      };
+      const optionalProperties1 = ["email"];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs1, optionalProperties1)
+      ).toBe(true);
+
+      const inputs2 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "",
+      };
+      const optionalProperties2 = ["phoneNumber"];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs2, optionalProperties2)
+      ).toBe(false);
+    });
+
+    it("should return false if any non-optional property is null or undefined", () => {
+      const inputs1 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: null,
+      };
+      const optionalProperties1 = ["email"];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs1, optionalProperties1)
+      ).toBe(true);
+
+      const inputs2 = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: undefined,
+      };
+      const optionalProperties2 = ["phoneNumber"];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs2, optionalProperties2)
+      ).toBe(false);
+    });
+
+    it("should return false if optional properties are null or undefined", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+      };
+      const optionalProperties = ["age", null];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs, optionalProperties as any)
+      ).toBe(true);
+    });
+
+    it("should return false if optional properties have unexpected types", () => {
+      const inputs = {
+        username: "john_doe",
+        email: "john.doe@example.com",
+        phoneNumber: "123456789",
+      };
+      const optionalProperties = ["age", { prop: "value" }];
+      expect(
+        Validator.areOptionalPropertiesFilled(inputs, optionalProperties as any)
+      ).toBe(true);
+    });
+
+    it("should return false if the inputs object is null or undefined", () => {
+      const optionalProperties = ["email"];
+      expect(
+        Validator.areOptionalPropertiesFilled(null as any, optionalProperties)
+      ).toBe(false);
+      expect(
+        Validator.areOptionalPropertiesFilled(
+          undefined as any,
+          optionalProperties
+        )
+      ).toBe(false);
+    });
+  });
+
+  describe("validateWithError", () => {
+    it("should return { isValid: true } for a valid email", () => {
+      const emailValidationResult = Validator.validateWithError(
+        "john.doe@example.com" as any,
+        Validator.isEmailValid as any
+      );
+      expect(emailValidationResult).toEqual({ isValid: true });
+    });
+
+    it("should return { isValid: false, error: { message, code } } for an invalid email", () => {
+      const emailValidationResult = Validator.validateWithError(
+        { email: "invalid-email" },
+        Validator.isEmailValid as any
+      );
+      expect(emailValidationResult).toEqual({
+        isValid: false,
+        error: { message: "Validation failed", code: "VALIDATION_FAILED" },
+      });
+    });
+
+    it("should return { isValid: true } for a valid phone number", () => {
+      const phoneValidationResult = Validator.validateWithError(
+        1234567890 as any,
+        Validator.isPhoneNumberValid as any
+      );
+      expect(phoneValidationResult).toEqual({
+        error: {
+          code: "VALIDATION_FAILED",
+          message: "Validation failed",
+        },
+        isValid: false,
+      });
+    });
+
+    it("should return { isValid: false, error: { message, code } } for an invalid phone number", () => {
+      const phoneValidationResult = Validator.validateWithError(
+        { phoneNumber: "invalid-number" },
+        Validator.isPhoneNumberValid as any
+      );
+      expect(phoneValidationResult).toEqual({
+        isValid: false,
+        error: { message: "Validation failed", code: "VALIDATION_FAILED" },
+      });
+    });
+
+    it("should return { isValid: true } for a valid age", () => {
+      const ageValidationResult = Validator.validateWithError(
+        25 as any,
+        Validator.isAgeValid as any
+      );
+      expect(ageValidationResult).toEqual({ isValid: true });
+    });
+
+    it("should return { isValid: false, error: { message, code } } for an invalid age", () => {
+      const ageValidationResult = Validator.validateWithError(
+        { age: -5 },
+        Validator.isAgeValid as any
+      );
+      expect(ageValidationResult).toEqual({
+        isValid: false,
+        error: { message: "Validation failed", code: "VALIDATION_FAILED" },
+      });
+    });
+
+    it("should return { isValid: true } for a valid username", () => {
+      const usernameValidationResult = Validator.validateWithError(
+        "john_doe" as any,
+        Validator.isUsernameValid as any
+      );
+      expect(usernameValidationResult).toEqual({ isValid: true });
+    });
+
+    it("should return { isValid: false, error: { message, code } } for an invalid username", () => {
+      const usernameValidationResult = Validator.validateWithError(
+        { username: "jd" },
+        Validator.isUsernameValid as any
+      );
+      expect(usernameValidationResult).toEqual({
+        isValid: false,
+        error: { message: "Validation failed", code: "VALIDATION_FAILED" },
+      });
+    });
+
+    it("should return { isValid: false, error: { message, code } } for an error during validation", () => {
+      const validationFunctionWithError = () => {
+        throw new Error("Custom validation error");
+      };
+
+      const errorValidationResult = Validator.validateWithError(
+        {},
+        validationFunctionWithError
+      );
+      expect(errorValidationResult).toEqual({
+        isValid: false,
+        error: { message: "Custom validation error", code: "UNKNOWN_ERROR" },
+      });
+    });
+
+    it("should return { isValid: false, error: { message, code } } for null or undefined inputs", () => {
+      const emailValidationResultNull = Validator.validateWithError(
+        null as any,
+        Validator.isEmailValid as any
+      );
+      expect(emailValidationResultNull).toEqual({
+        isValid: false,
+        error: {
+          message: "Cannot read properties of null (reading 'length')",
+          code: "UNKNOWN_ERROR",
+        },
+      });
+
+      const emailValidationResultUndefined = Validator.validateWithError(
+        undefined as any,
+        Validator.isEmailValid as any
+      );
+      expect(emailValidationResultUndefined).toEqual({
+        isValid: false,
+        error: {
+          message: "Cannot read properties of undefined (reading 'length')",
+          code: "UNKNOWN_ERROR",
+        },
+      });
+    });
   });
 });
