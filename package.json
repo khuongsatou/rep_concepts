@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run test": "jest",
+    "run test 2": "jest --detectOpenHandles",
     "run tsc": "tsc"
   },
   "repository": {
@@ -19,6 +20,10 @@
   },
   "homepage": "https://github.com/khuongsatou/rep_concepts#readme",
   "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.7",
+    "@babel/plugin-proposal-decorators": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
     "@types/chai": "^4.3.11",
     "@types/jest": "^29.5.11",
     "@types/mime-types": "^2.1.4",
@@ -37,6 +42,8 @@
     "mime-types": "^2.1.35",
     "moment-timezone": "^0.5.43",
     "mysql": "^2.18.1",
+    "mysql2": "^3.6.5",
+    "pg": "^8.11.3",
     "reflect-metadata": "^0.2.1",
     "typeorm": "^0.3.17"
   }

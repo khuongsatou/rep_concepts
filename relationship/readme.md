@@ -1,3 +1,6 @@
+### Ghi chú các mối quan hệ
+- Từ dự án liệt kê ra các mối quan hệ
+
 ### Nhận biết Mối Quan Hệ "Nhiều - Nhiều"
 
 1. **Mối quan hệ không có hướng:**
@@ -40,3 +43,4 @@
      ```
 
 Khi nhìn vào cấu trúc cơ sở dữ liệu và thấy xuất hiện các dấu hiệu trên, bạn có thể kết luận rằng có một mối quan hệ "Nhiều - Nhiều" giữa các thực thể đó.
+

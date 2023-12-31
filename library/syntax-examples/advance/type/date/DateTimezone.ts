@@ -39,11 +39,11 @@ export class TimeHandler {
     this.sendDataToServer(utcTime);
     
     // Test với moment.
-    const londonTime = moment.tz("2023-12-24T13:25:00", "Asia/Bangkok");
-    const utcTime2 = londonTime.utc();
+    // const londonTime = moment.tz("2023-12-24T13:25:00", "Asia/Bangkok");
+    // const utcTime2 = londonTime.utc();
 
-    console.log("London Time:", londonTime.format());
-    console.log("UTC Time:", utcTime2.format());
+    // console.log("London Time:", londonTime.format());
+    // console.log("UTC Time:", utcTime2.format());
   }
 
   // Server nhận và lưu dữ liệu vào database
