@@ -1,0 +1,1 @@
+# Đối với entity thì nên tách ra thành từng file và import vào
