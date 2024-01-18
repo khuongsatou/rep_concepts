@@ -4,7 +4,6 @@ import { IBaseRepository, BaseRepository } from "../reponsitory/BaseRepository";
 //  Nó sử dụng TypeORM's Services để thực hiện các thao tác cơ bản và có thể mở rộng
 export interface IBaseService<T> {
   findOne(id: number): Promise<T | undefined>;
-  // findAll(): Promise<T[]>;
   findAll(options?: any): Promise<T[]>;
   create(entity: T): T;
   save(entity: T): Promise<T>;
@@ -25,9 +24,6 @@ export class BaseService<T> implements IBaseService<T> {
     return this.repository.findOne(id);
   }
 
-  // async findAll(): Promise<T[]> {
-  //   return this.repository.findAll();
-  // }
   async findAll(options?: any): Promise<T[]> {
     return this.repository.findAll(options);
   }
@@ -40,7 +36,11 @@ export class BaseService<T> implements IBaseService<T> {
     return this.repository.save(entity);
   }
 
+
+
   async remove(id: number): Promise<void> {
     await this.repository.remove(id);
   }
 }
+
+

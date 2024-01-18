@@ -10,7 +10,6 @@ import {
 export interface IBaseRepository<T> {
   getEntity(): EntityTarget<T>;
   findOne(id: number): Promise<T | undefined>;
-  // findAll(): Promise<T[]>;
   findAll(options?: FindManyOptions<T>): Promise<T[]>;
   create(entity: T): T;
   save(entity: T): Promise<T>;
@@ -28,13 +27,9 @@ export class BaseRepository<T> implements IBaseRepository<T> {
   }
 
   findOne(id: number): Promise<T | undefined> {
-   
     return this.repository.findOneBy({ id: id } as any);
   }
 
-  // findAll(): Promise<T[]> {
-  //   return this.repository.find();
-  // }
   async findAll(options?: FindManyOptions<T>): Promise<T[]> {
     return this.repository.find(options);
   }

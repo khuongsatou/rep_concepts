@@ -23,3 +23,7 @@ export class UserDTO {
   username: string;
   profile: ProfileDTO;
 }
+
+
+// Use
+// Hàm lấy dữ liệu và chuyển đổi thành JSON
