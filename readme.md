@@ -1,21 +1,27 @@
+# Project Title: ""Reponsitory Concepts"
+This project is organized as a library containing various functionalities and utilities.
+-> "Dự án này được tổ chức như một thư viện chứa nhiều chức năng và tiện ích khác nhau"
+
 
 Attempt | #1 | #2 | #3
 --- | --- | --- | --- 
 1 | Architecture | 0 |---
+--- | --- | --- | --- 
+2 | Technique | 0 |---
+--- | --- | --- | --- 
+3 | Task | 0 |---
+--- | --- | --- | --- 
+4 | Syntax | 0 |---
+--- | --- | --- | --- 
+5 | Pricing | 0 |---
+--- | --- | --- | --- 
+6 | Pricing | 0 |---
+--- | --- | --- | --- 
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
 
 
 
-
-
-# Project Title;
-
-This project is organized as a library containing various functionalities and utilities.
-
-## CRUD Operations
+## CRUD Operations Syntax
 
 ### [Create](./optimized-list/crud-operations/create/)
 - **JavaScript:** [create.js](./optimized-list/crud-operations/create/javascript/create.js)
@@ -59,31 +65,32 @@ This project is organized as a library containing various functionalities and ut
 ### [Test Setup](./optimized-list/test/setup.js)
 - **JavaScript:** [setup.js](./optimized-list/test/setup.js)
 
+...
 
 
 # Xử lí các vấn đề
-- javascript concepts gồm những gì
-- Giờ hãy cho tôi biết kiến trúc của javascript
-- Giờ tôi muốn xây dựng một cái kho dùng để lưu trữ các dự án dưới local và dùng github làm nơi lưu kho trên server. Khi tôi muốn làm dự án sẽ tiến hành tìm task giống với task tôi yêu cầu và lấy xuống, bạn hãy cho tôi quy trình làm
-- Giờ làm sao để tôi có thể tích hợp dự án vào node_modules
-- Bạn có thể cho tôi quy trình xây dựng một package do user tự làm
-- Bạn có thể cho tôi code mẫu
-- khi đó tôi muốn thay đổi hoặc chỉnh sửa package thì làm sao để update vào dự án của tôi
-- Quay trở về cái kho dưới local giờ tôi muốn thêm dự án vào kho thì làm thế nào
-- Kho của tôi rất là lớn và rất nặng làm sao để tối ưu
-- Giờ tôi muốn lên cấu trúc thư mục để tạo kho
-- Project của tôi gôm nhiều kho
-- Đặt tên theo kiến trúc như xử lí danh sách, sử lý chuỗi,…
-- Giờ hãy cho tôi tên kho
-- Nếu như một danh sách có chức năng giống nhau nhưng cái mới tối ưu hơn thì nên đặt tên thư mục như thế nào
-- Tạo cho tôi những code mẫu và cấu trúc tree với các thư mục trên
-- Từng thư mục tôi muốn chia theo ngôn ngữ javascript và typescript
-- Khi đó giờ tôi muốn tìm kiếm 1 thư mục và 1 chức năng thì làm thế nào
-- Giờ tôi muốn có thêm ghi chú vào từng thư mục và chức năng
-- Giờ tôi muốn thêm mục test 
-- Bên trên là các thư mục theo kiến trúc giờ tôi muốn có thêm mục lớn chia theo chức năng như CURD và nhiều chức năng khác
-- Kết hợp 2 kiến trúc bên trên thành một dự án
-- Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện
+- Javascript concepts gồm những gì?
+- Giờ hãy cho tôi biết kiến trúc của javascript?
+- Giờ tôi muốn xây dựng một cái kho dùng để lưu trữ các dự án dưới local và dùng github làm nơi lưu kho trên server. Khi tôi muốn làm dự án sẽ tiến hành tìm task giống với task tôi yêu cầu và lấy xuống, bạn hãy cho tôi quy trình làm?
+- Giờ làm sao để tôi có thể tích hợp dự án vào node_modules?
+- Bạn có thể cho tôi quy trình xây dựng một package do user tự làm?
+- Bạn có thể cho tôi code mẫu?
+- khi đó tôi muốn thay đổi hoặc chỉnh sửa package thì làm sao để update vào dự án của tôi?
+- Quay trở về cái kho dưới local giờ tôi muốn thêm dự án vào kho thì làm thế nào?
+- Kho của tôi rất là lớn và rất nặng làm sao để tối ưu?
+- Giờ tôi muốn lên cấu trúc thư mục để tạo kho?
+- Project của tôi gôm nhiều kho?
+- Đặt tên theo kiến trúc như xử lí danh sách, xử lí chuỗi,…
+- Giờ hãy cho tôi tên kho?
+- Nếu như một danh sách có chức năng giống nhau nhưng cái mới tối ưu hơn thì nên đặt tên thư mục như thế nào?
+- Tạo cho tôi những code mẫu và cấu trúc tree với các thư mục trên?
+- Từng thư mục tôi muốn chia theo ngôn ngữ javascript và typescript?
+- Khi đó giờ tôi muốn tìm kiếm 1 thư mục và 1 chức năng thì làm thế nào?
+- Giờ tôi muốn có thêm ghi chú vào từng thư mục và chức năng?
+- Giờ tôi muốn thêm mục test?
+- Bên trên là các thư mục theo kiến trúc giờ tôi muốn có thêm mục lớn chia theo chức năng như CURD và nhiều chức năng khác?
+- Kết hợp 2 kiến trúc bên trên thành một dự án?
+- Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện?
 
 # Cấu trúc thư mục
 
@@ -192,3 +199,6 @@ library/
 
 
 ```
+
+
+...
