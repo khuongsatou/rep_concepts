@@ -1,6 +1,6 @@
 {
   "name": "rep_concepts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This project is organized as a library containing various functionalities and utilities.",
   "main": "index.js",
   "scripts": {
@@ -41,7 +41,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "express": "^4.18.2",
-    "faker": "^6.6.6",
+    "faker": "^5.5.3",
     "file-type": "^18.7.0",
     "fs": "^0.0.1-security",
     "mime-types": "^2.1.35",

@@ -92,9 +92,12 @@ STT | Thư mục | Ghi chú | Khác
 - Bên trên là các thư mục theo kiến trúc giờ tôi muốn có thêm mục lớn chia theo chức năng như CURD và nhiều chức năng khác?
 - Kết hợp 2 kiến trúc bên trên thành một dự án?
 - Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện?
+- ...
+# Xem thêm
+- ./docs
+
 
 # Cấu trúc thư mục cơ bản
-
 
 ```javascript
 library/
