@@ -1,14 +1,23 @@
 {
   "name": "rep_concepts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This project is organized as a library containing various functionalities and utilities.",
   "main": "index.js",
+  "keywords": [
+    "Architecture",
+    "Technique",
+    "Task",
+    "Syntax",
+    "Pricing"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run test": "jest",
     "run test 2": "jest --detectOpenHandles",
     "run tsc": "tsc",
-    "start": "nodemon library/technique/database/orm-blog/App.ts"
+    "start": "nodemon library/technique/database/orm-blog/App.ts",
+    "npm login": "npm login",
+    "npm publish": "npm publish"
   },
   "repository": {
     "type": "git",

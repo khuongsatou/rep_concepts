@@ -1,4 +1,4 @@
-# Project Title: ""Reponsitory Concepts"
+# Tên kho: "Reponsitory Concepts"
 This project is organized as a library containing various functionalities and utilities.
 <br/>
 -> "Dự án này được tổ chức như một thư viện chứa nhiều chức năng và tiện ích khác nhau"
@@ -6,17 +6,15 @@ This project is organized as a library containing various functionalities and ut
 
 STT | Thư mục | Ghi chú | Khác
 --- | --- | --- | --- 
-1 | Architecture | 0 |---
+1 | Architecture | -- |---
 --- | --- | --- | --- 
-2 | Technique | 0 |---
+2 | Technique | -- |---
 --- | --- | --- | --- 
-3 | Task | 0 |---
+3 | Task | -- |---
 --- | --- | --- | --- 
-4 | Syntax | 0 |---
+4 | Syntax | -- |---
 --- | --- | --- | --- 
-5 | Pricing | 0 |---
---- | --- | --- | --- 
-6 | Pricing | 0 |---
+5 | Pricing | -- |---
 --- | --- | --- | --- 
 
 

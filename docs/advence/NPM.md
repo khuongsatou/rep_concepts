@@ -5,4 +5,4 @@ https://docs.npmjs.com/searching-for-and-choosing-packages-to-download
 https://docs.npmjs.com/generating-provenance-statements
 https://docs.npmjs.com/creating-an-organization
 https://docs.npmjs.com/policies/terms :Không đọc
-https://docs.npmjs.com/cli/v10/commands/npm : Không đọc
+https://docs.npmjs.com/cli/v10/commands/npm : Không đọc sẽ đọc sau.
