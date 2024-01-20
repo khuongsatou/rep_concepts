@@ -13,6 +13,7 @@ npm -v
 - GitHub Actions 
 - guidelines
 - Các nhãn phân phối (dist-tags)
+- bash
 
 # NPM làm được gì
 - the website
@@ -420,4 +421,436 @@ VD: Để thêm nhãn "stable" cho phiên bản 1.4.0 của gói "example-packag
 - npm deprecate <package-name> "<message>"
 
 - npm deprecate <package-name>@<version> "<message>"
+
+-> Nếu bạn đã bật xác thực hai yếu tố, hãy thêm một mật khẩu một lần vào lệnh, --otp=123456 (trong đó 123456 là mã từ ứng dụng xác thực của bạn).
+
+# Bạn có thể chuyển nó cho tài khoản người dùng @npm, thuộc sở hữu của npm registry.
+- Lưu ý: Khi bạn chuyển gói cho tài khoản npm, bạn sẽ không thể cập nhật nó nữa.
+- npm owner add npm <package-name>
+- npm owner rm <user> <package-name>
+
+# Chuyển gói từ một tài khoản người dùng sang một tài khoản người dùng khác: On the package Admin tab Maintainers
+- enter the npm username of the new maintainer.
+- npm owner add <their-username> <package-name> --otp=123456
+# người duy trì mới chấp nhận lời mời
+- npm owner rm <your-username> <package-name> --otp=123456
+
+# Hủy xuất bản các gói từ registry
+-> Bạn có thể hủy xuất bản trong vòng 72 giờ kể từ lần xuất bản ban đầu; sau 72 giờ, bạn vẫn có thể hủy xuất bản gói nếu nó đáp ứng các tiêu chí nhất định.
+-> Nếu bạn không thể hủy xuất bản gói của mình, bạn có thể đánh dấu nó là đã lạc hậu thay vào đó.
+-> Trên trang gói, chọn tab Admin, dưới "Danger Zone", nhấp vào nút "Unpublish".
+- npm unpublish <package-name> --force
+- Lưu ý: Lựa chọn --force là bắt buộc để hủy xuất bản gói.
+- Using the command line
+To unpublish an entire package, run the following command, replacing <package-name> with the name of your package:
+
+npm unpublish <package-name> -f
+If you have two-factor authentication enabled for writes, you will need to add a one-time password to the unpublish command, --otp=123456 (where 123456 is the code from your authenticator app).
+
+If you need help unpublishing your package, please contact npm Support. If you are an Enterprise customer, please contact Enterprise Support.
+
+Note: If you unpublish an entire package, you may not publish any new versions of that package until 24 hours have passed.
+
+Unpublishing a single version of a package
+If you want to remove a single version of a package, you can unpublish one version without affecting the others. This will delete only that version from the registry and it will be unable to be installed. This option is only available via the npm CLI.
+
+Using the command line
+To unpublish a single version of a package, run the following command, replacing <package-name> with the name of your package, and <version> with your version number:
+
+npm unpublish <package-name>@<version>
+When to unpublish
+Unpublishing a package permanently removes the package from the registry so it is no longer available for other users to install. Once a package is unpublished, republishing under the same name is blocked for 24 hours. If you've unpublished a package by mistake, we'd recommend publishing again under a different name, or for unpublished versions, bumping the version number and publishing again.
+
+You might want to unpublish a package because you:
+
+Published something accidentally.
+Wanted to test npm.
+Published content you didn't intend to be public.
+Want to rename a package. (The only way to rename a package is to re-publish it under a new name)
+Note: package-name@version is unique, and cannot be reused by unpublishing and re-publishing it. We recommend publishing a minor version update instead.
+
+When to deprecate
+If you are no longer interested in maintaining a package, but want it to remain available for users to install, or if your package has dependents, we'd recommend deprecating it. To learn about how to deprecate a package, see "Deprecating and undeprecating packages or package versions".
+
+
+# Tìm kiếm một gói
+- npm search
+- Sort packages and Popularity
+- npmjs.com
+
+- Build Environment: The environment used to build the package.
+- Build Summary: A link to the workflow run that built the package.
+- Source Commit: A link to the commit the package was built from.
+- Build File: A link to the workflow file used to build the package.
+- Public Ledger: A link to a transparency log entry attesting an authorized user published the package.
+
+
+# Xác minh chứng nhận xuất xứ
+- npm audit signatures
+- Cài đặt phiên bản npm CLI là v9.5.0 trở lên: npm install -g npm@latest
+- Cài đặt các phụ thuộc với npm install hoặc npm ci
+
+# Cài Đặt một Gói Công Cộng được Phạm Vi (Scoped)
+- Gói công cộng được phạm vi có thể được tải xuống và cài đặt bởi bất kỳ ai, miễn là tên phạm vi được tham chiếu trong quá trình cài đặt:
+- npm install @scope/package-name
+
+# Cài Đặt một Gói Riêng Tư
+- Gói riêng tư chỉ có thể được tải xuống và cài đặt bởi những người đã được cấp quyền đọc gói. Vì gói riêng tư luôn được phạm vi, bạn phải tham chiếu tên phạm vi trong quá trình cài đặt:
+- npm install @scope/private-package-name
+
+# Kiểm Tra Cài Đặt Gói
+- ls node_modules
+
+# Cài đặt gói theo tag
+- npm install <package_name>@<tag>
+- npm install example-package@beta
+
+# Npx
+- npm install -g <package_name>
+
+- Lưu ý: Nếu bạn đang sử dụng npm 5.2 trở lên, chúng tôi khuyến nghị sử dụng npx để chạy các gói toàn cầu.
+
+# Giải Quyết Lỗi Quyền EACCES Khi Cài Đặt Gói Toàn Cầu
+1. Cài Đặt Lại npm Bằng Trình Quản Lý Phiên Bản Node (NVM) (Được Khuyến Nghị)
+2. Thay Đổi Thủ Mục Mặc Định Của npm Thủ Công
+- mkdir ~/.npm-global
+- npm config set prefix '~/.npm-global'
+-> ~/.profile
+- export PATH=~/.npm-global/bin:$PATH
+- source ~/.profile
+- npm install -g jshint
+- NPM_CONFIG_PREFIX=~/.npm-global
+
+# Cập Nhật Các Gói Ở Mức Local:
+- npm update
+- npm outdated
+
+# Cập Nhật Các Gói Được Cài Đặt Toàn Cầu:
+- npm install npm@latest -g
+
+# Xác Định Các Gói Toàn Cầu Cần Được Cập Nhật:
+- npm outdated -g --depth=0
+
+# Cập Nhật Một Gói Toàn Cầu:
+- npm update -g <package_name>
+
+# Cập nhật tất cả các gói:
+- npm update -g
+-> Lưu ý: Bạn có thể cần sử dụng quyền quản trị viên (sudo) khi chạy các lệnh cập nhật toàn cầu trên một số hệ điều hành.
+
+# Sử Dụng Các Gói Không Scoped Trong Dự Án:
+# Module Node.js:
+var lodash = require('lodash');
+
+var output = lodash.without([1, 2, 3], 1);
+console.log(output);
+
+# Tệp package.json:
+{
+  "dependencies": {
+    "package_name": "^1.0.0"
+  }
+}
+
+# Sử Dụng Các Gói Scoped Trong Dự Án:
+# Module Node.js:
+var projectName = require("@scope/package-name")
+
+# Tệp package.json:
+{
+  "dependencies": {
+    "@scope/package_name": "^1.0.0"
+  }
+}
+
+
+# Cannot find module
+-> Nếu bạn chưa cài đặt một gói đúng cách, bạn sẽ nhận được một lỗi khi bạn cố gắng sử dụng nó trong mã nguồn của mình. Ví dụ, nếu bạn tham chiếu đến gói lodash mà chưa cài đặt nó, bạn sẽ thấy lỗi sau:
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'lodash'
+
+- Đối với các gói có phạm vi (scoped), chạy npm install @scope/package_name.
+- Đối với các gói không có phạm vi (unscoped), chạy npm install package_name.
+
+# Using deprecated packages
+-> it may mean the package is unmaintained and will no longer be updated by the publisher.
+
+# Gỡ cài đặt các gói cục bộ:
+- Gỡ cài đặt một gói cục bộ từ thư mục node_modules:
+# Gỡ cài đặt một gói không có phạm vi
+- npm uninstall <package_name>
+
+# Gỡ cài đặt một gói có phạm vi
+- npm uninstall <@scope/package_name>
+
+VD: Gỡ cài đặt gói lodash
+npm uninstall lodash
+
+# Gỡ cài đặt mà không loại bỏ khỏi package.json
+- npm uninstall --no-save <package_name>
+
+# Gỡ cài đặt một gói toàn cầu không có phạm vi
+- npm uninstall -g <package_name>
+
+# Gỡ cài đặt một gói toàn cầu có phạm vi
+- npm uninstall -g <@scope/package_name>
+
+VD: Gỡ cài đặt gói jshint toàn cầu
+- npm uninstall -g jshint
+
+# Nghiêm Trọng (Severity) của Lỗ Hổng
+- Critical (Nghiêm Trọng): Địa chỉ ngay lập tức.
+- High (Cao): Địa chỉ càng sớm càng tốt.
+- Moderate (Trung bình): Địa chỉ khi có thời gian.
+- Low (Thấp): Địa chỉ theo quyết định cá nhân.
+
+# Lỗ Hổng
+- Mô Tả (Description) của Lỗ Hổng:
+-> Mô tả chi tiết về lỗ hổng. Ví dụ, "Tấn công từ chối dịch vụ (Denial of Service)".
+- Gói (Package):
+-> Đã Sửa trong phiên bản (Patched in):
+-> Dải phiên bản ngữ nghĩa mô tả phiên bản nào chứa bản sửa lỗ hổng.
+- Phụ Thuộc của (Dependency of):
+-> Module mà gói chứa lỗ hổng phụ thuộc vào.
+- Đường Dẫn (Path):
+-> Đường dẫn đến mã nguồn chứa lỗ hổng.
+- Thông Tin Thêm (More info):
+-> Một liên kết đến báo cáo bảo mật chi tiết hơn.
+
+
+# Về Các Báo Cáo Bảo Mật:
+- npm audit
+-> Lệnh này kiểm tra các phụ thuộc trực tiếp, devDependencies, bundledDependencies, và optionalDependencies, nhưng không kiểm tra peerDependencies.
+
+# Giải Quyết Các Lỗi EAUDITNOPJSON và EAUDITNOLOCK:
+- npm i --package-lock-only
+-> mô tả của lỗ hổng, đường dẫn, và các thông tin khác, và nếu có sẵn, các lệnh để áp dụng các bản vá để khắc phục các lỗ hổng
+
+# Cảnh Báo Về SEMVER (Semantic Versioning)
+-> bạn có thể mở một yêu cầu kéo (pull request) trên kho lưu trữ của gói phụ thuộc để sử dụng phiên bản đã sửa.
+-> kiểm tra trường "Path" để xem vị trí của gói có lỗ hổng, sau đó kiểm tra gói phụ thuộc vào nó.
+-> Tìm gói phụ thuộc trên npm public registry và điều hướng đến kho lưu trữ của nó.
+-> Khi yêu cầu kéo được hợp nhất và gói đã được cập nhật trên npm public registry, cập nhật bản sao của bạn với npm update.
+
+# Turning off npm audit on package installation
+- npm install example-package-name --no-audit
+- npm set audit false
+
+# Về npm Provenance
+- Provenance Attestation
+- Publish Attestation
+- Về Sigstore
+
+# Xuất bản gói với chứng thực thông qua GitHub Actions
+- Cấp quyền để tạo ID-token
+permissions:
+  id-token: write
+
+- Chạy trên một runner do GitHub lưu trữ:
+runs-on: ubuntu-latest
+
+# Thêm cờ --provenance vào lệnh xuất bản của bạn:
+npm publish --provenance
+
+-> Nếu bạn đang xuất bản một gói lần đầu tiên, bạn cũng cần đặt quyền truy cập thành công khai một cách rõ ràng
+npm publish --provenance --access public
+
+# Ví dụ về luồng làm GitHub Actions:
+name: Publish Package to npmjs
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install -g npm
+      - run: npm ci
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+# Trong luồng làm GitHub Actions của bạn, bạn có thể sử dụng một biến môi trường được gọi là NPM_CONFIG_PROVENANCE và đặt giá trị của nó thành true.
+- Cấu hình tệp package.json của bạn:
+"publishConfig": {
+  "provenance": true
+}
+- Thêm một tệp .npmrc:
+provenance=true
+-> Lưu ý: Hiện tại, yarn không được hỗ trợ để xuất bản các gói của bạn với chứng thực.
+
+# Về Chữ Ký ECDSA của Registry
+-> Chữ ký được cung cấp trong packument của gói trong mỗi phiên bản đã xuất bản trong đối tượng dist:
+"dist": {
+  ..omitted..,
+  "signatures": [{
+    "keyid": "SHA256:{{SHA256_PUBLIC_KEY}}",
+    "sig": "a312b9c3cb4a1b693e8ebac5ee1ca9cc01f2661c14391917dcb111517f72370809..."
+  }]
+}
+-> Để tạo chữ ký, hãy ký tên gói, phiên bản và sha integrity của tarball: 
+${package.name}@${package.version}:${package.dist.integrity}.
+
+# Khóa ký công cộng được cung cấp tại registry-host.tld/-/npm/v1/keys theo định dạng sau:
+{
+  "keys": [{
+    "expires": null,
+    "keyid": "SHA256:{{SHA256_PUBLIC_KEY}}",
+    "keytype": "ecdsa-sha2-nistp256",
+    "scheme": "ecdsa-sha2-nistp256",
+    "key": "{{B64_PUBLIC_KEY}}"
+  }]
+}
+
+expires: null hoặc một định dạng đơn giản mở rộng của ISO 8601: YYYY-MM-DDTHH:mm:ss.sssZ
+keydid: vết mốc vân tay sha256 của khóa công cộng
+keytype: chỉ có ecdsa-sha2-nistp256 được hỗ trợ bởi npm CLI hiện tại
+scheme: chỉ có ecdsa-sha2-nistp256 được hỗ trợ bởi npm CLI hiện tại
+key: khóa công cộng được mã hóa base64
+
+# Verifying ECDSA registry signatures
+# Xác Minh Chữ Ký Registry
+- npm audit signatures
+-> audited 1640 packages in 2s
+-> 1640 have verified registry signatures
+-> Bạn có thể kiểm tra xem registry có hỗ trợ chữ ký hay không bằng cách yêu cầu các khóa ký công cộng từ registry-host.tld/-/npm/v1/keys.
+
+# entworkn
+# Bạn có thể tìm thông tin liên lạc với người duy trì gói bằng cách sử dụng lệnh npm owner ls <tên-gói>
+# Reporting malware Report malware. ->  Send Report.
+
+# npm token commands let you:
+- Xem các mã thông tin để theo dõi và quản lý dễ dàng hơn
+- Tạo mới các mã thông tin thừa kế
+- Hạn chế quyền truy cập theo dải địa chỉ IP (CIDR)
+- Xóa/mất hiệu lực các mã thông tin
+
+-> Mỗi mã thông tin có thể truy cập tới 50 tổ chức, và tới 50 gói, 50 phạm vi, hoặc một sự kết hợp giữa 50 gói và phạm v
+
+# Chọn loại mã thông tin truy cập:
+- Chỉ đọc: Một mã thông tin truy cập chỉ đọc chỉ có thể được sử dụng để tải các gói từ registry.
+- Tự động: Một mã thông tin truy cập tự động có thể tải các gói và xuất bản các gói mới, nhưng nếu bạn có xác minh hai yếu tố (2FA) được cấu hình trên tài khoản của mình, thì nó sẽ không được áp dụng
+- Xuất bản: Một mã thông tin truy cập xuất bản có thể thực hiện bất kỳ hành động nào thay mặt bạn, bao gồm tải các gói, xuất bản các gói và thay đổi cài đặt người dùng hoặc cài đặt gói.
+
+# Creating granular access tokens on the website
+- Trong trường Expiration, nhập thời gian hết hạn của mã thông tin truy cập. Ngày hết hạn phải ít nhất là 1 ngày trong tương lai.
+- Trong trường Allowed IP Ranges, nhập các dải địa IP để hạn chế mã thông tin truy cập của bạn. Bạn phải sử dụng notation CIDR để nhập các dải địa IP. Để thêm nhiều hơn một dải IP được phép, nhấp vào Add IP Range và nhập một dải IP trong trường văn bản mới.
+
+# Permissions
+- All Packages để cấp quyền truy cập của mã thông tin truy cập đến tất cả các gói mà tài khoản người dùng có quyền truy cập.
+- Only select packages and scopes để chọn tối đa 50 gói hoặc phạm vi cụ thể để cấp quyền truy cập cho mã thông tin truy cập. Sau đó, chọn các gói hoặc phạm vi cụ thể từ menu thả xuống.
+
+# Organizations
+- In the Permissions dropdown menu, select No access, Read-only, or Read and write.
+- Under Select organizations, select the organizations you want to grant your token access to.
+
+# Để tạo một mã thông tin truy cập mới
+- npm token create
+- npm token create --read-only
+- pm token create --cidr=[list]
+-> npm token create --cidr=192.0.2.0/24
+- npm token create --read-only --cidr=[list]
+
+# Viewing tokens on the CLI
+- npm token list
+
+# Trên dòng lệnh, chạy lệnh sau, thay thế 123456 bằng ID của mã thông tin truy cập bạn muốn xóa:
+- npm token delete 123456
+
+# Tạo token quyền chỉ đọc
+- npm token create --read-only
+
+# Set the token as an environment variable on the CI/CD server
+steps:
+  - run: |
+      npm install
+  - env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+# .npmrc
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+-> Lưu ý: bạn đang chỉ định một giá trị chính xác của ${NPM_TOKEN}. CLI npm sẽ thay thế giá trị này bằng nội dung của biến môi trường NPM_TOKEN. Đừng đặt một mã thông tin trong tệp này.
+
+# Docker build secrets.
+FROM node
+
+COPY package.json package.json
+RUN npm install
+
+# Thêm các tệp nguồn của bạn
+COPY . .
+CMD npm start
+
+-> Để cài đặt các gói riêng tư, bạn có thể nghĩ rằng bạn có thể thêm một dòng trước khi chạy npm install, sử dụng tham số ENV:
+ENV NPM_TOKEN=00000000-0000-0000-0000-000000000000
+
+# Cập nhật Dockerfile
+# https://docs.npmjs.com/docker-and-private-modules
+FROM node:18
+
+ENV APP_HOME="/app"
+
+WORKDIR ${APP_HOME}
+
+COPY package*.json ${APP_HOME}/
+
+RUN --mount=type=secret,id=npmrc,target=/root/.npmrc npm install
+
+COPY . ${APP_HOME}/
+
+CMD npm start
+
+# Xây dựng hình ảnh Docker
+docker build . -t secure-app-secrets:1.0 --secret id=npmrc,src=$HOME/.npmrc
+
+# Creating an organization
+Ví dụ, nếu tên người dùng cũ của bạn là "wombat", tên người dùng mới của bạn có thể là "wombat-new".
+Thêm tài khoản người dùng npm mới của bạn vào một nhóm có tên là "Developers" trong tổ chức mới của bạn.
+# Requiring two-factor authentication in your organization
+
+# NPM Teams
+- npm Teams. npm Teams là một gói trả phí để cung cấp khả năng cài đặt và xuất bản các gói riêng tư cho các thành viên của tổ chức
+
+# Upgrading paid
+- Nếu bạn có một tổ chức với gói gói riêng tư, tổ chức của bạn sẽ tốn 7 đô la mỗi tháng cho mỗi người dùng. 
+
+# Role
+- Chủ sở hữu (Owner): Người dùng quản lý thành viên của tổ chức và thanh toán.
+- Quản trị viên (Admin): Người dùng quản lý thành viên nhóm và quyền truy cập gói.
+- Thành viên (Member): Người dùng tạo và xuất bản các gói trong phạm vi tổ chức.
+
+# Adding package access to a team using the CLI
+- npm access grant <read-only|read-write> <org:team> [<package>]
+- npm access revoke <org:team> [<package>]
+
+# Changing package access for a team from the CLI
+- npm access
+
+# Đặt phạm vi tổ chức của bạn cho tất cả các gói mới
+- npm config set scope <org-name> --global
+
+# Đặt phạm vi tổ chức của bạn cho một gói cụ thể
+- npm config set scope <org-name>
+
+# Thay đổi tính khả nhìn công khai mặc định cho một gói cụ thể
+- npm publish --access public
+
+# Đặt tính khả nhìn công khai cho một gói cụ thể
+- npm config set access public
+
+# Đặt tính khả nhìn công khai cho tất cả các gói
+- npm config set access public --global
+
+
+
 
