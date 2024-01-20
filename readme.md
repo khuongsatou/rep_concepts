@@ -1,9 +1,10 @@
 # Project Title: ""Reponsitory Concepts"
 This project is organized as a library containing various functionalities and utilities.
+<br/>
 -> "Dự án này được tổ chức như một thư viện chứa nhiều chức năng và tiện ích khác nhau"
 
 
-Attempt | #1 | #2 | #3
+STT | Thư mục | Ghi chú | Khác
 --- | --- | --- | --- 
 1 | Architecture | 0 |---
 --- | --- | --- | --- 
@@ -92,7 +93,7 @@ Attempt | #1 | #2 | #3
 - Kết hợp 2 kiến trúc bên trên thành một dự án?
 - Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện?
 
-# Cấu trúc thư mục
+# Cấu trúc thư mục cơ bản
 
 
 ```javascript
