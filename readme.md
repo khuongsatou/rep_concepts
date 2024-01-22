@@ -1,9 +1,22 @@
 # Tên kho: "Reponsitory Concepts"
 This project is organized as a library containing various functionalities and utilities.
 <br/>
--> "Dự án này được tổ chức như một thư viện chứa nhiều chức năng và tiện ích khác nhau"
+-> "Dự án này được tổ chức như một thư viện chứa nhiều chức năng và tiện ích khác nhau".
+
+# Tại sao lại có dự án này:
+-> Chia thành từng mảnh nhỏ và ghép lại thành một dự án lớn.
+<br/>
+Ví dụ: "Chúng thực hiện chức năng tương tự như bộ kits nội thất đã sẵn có cho xây dựng nhà cửa — việc lắp ghép các tấm đã được cắt sẵn và vít chúng lại với nhau để tạo ra một kệ sách dễ dàng hơn nhiều so với việc tự thiết kế, tìm kiếm gỗ đúng, cắt tất cả các tấm với kích thước và hình dạng đúng, tìm vít có kích thước phù hợp, và sau đó lắp chúng lại để tạo ra một kệ sách.
+
+# Chăm ngôn sống của tui:
+1. -  "Làm gì thì làm nhưng ưu tiên nhất là ngủ".
+"Khi bạn nhập vào đầu càng nhiều thì để có thể sắp xếp và xuất ra nhanh chống kịp thời thì cần ngủ z('_')/".
+2. -  "Đừng có lười".
+"Khi làm gì thì nên đọc hướng dẫn sử dụng không ai hiểu nó bằng người tạo ra nó".
 
 
+
+# Bảng tóm tắt các chức năng chính:
 STT | Thư mục | Ghi chú | Khác
 --- | --- | --- | --- 
 1 | Architecture | -- |---
@@ -18,10 +31,15 @@ STT | Thư mục | Ghi chú | Khác
 --- | --- | --- | --- 
 
 
+# Patch and Minor and Major
+- Bản phát hành Patch: 1.0 hoặc 1.0.x hoặc ~1.0.4
+- Bản phát hành Minor: 1 hoặc 1.x hoặc ^1.0.4
+- Bản phát hành Major: * hoặc x
 
 
-## CRUD Operations Syntax
 
+## Mẫu thử: CRUD Operations Syntax v1.0.0 - library/syntax-examples
+- " Lên CodeBase cho Reponsitory - Thử nghiệm ý tưởng có khả thi và hiệu quả không".
 ### [Create](./optimized-list/crud-operations/create/)
 - **JavaScript:** [create.js](./optimized-list/crud-operations/create/javascript/create.js)
 - **TypeScript:** [create.ts](./optimized-list/crud-operations/create/typescript/create.ts)
@@ -78,7 +96,7 @@ STT | Thư mục | Ghi chú | Khác
 - Quay trở về cái kho dưới local giờ tôi muốn thêm dự án vào kho thì làm thế nào?
 - Kho của tôi rất là lớn và rất nặng làm sao để tối ưu?
 - Giờ tôi muốn lên cấu trúc thư mục để tạo kho?
-- Project của tôi gôm nhiều kho?
+- Project của tôi gồm nhiều kho?
 - Đặt tên theo kiến trúc như xử lí danh sách, xử lí chuỗi,…
 - Giờ hãy cho tôi tên kho?
 - Nếu như một danh sách có chức năng giống nhau nhưng cái mới tối ưu hơn thì nên đặt tên thư mục như thế nào?
@@ -91,11 +109,12 @@ STT | Thư mục | Ghi chú | Khác
 - Kết hợp 2 kiến trúc bên trên thành một dự án?
 - Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện?
 - ...
+
 # Xem thêm
 - ./docs
 
 
-# Cấu trúc thư mục cơ bản
+# Cấu trúc thư mục cơ bản cho reponsitory v1.0.0
 
 ```javascript
 library/
@@ -204,3 +223,7 @@ library/
 
 
 ...
+
+## Mẫu thử: Technique Backend v2.0.0 - library/technique
+-> "Các prompt tổng hợp cho từ các - không ai hiểu nó bằng người tạo ra nó"
+- Documentation official prompt chatGPT, graphQL, javascript, jest, npm, ...
