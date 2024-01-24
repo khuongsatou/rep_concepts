@@ -40,4 +40,6 @@ B1.
 B2.
 - Lên một dự án cần dùng liên quan đến document vừa đọc.
 - Sử dụng chatGPT để giải thích đối chiếu với document chương cần nghiên cứu để làm rõ.
-B3. Đang lên kế hoạch.
+B3. Dùng ChatGPT để lên các câu hỏi trong docs
+- Hỏi và trả lời, truy xuất đáp án nhanh nhất trong docs.
+B4. Đang lên kế hoạch.

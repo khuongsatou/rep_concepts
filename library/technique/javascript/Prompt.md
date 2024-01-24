@@ -78,6 +78,9 @@ Ví dụ: "về các ngôn ngữ lập trình web phía máy chủ phổ biến 
 # Event
 - DOMContentLoaded
 
+# IDE Online
+- CodePen, JSFiddle hoặc Glitch
+
 
 # Template basic về nhập javascript
 ```html
@@ -179,7 +182,10 @@ Ví dụ về 3 script:
 - .createElement
 - .body.append
 - .querySelectorAll
-- 
+- .setAttribute("class", "msgBox")
+- .parentNode.removeChild(panel)
+
+
 
 # Toán tử
 - + - * /
@@ -554,6 +560,538 @@ const code = station.slice(0,3);
 const semiColon = station.indexOf(';');
 const name = station.slice(semiColon + 1);
 const result = `${code}: ${name}`;
+
+
+# Mảng - (Arrays)
+- Mảng thường được mô tả là "đối tượng giống như danh sách";
+const sequence = [1, 1, 2, 3, 5, 8, 13];
+const random = ["tree", 795, [0, 1, 2]];
+
+# Tìm chiều dài của một mảng
+const shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
+console.log(shopping.length); // 5
+
+# Bạn cũng có thể sửa đổi một mục trong mảng bằng cách gán một giá trị mới cho mục duy nhất đó
+const shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
+shopping[0] = "tahini";
+console.log(shopping);
+// shopping sẽ trả về [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+
+# Truy cập phần tử
+const random = ["tree", 795, [0, 1, 2]];
+random[2][2];
+
+# Phương thức indexOf() nhận một mục làm đối số và sẽ trả về chỉ số của mục đó hoặc -1
+const birds = ["Parrot", "Falcon", "Owl"];
+console.log(birds.indexOf("Owl")); // 2
+console.log(birds.indexOf("Rabbit")); // -1
+
+# Thêm mục
+const cities = ["Manchester", "Liverpool"];
+cities.push("Cardiff");
+console.log(cities); // [ "Manchester", "Liverpool", "Cardiff" ]
+cities.push("Bradford", "Brighton");
+console.log(cities); // [ "Manchester", "Liverpool", "Cardiff", "Bradford", "Brighton" ]
+
+# Nếu bạn muốn lưu trữ chiều dài mới của mảng trong một biến
+const newLength = cities.push("Bristol");
+
+# Để thêm một mục vào đầu mảng, 
+cities.unshift("Edinburgh");
+
+# Xóa mục ở cuối
+cities.pop();
+
+# Phương thức pop() trả về mục đã bị loại bỏ. Để lưu mục đó vào một biến mới
+const removedCity = cities.pop();
+
+# Để loại bỏ mục đầu tiên từ một mảng, sử dụng shift():
+cities.shift();
+
+# Nếu bạn biết chỉ số của một mục, bạn có thể loại bỏ nó khỏi mảng bằng cách sử dụng splice()
+const index = cities.indexOf("Liverpool");
+if (index !== -1) {
+  cities.splice(index, 1);
+}
+console.log(cities); // [ "Manchester", "Edinburgh", "Carlisle" ]
+
+# Truy cập từng mục
+const birds = ["Parrot", "Falcon", "Owl"];
+
+for (const bird of birds) {
+  console.log(bird);
+}
+
+# Bạn có thể làm điều này bằng cách sử dụng map().
+function double(number) {
+  return number * 2;
+}
+const numbers = [5, 2, 7, 6];
+const doubled = numbers.map(double);
+console.log(doubled); // [ 10, 4, 14, 12 ]
+
+# Bạn có thể làm điều này bằng cách sử dụng filter()
+function isLong(city) {
+  return city.length > 8;
+}
+const cities = ["London", "Liverpool", "Totnes", "Edinburgh"];
+const longer = cities.filter(isLong);
+console.log(longer); // [ "Liverpool", "Edinburgh" ]
+
+# Chuyển đổi giữa chuỗi và mảng
+const data = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+const cities = data.split(",");
+
+cities.length;
+cities[0]; // mục đầu tiên trong mảng
+cities[1]; // mục thứ hai trong mảng
+cities[cities.length - 1]; // mục cuối cùng trong mảng
+
+# Chuyển đổi giữa mảng và chuỗi
+const commaSeparated = cities.join(",");
+- Hoặc
+const dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
+dogNames.toString(); // Rocket,Flash,Bella,Slugger
+
+# Ví dụ
+VD1: printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom.
+
+``` javascript
+  const productData = ["Shoes:23.99", "Hat:12.50", "Socks:5.99", "Gloves:15.00"];
+
+  const products = productData.map(item => item.split(':').map(subItem => (isNaN(subItem) ? subItem : parseFloat(subItem))));
+
+  // number 2
+  for (const product of products) {
+    // number 3
+    const [productName, productPrice] = product;
+    // number 4
+    total += productPrice;
+    // number 5
+    const itemText = `${productName} — $${productPrice.toFixed(2)}`;
+    console.log(itemText);
+  }
+
+
+
+```
+
+VD2: bạn có thể chỉ muốn hiển thị 5 đối tượng tại một thời điểm vì lý do hiệu suất hoặc tránh làm mất trật tự. Khi các đối tượng mới được tạo và thêm vào mảng, các đối tượng cũ có thể bị xóa khỏi mảng để duy trì số lượng mong muốn.
+
+ // Chỉ cho phép nhập một thuật ngữ nếu ô tìm kiếm không trống
+if (searchInput.value !== '') {
+  myHistory.unshift(searchInput.value);
+
+  // Làm trống danh sách để không hiển thị các mục trùng lặp
+  // Hiển thị được tạo lại mỗi khi nhập một thuật ngữ tìm kiếm.
+  list.innerHTML = '';
+
+  // Lặp qua mảng và hiển thị tất cả các thuật ngữ tìm kiếm trong danh sách
+  for (const itemText of myHistory) {
+    const listItem = document.createElement('li');
+    listItem.textContent = itemText;
+    list.appendChild(listItem);
+  }
+
+  // Nếu độ dài mảng là 5 hoặc nhiều hơn, loại bỏ thuật ngữ tìm kiếm cũ nhất
+  if (myHistory.length >= MAX_HISTORY) {
+    myHistory.pop();
+  }
+
+  // Làm trống ô tìm kiếm và đặt trọng tâm vào nó, sẵn sàng cho thuật ngữ tiếp theo được nhập
+  searchInput.value = '';
+  searchInput.focus();
+}
+
+
+# Học thêm javascript qua các bài tập
+https://learnjavascript.online/app.html?id=1436
+
+# Logical operators: AND, OR và NOT
+&& — AND; cho phép bạn kết nối với nhau hai hoặc nhiều biểu thức sao cho tất cả chúng đều phải đánh giá cá nhân là true để biểu thức tổng trả về true.
+|| — OR; cho phép bạn kết nối với nhau hai hoặc nhiều biểu thức sao cho một hoặc nhiều biểu thức phải đánh giá cá nhân là true để biểu thức tổng trả về true.
+- Trong đoạn mã này, nếu biểu thức OR trả về true, toán tử NOT sẽ phủ định nó để biểu thức tổng trả về false.
+
+# Lỗi sai logic
+if (x === 5 || 7 || 10 || 20) {
+  // thực hiện mã của tôi
+}
+-> Trong trường hợp này, điều kiện bên trong if () sẽ luôn đánh giá là true vì 7 (hoặc bất kỳ giá trị không phải là 0 nào khác) luôn đánh giá là true. Điều kiện này thực sự đang nói "nếu x bằng 5, hoặc 7 là true — điều mà luôn đúng". Điều này là logic không đúng! Để làm cho nó hoạt động, bạn phải chỉ định một bài kiểm tra đầy đủ ở mỗi bên của mỗi toán tử OR:
+if (x === 5 || x === 7 || x === 10 || x === 20) {
+  // thực hiện mã của tôi
+}
+
+# Câu lệnh switch
+->  Đối với những trường hợp bạn chỉ muốn thiết lập một biến thành một giá trị cụ thể hoặc in ra một câu lệnh cụ thể tùy thuộc vào điều kiện, cú pháp có thể hơi cồng kềnh, đặc biệt là nếu bạn có một số lượng lớn các lựa chọn.
+-> — nó nhận một biểu thức/giá trị duy nhất làm đầu vào, sau đó xem xét nhiều lựa chọn cho đến khi nó tìm thấy một lựa chọn phù hợp với giá trị đó, thực thi mã tương ứng đi kèm.
+
+switch (expression) {
+  case choice1:
+    // chạy mã này
+    break;
+
+  case choice2:
+    // chạy mã này thay thế
+    break;
+
+  // bao gồm bất kỳ case nào bạn muốn
+
+  default:
+    // thực sự, chỉ chạy mã này
+    break;
+}
+Ví dụ:
+```javascript
+
+
+const select = document.querySelector("select");
+const para = document.querySelector("p");
+
+select.addEventListener("change", setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  switch (choice) {
+    case "sunny":
+      para.textContent =
+        "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+      break;
+    case "rainy":
+      para.textContent =
+        "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+      break;
+    case "snowing":
+      para.textContent =
+        "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+      break;
+    case "overcast":
+      para.textContent =
+        "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+      break;
+    default:
+      para.textContent = "";
+  }
+}
+
+```
+
+# Toán tử 3 ngôi:
+const greeting = isBirthday
+  ? "Chúc mừng sinh nhật bà Smith — chúc bạn có một ngày tuyệt vời!"
+  : "Chào buổi sáng bà Smith.";
+
+# Ví dụ chương trình tạo lịch cơ bản
+``` javascript
+let days = 31;
+  if (choice === "February") {
+    days = 28;
+  } else if (
+    choice === "April" ||
+    choice === "June" ||
+    choice === "September" ||
+    choice === "November"
+  ) {
+    days = 30;
+  }
+
+  createCalendar(days, choice);
+
+
+function createCalendar(days, choice) {
+  list.innerHTML = "";
+  h1.textContent = choice;
+  for (let i = 1; i <= days; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = i;
+    list.appendChild(listItem);
+  }
+}
+
+createCalendar(31, "January");
+```
+
+# Suppose we wanted to draw 100 random circles on a <canvas> element (press the Update button to run the example again and again to see different random sets):
+
+``` javascript
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight;
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
+    ctx.arc(
+      random(canvas.width),
+      random(canvas.height),
+      random(50),
+      0,
+      2 * Math.PI,
+    );
+    ctx.fill();
+  }
+}
+```
+
+# Set và Map.
+# map() và filter()
+-  tạo ra một bộ sưu tập mới
+```javascript
+function toUpper(string) {
+  return string.toUpperCase();
+}
+
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+const upperCats = cats.map(toUpper);
+
+console.log(upperCats);
+// [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+
+```
+``` javascript
+function lCat(cat) {
+  return cat.startsWith("L");
+}
+
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+const filtered = cats.filter(lCat);
+
+console.log(filtered);
+// [ "Leopard", "Lion" ]
+
+
+```
+- Viết gọn hơn:
+```javascript
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+const filtered = cats.filter((cat) => cat.startsWith("L"));
+console.log(filtered);
+// [ "Leopard", "Lion" ]
+```
+
+# for (const cat of cats)
+
+# Ví dụ về vòng lặp
+- Thực hiện chức năng search đơn giản.
+``` javascript
+const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+
+for (const contact of contacts) {
+    const splitContact = contact.split(":");
+    if (splitContact[0].toLowerCase() === searchName) {
+      para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+      break;
+    }
+  }
+  if (para.textContent === "") {
+    para.textContent = "Contact not found.";
+  }
+
+```
+
+- Thực hiện chức năng bình phương một số.
+```javascript
+for (let i = 1; i <= num; i++) {
+  let sqRoot = Math.sqrt(i);
+  if (Math.floor(sqRoot) !== sqRoot) {
+    continue;
+  }
+  para.textContent += `${i} `;
+}
+
+```
+
+- Tìm mèo
+```javascript
+const cats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavoriteCats = "My cats are called ";
+
+let i = 0;
+
+while (i < cats.length) {
+  if (i === cats.length - 1) {
+    myFavoriteCats += `and ${cats[i]}.`;
+  } else {
+    myFavoriteCats += `${cats[i]}, `;
+  }
+
+  i++;
+}
+
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+```
+```javascript
+const cats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavoriteCats = "My cats are called ";
+
+let i = 0;
+
+do {
+  if (i === cats.length - 1) {
+  myFavoriteCats += and ${cats[i]}.;
+  } else {
+  myFavoriteCats += ${cats[i]}, ;
+  }
+
+  i++;
+} while (i < cats.length);
+
+```
+
+- Launch countdown
+```javascript
+
+let i = 10;
+
+while (i >= 0) {
+  const para = document.createElement('p');
+  if (i === 10) {
+    para.textContent = `Countdown ${i}`;
+  } else if (i === 0) {
+    para.textContent = 'Blast off!';
+  } else {
+    para.textContent = i;
+  }
+
+  output.appendChild(para);
+
+  i--;
+}
+
+```
+- we don't want to let Phil and Lola in because they are greedy and rude, and always eat all the food! We have two lists, one for guests to admit, and one for guests to refuse.
+
+
+# Loại vòng lặp nào nên sử dụng?
+- Nếu bạn đang lặp qua một mảng hoặc một đối tượng khác hỗ trợ nó và không cần truy cập vào vị trí chỉ số của mỗi mục, thì vòng lặp for...of là lựa chọn tốt nhất
+- Chúng tôi khuyên bạn nên sử dụng vòng lặp for, ít nhất là từ đầu, vì đó có lẽ là cách dễ nhất để nhớ mọi thứ 
+
+# Hàm không tên
+(function () {
+ alert("hello");
+});
+
+-> Điều này được gọi là hàm không tên, vì nó không có tên. Bạn thường sẽ thấy các hàm không tên khi một hàm mong đợi nhận một hàm khác dưới dạng tham số. Trong trường hợp này, tham số hàm thường được truyền dưới dạng một hàm không tên.
+
+Lưu ý: Hình thức tạo hàm này còn được gọi là biểu thức hàm. Khác với khai báo hàm, biểu thức hàm không được nâng lên."
+
+Ví dụ:
+function logKey(event) {
+  console.log(You pressed "${event.key}".);
+}
+
+textBox.addEventListener("keydown", logKey);
+
+-> Thay vì xác định một hàm riêng biệt logKey(), bạn có thể truyền một hàm không tên vào addEventListener():
+- Thay thế thành hàm không tên:
+textBox.addEventListener("keydown", function (event) {
+  console.log(You pressed "${event.key}".);
+});
+
+- Hoặc 1 arrow Function
+textBox.addEventListener("keydown", (event) => {
+  console.log(`You pressed "${event.key}".`);
+});
+
+- Nếu hàm chỉ có một tham số, bạn có thể bỏ qua dấu ngoặc đơn xung quanh tham số:
+textBox.addEventListener("keydown", event => {
+  console.log(`You pressed "${event.key}".`);
+});
+
+- Cuối cùng, nếu hàm của bạn chỉ chứa một dòng là một câu lệnh return, bạn cũng có thể bỏ qua dấu ngoặc nhọn và từ khóa return và tự động trả giá trị biểu thức.
+``` javascript
+const originals = [1, 2, 3];
+
+const doubled = originals.map(item => item * 2);
+
+console.log(doubled); // [2, 4, 6]
+
+```
+-> Chúng tôi khuyến khích bạn sử dụng hàm mũi tên, vì chúng có thể làm cho mã của bạn ngắn gọn và dễ đọc hơn
+
+# Lỗi xung đột hàm
+<script src="first.js"></script>
+<script src="second.js"></script>
+<script>
+  greeting();
+</script>
+
+-> Cả hai hàm bạn muốn gọi đều được gọi là greeting(), nhưng bạn chỉ có thể truy cập vào hàm greeting() của tệp first.js (tệp thứ hai sẽ bị bỏ qua)
+
+
+
+# Trang tìm icon
+iconfinder.com
+
+# Thêm icon vào javascript
+```javascript
+
+if (msgType === "warning") {
+  msg.style.backgroundImage = "url(icons/warning.png)";
+  panel.style.backgroundColor = "red";
+} else if (msgType === "chat") {
+  msg.style.backgroundImage = "url(icons/chat.png)";
+  panel.style.backgroundColor = "aqua";
+} else {
+  msg.style.paddingLeft = "20px";
+}
+
+
+```
+# Tính hình
+```javascript
+function squared(num) {
+  return num * num;
+}
+
+function cubed(num) {
+  return num * num * num;
+}
+
+function factorial(num) {
+  if (num < 0) return undefined;
+  if (num === 0) return 1;
+  let x = num - 1;
+  while (x > 1) {
+    num *= x;
+    x--;
+  }
+  return num;
+}
+
+ const num = parseFloat(input.value);
+  if (isNaN(num)) {
+    para.textContent = "Bạn cần nhập một số!";
+  } else {
+    para.textContent = `${num} bình phương là ${squared(num)}. `;
+    para.textContent += `${num} khối là ${cubed(num)}. `;
+    para.textContent += `${num} giai thừa là ${factorial(num)}. `;
+  }
+```
+
+
+
+
+
+
+
+
+
 
 
 
