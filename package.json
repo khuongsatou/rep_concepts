@@ -1,6 +1,6 @@
 {
   "name": "rep_concepts",
-  "version": "1.0.7",
+  "version": "1.0.11",
   "description": "This project is organized as a library containing various functionalities and utilities.",
   "main": "index.js",
   "keywords": [

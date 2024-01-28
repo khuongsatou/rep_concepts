@@ -9,10 +9,21 @@ This project is organized as a library containing various functionalities and ut
 Ví dụ: "Chúng thực hiện chức năng tương tự như bộ kits nội thất đã sẵn có cho xây dựng nhà cửa — việc lắp ghép các tấm đã được cắt sẵn và vít chúng lại với nhau để tạo ra một kệ sách dễ dàng hơn nhiều so với việc tự thiết kế, tìm kiếm gỗ đúng, cắt tất cả các tấm với kích thước và hình dạng đúng, tìm vít có kích thước phù hợp, và sau đó lắp chúng lại để tạo ra một kệ sách.
 
 # Chăm ngôn sống của tui:
-1. -  "Làm gì thì làm nhưng ưu tiên nhất là ngủ".
-"Khi bạn nhập vào đầu càng nhiều thì để có thể sắp xếp và xuất ra nhanh chống kịp thời thì cần ngủ z('_')/".
-2. -  "Đừng có lười".
-"Khi làm gì thì nên đọc hướng dẫn sử dụng không ai hiểu nó bằng người tạo ra nó".
+1. -  "Làm gì thì làm nhưng ưu tiên nhất là ngủ".<br/>
+"Khi bạn nhập vào đầu càng nhiều thì để có thể sắp xếp và xuất ra nhanh chống kịp thời thì cần ngủ z('_')/".<br/>
+2. -  "Đừng có lười".<br/>
+"Khi làm gì thì nên đọc hướng dẫn sử dụng không ai hiểu nó bằng người tạo ra nó".<br/>
+3. -  "Ít code thôi và đọc document nhiều vào"<br/>
+"Vì thời đại trước khi có ChatGPT thì ta phải học code, code từng chức năng thì giờ khác rồi bạn đừng nên học theo cách cũ nữa sẽ bị đục người".<br/>
+"Vì thời đại giờ là dùng generator ai nên bạn hãy học prompt thay vì học thuộc code, nó sẽ code dự án nhanh hơn gấp chục lần".<br/>
+
+# Hướng dẫn sử dụng
+Bước 0. npm install res_reponsitory mở projects <br/>
+Bước 1. Mở visual studio code tìm node_modules/res_reponsitory <br/>
+Bước 2. Ví dụ tôi muốn tìm shift() để hỏi xem chức năng nó là gì, ghi shift vào search của visual studio code<br/>
+Bước 3. Và tìm đến file Prompt.md sẽ biết được cách dùng và chức năng.<br/>
+Bước 4. Nếu muốn biết thêm thông tin dùng prompt đó cho chatGPT<br/>
+Bước 5. Bên trên là cách đơn giản nhất để sử dụng project này cho dự án của bạn khi bạn bí ý tưởng về prompt trên backend thay vì search google thì nên search trong dự án chỉ dành riêng cho Backend vì tui tổng hợp từ các document offical của trang, đây cũng là một các học riêng của tui.<br/>
 
 
 
@@ -38,7 +49,7 @@ STT | Thư mục | Ghi chú | Khác
 
 
 
-## Mẫu thử: CRUD Operations Syntax v1.0.0 - library/syntax-examples
+## Mẫu thử: CRUD Operations Syntax v1.0.0 - library/syntax-examples/
 - " Lên CodeBase cho Reponsitory - Thử nghiệm ý tưởng có khả thi và hiệu quả không".
 ### [Create](./optimized-list/crud-operations/create/)
 - **JavaScript:** [create.js](./optimized-list/crud-operations/create/javascript/create.js)
@@ -109,6 +120,26 @@ STT | Thư mục | Ghi chú | Khác
 - Kết hợp 2 kiến trúc bên trên thành một dự án?
 - Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện?
 - ...
+
+# Các vấn đề và câu hỏi
+- Làm sao để dùng dự án này?
+- Làm sao để nó có ít mà không phải clone về rồi để đó
+- Dự án này có bị lỗi thời không?
+- Dự án này tôi không nhớ hết thì phải làm sao?
+- Dự án này phát triển theo hướng nào?
+- Dự án này áp dụng vào dự án tôi nó có ảnh hưởng gì không?
+- Dự án này làm sao để tôi biết hết cấu trúc
+- Dự án này làm sao để tôi có thể hiểu hết mà không tốn thời gian?
+- Dự án này làm sao thông tin có chính xác không?
+- Dự án này do bao nhiêu người phát triển?
+- Dự án này tồn tại trong bao lâu?
+- Dự án này có nặng không?
+- Ai là người cho tôi ý tưởng xây dựng dự án này?
+- Tại sao cái document này nó không giống với một thư viện mà nó lại trình bày tào lao vậy?
+- Tôi clone về tìm nó ở đâu?
+- ...
+
+
 
 # Xem thêm
 - ./docs
@@ -224,6 +255,16 @@ library/
 
 ...
 
-## Mẫu thử: Technique Backend v2.0.0 - library/technique
+## Mẫu thử: Technique Backend v2.0.0 - library/technique/
 -> "Các prompt tổng hợp cho từ các - không ai hiểu nó bằng người tạo ra nó"
 - Documentation official prompt chatGPT, graphQL, javascript, jest, npm, ...
+
+
+## Mẫu thử: Technique Backend v3.0.0 - relationship/
+-> Với các mối quan hệ thiết kế database theo dự án
+
+## Mẫu thử: Technique Backend v4.0.0 - devops/
+-> Các CI/CD và release dự án
+
+## Mẫu thử: Technique Backend v5.0.0 - microservices/
+-> Kết hợp các công nghệ lại với nhau sử dụng kiến trúc microservices

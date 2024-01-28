@@ -11,3 +11,8 @@ Ví dụ:
 
 # Thực hành
 - Làm các bài tập trên docs chính thức để nắm rõ
+
+# Đọc đề bài tập và mô phỏng theo.
+- Ví dụ: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery
+
+

@@ -81,6 +81,9 @@ Ví dụ: "về các ngôn ngữ lập trình web phía máy chủ phổ biến 
 # IDE Online
 - CodePen, JSFiddle hoặc Glitch
 
+# Yêu cầu
+- Luôn tốt khi nhất quán
+
 
 # Template basic về nhập javascript
 ```html
@@ -1083,22 +1086,910 @@ function factorial(num) {
     para.textContent += `${num} giai thừa là ${factorial(num)}. `;
   }
 ```
+# Event
+## Có nhiều loại sự kiện khác nhau có thể xảy ra.
+- Người dùng chọn, nhấp chuột hoặc di chuột qua một phần tử cụ thể.
+- Người dùng chọn một phím trên bàn phím.
+- Người dùng thay đổi kích thước hoặc đóng cửa sổ trình duyệt.
+- Một trang web kết thúc việc tải.
+- Một biểu mẫu được gửi.
+- Một video được phát, tạm dừng hoặc kết thúc.
+- Xảy ra một lỗi.
+- Bạn có thể nhận ra từ đây (và từ việc nhìn chung vào tài liệu tham khảo sự kiện MDN) rằng có rất nhiều sự kiện có thể được kích hoạt.
+Vd: Thay đổi màu sắc
+```javascript
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+btn.addEventListener("click", () => {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+});
+```
 
 
+# AddEventListener
+- focus và blur:  Màu thay đổi khi nút được tập trung và không được tập trung; hãy thử nhấn tab để tập trung vào nút và nhấn tab lại để tập trung khỏi nút
+- dblclick: Màu thay đổi chỉ khi nút được nhấp đúp.
+- mouseover và mouseout: Màu thay đổi khi con trỏ chuột di chuyển qua nút hoặc khi con trỏ di chuyển khỏi nút, tương ứng.
+- keydown: Thả phím ra
+
+# removeEventListener
+->  Ví dụ, điều này sẽ gỡ bỏ trình xử lý sự kiện changeBackground():
+```javascript
+const controller = new AbortController();
+
+btn.addEventListener("click",
+  () => {
+    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    document.body.style.backgroundColor = rndCol;
+  },
+  { signal: controller.signal } // pass an AbortSignal to this handler and // removes any/all event handlers associated with this controller
+);
 
 
+```
+-> Đối với các chương trình đơn giản, nhỏ, việc dọn dẹp trình xử lý sự kiện cũ, không sử dụng lại không cần thiết, nhưng đối với các chương trình lớn, phức tạp hơn, điều này có thể cải thiện hiệu suất.
+
+# Thuộc tính trình xử lý sự kiện
+- Ví dụ, các phần tử có thuộc tính onclick. Đây được gọi là thuộc tính trình xử lý sự kiện. Để lắng nghe sự kiện, bạn có thể gán hàm xử lý cho thuộc tính.
+
+- Với thuộc tính trình xử lý sự kiện, bạn không thể thêm nhiều hơn một trình xử lý cho một sự kiện duy nhất.
+VD 1: 
+- btn.onclick = () => {}
+- btn.onclick = bgChange;
+
+# Thêm sự kiện cho nhiều nút
+```javascript
+  const buttons = document.querySelectorAll("button")
+  for (const button of buttons) {
+    button.addEventListener("click", bgChange);
+  }
+
+```
+
+# Đối tượng sự kiện
+- Đôi khi, bên trong một hàm xử lý sự kiện, bạn sẽ thấy một tham số được chỉ định với tên như event, evt hoặc e.
+- Điều này được gọi là đối tượng sự kiện, và nó được tự động chuyển đến các trình xử lý sự kiện để cung cấp các tính năng và thông tin bổ sung
+```javascript
+function bgChange(e) { // Đối tượng sự kiện.
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  e.target.style.backgroundColor = rndCol;
+  console.log(e);
+}
+```
+-> bạn có thể thấy chúng tôi đang bao gồm một đối tượng sự kiện, e, trong hàm, và trong hàm đặt một kiểu màu nền trên e.target — đó là chính nút. Thuộc tính target của đối tượng sự kiện luôn là một tham chiếu đến phần tử sự kiện xảy ra
+
+# Ngăn sự kiện
+- Vấn đề đến khi người dùng không nhập đúng dữ liệu, như một nhà phát triển, bạn muốn ngăn chặn việc gửi đến máy chủ và hiển thị một thông báo lỗi nói về điều gì đó sai và cần làm gì để sửa chữa
+
+- preventDefault() : điều này ngăn chặn việc gửi biểu mẫu — và sau đó hiển thị một thông báo lỗi trong đoạn văn bản dưới biểu mẫu của chúng tôi để thông báo cho người dùng biết có gì sai
+```javascript
+form.addEventListener("submit", (e) => {
+  if (fname.value === "" || lname.value === "") {
+    e.preventDefault();
+    para.textContent = "Bạn cần điền cả hai tên!";
+  }
+});
+
+```
+#  Sự kiện Delegation
+- cách chúng tôi sử dụng event.target.
 
 
+# Về Keydown
+- Sự kiện keydown xảy ra khi người dùng nhấn một phím. Đối tượng sự kiện của nó là một KeyboardEvent
+- Sự kiện chuyên biệt với một thuộc tính key nói cho bạn biết phím nào đã được nhấn:
+Ví dụ:
+`Bạn đã nhấn phím "${event.key}"
 
 
+# Event bubbling
+- Bong bóng sự kiện mô tả cách trình duyệt xử lý các sự kiện được đặt mục tiêu vào các phần tử lồng nhau.
+<div id="container">
+  <button>Click me!</button>
+</div>
+<pre id="output"></pre>
 
 
+```javascript
+const output = document.querySelector("#output");
+function handleClick(e) {
+  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector("#container");
+container.addEventListener("click", handleClick);
 
 
+```
+- Điều này hợp lý: nút nằm bên trong <div>, vì vậy khi bạn nhấp vào nút, bạn cũng ngầm nhấp vào phần tử mà nó nằm trong.
+
+<body>
+  <div id="container">
+    <button>Click me!</button>
+  </div>
+  <pre id="output"></pre>
+</body>
 
 
+```javascript
+const output = document.querySelector("#output");
+function handleClick(e) {
+  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector("#container");
+const button = document.querySelector("button");
+
+document.body.addEventListener("click", handleClick);
+container.addEventListener("click", handleClick);
+button.addEventListener("click", handleClick);
+
+```
+You clicked on a BUTTON element
+You clicked on a DIV element
+You clicked on a BODY element
+1. nhấp vào nút xảy ra đầu tiên
+2. tiếp theo là nhấp vào phần tử cha của nó (phần tử <div>)
+3. tiếp theo là phần tử cha của <div> (phần tử <body>).
+-> Chúng ta mô tả điều này bằng cách nói rằng sự kiện nổi lên từ phần tử bên trong nhất đã được nhấp chuột.
 
 
+Ví dụ về video:
+<button>Hiển thị video</button>
+
+<div class="hidden">
+  <video>
+    <source
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+      type="video/webm" />
+    <p>
+      Trình duyệt của bạn không hỗ trợ video HTML. Đây là một
+      <a href="rabbit320.mp4">liên kết đến video</a> thay thế.
+    </p>
+  </video>
+</div>
 
 
+```javascript
+const btn = document.querySelector("button");
+const box = document.querySelector("div");
+const video = document.querySelector("video");
 
+btn.addEventListener("click", () => box.classList.remove("hidden"));
+video.addEventListener("click", () => video.play());
+box.addEventListener("click", () => box.classList.add("hidden"));
+
+```
+
+# Fixing the problem with stopPropagation()
+-> để Fix lỗi lag truyền event
+```javascript
+const btn = document.querySelector("button");
+const box = document.querySelector("div");
+const video = document.querySelector("video");
+
+btn.addEventListener("click", () => box.classList.remove("hidden"));
+
+video.addEventListener("click", (event) => {
+  event.stopPropagation(); // dừng lag truyền event
+  video.play();
+});
+
+box.addEventListener("click", () => box.classList.add("hidden"));
+
+```
+# Event Capture
+- Một biến thể khác của việc lan truyền sự kiện là chụp sự kiện.
+
+document.body.addEventListener("click", handleClick, { capture: true });
+
+
+# Event delegation
+<div id="container">
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+</div>
+
+.tile {
+  height: 100px;
+  width: 25%;
+  float: left;
+}
+
+
+```javascript
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function bgChange() {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  return rndCol;
+}
+
+const container = document.querySelector("#container");
+
+container.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = bgChange();// Nó sẽ hiện background cho phần tử ô con
+});
+
+```
+Ví dụ, Node.js là một runtime JavaScript rất phổ biến cho phép các nhà phát triển sử dụng JavaScript để xây dựng ứng dụng mạng và máy chủ. Mô hình sự kiện trong Node.js dựa trên listeners để lắng nghe sự kiện và emitters để phát ra sự kiện theo chu kỳ.
+- Mô hình sự kiện trong Node.js dựa trên listeners để lắng nghe sự kiện và emitters để phát ra sự kiện theo chu kỳ 
+- Sử dụng các hàm như on() để đăng ký một trình nghe sự kiện, và once() để đăng ký một trình nghe sự kiện chỉ sau khi nó đã chạy một lần
+- Mô hình sự kiện trong Node.js dựa trên listeners để lắng nghe sự kiện và emitters để phát ra sự kiện theo chu kỳ — nghe có vẻ không khác biệt nhiều, nhưng mã nguồn khá khác nhau, sử dụng các hàm như on() để đăng ký một trình nghe sự kiện, và once() để đăng ký một trình nghe sự kiện chỉ sau khi nó đã chạy một lần.
+- Bây giờ bạn nên biết tất cả những điều cơ bản về sự kiện web ở giai đoạn sớm này. Như đã đề cập, sự kiện thực sự không phải là một phần của JavaScript cơ bản — chúng được định nghĩa trong các API Web của trình duyệt.
+
+- Ngoài ra, quan trọng là hiểu rằng các ngữ cảnh khác nhau mà JavaScript được sử dụng có các mô hình sự kiện khác nhau — từ API Web đến các lĩnh vực khác như tiện ích mở rộng web của trình duyệt và Node.js (JavaScript phía máy chủ). Chúng tôi không mong đợi bạn hiểu rõ tất cả những lĩnh vực này ngay bây giờ, nhưng việc hiểu cơ bản về sự kiện sẽ giúp bạn tiến xa hơn trong việc học phát triển web.
+
+Lưu ý: Nếu bạn gặp vấn đề, bạn có thể liên hệ với chúng tôi qua một trong các kênh giao tiếp của chúng tôi.
+
+
+# Đối tượng trong javascript
+const person = {};
+
+## Hiển thị trên console.log
+[object Object]
+Object { }
+{ }
+
+## Bổ xung thêm dữ liệu
+
+```javascript
+const person = {
+  name: ["Bob", "Smith"],
+  age: 32,
+  bio: function () {
+    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+  },
+  introduceSelf: function () {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};
+
+person.name;
+person.name[0];
+person.age;
+person.bio();
+// "Bob Smith is 32 years old."
+person.introduceSelf();
+// "Hi! I'm Bob."
+
+const objectName = {
+  member1Name: member1Value,
+  member2Name: member2Value,
+  member3Name: member3Value,
+};
+
+
+```
+# Đối tượng như là các thuộc tính của đối tượng
+```javascript
+const person = {
+  name: {
+    first: "Bob",
+    last: "Smith",
+  },
+  // …
+};
+
+person.name.first;
+person.name.last;
+```
+
+# Notation Dấu ngoặc vuông (Bracket Notation)
+- Notation dấu ngoặc vuông cung cấp một cách truy cập thuộc tính của đối tượng. Thay vì sử dụng dấu chấm như thế này:
+```javascript
+person["age"];
+person["name"]["first"];
+
+```
+- thay vì sử dụng số chỉ mục để chọn một mục, bạn sử dụng tên được liên kết với giá trị của mỗi thành viên. Không có gì lạ khi mọi người đôi khi gọi đối tượng là các mảng liên kết 
+- Dấu chấm thường được ưa chuộng hơn so với dấu ngoặc vuông vì nó ngắn gọn hơn và dễ đọc hơn. 
+- Tuy nhiên, có một số trường hợp nơi bạn phải sử dụng dấu ngoặc vuông. Ví dụ, nếu tên thuộc tính của một đối tượng được giữ trong một biến, bạn không thể sử dụng dấu chấm để truy cập giá trị, nhưng bạn có thể truy cập giá trị bằng cách sử dụng dấu ngoặc vuông.
+- Trong ví dụ dưới đây, hàm logProperty() có thể sử dụng person[propertyName] để lấy giá trị của thuộc tính có tên trong propertyName.
+```javascript
+const person = {
+  name: ["Bob", "Smith"],
+  age: 32,
+};
+
+function logProperty(propertyName) {
+  console.log(person[propertyName]);
+}
+
+logProperty("name");
+// ["Bob", "Smith"]
+logProperty("age");
+// 32
+
+```
+# Thiết lập thành viên đối tượng
+```javascript
+person.age = 45;
+person["name"]["last"] = "Cratchit";
+
+person.age;
+person["name"]["last"];
+
+
+person["eyes"] = "hazel";
+person.farewell = function () {
+  console.log("Bye everybody!");
+};
+
+person["eyes"];
+person.farewell();
+// "Bye everybody!"
+
+```
+# Một khía cạnh hữu ích của dấu ngoặc vuông là nó có thể được sử dụng để đặt không chỉ giá trị thành viên một cách động, mà còn tên thành viên
+```javascript
+const myDataName = nameInput.value;
+const myDataValue = nameValue.value;
+
+person[myDataName] = myDataValue;
+
+// Để thử nghiệm điều này, hãy thêm các dòng sau vào mã của bạn, ngay dưới dấu ngoặc nhọn đóng của đối tượng person
+const myDataName = "height";
+const myDataValue = "1.75m";
+person[myDataName] = myDataValue;
+
+person.height;
+
+```
+-> Thêm một thuộc tính vào một đối tượng bằng phương thức trên không thể thực hiện được với dấu chấm, nó chỉ có thể chấp nhận một tên thành viên chữa động, không phải giá trị biến trỏ đến tên.
+
+# "This" là gì?
+- khi bạn chỉ cần tạo một đối tượng literal duy nhất, điều này không quá hữu ích. Nhưng nếu bạn tạo nhiều hơn một, điều này cho phép bạn sử dụng cùng một định nghĩa phương thức cho mọi đối tượng bạn tạo.
+```javascript
+introduceSelf() {
+  console.log(`Hi! I'm ${this.name[0]}.`);
+}
+
+// Ví dụ 2
+const person1 = {
+  name: "Chris",
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name}.`);
+  },
+};
+
+const person2 = {
+  name: "Deepti",
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name}.`);
+  },
+};
+
+```
+
+# Phiên bản đầu tiên của điều này chỉ là một hàm:
+```javascript
+function createPerson(name) {
+  const obj = {};
+  obj.name = name;
+  obj.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+  return obj;
+}
+
+const salva = createPerson("Salva");
+salva.name;
+salva.introduceSelf();
+// "Hi! I'm Salva."
+
+const frankie = createPerson("Frankie");
+frankie.name;
+frankie.introduceSelf();
+// "Hi! I'm Frankie."
+
+
+```
+-> Điều này hoạt động tốt nhưng hơi dài dòng: chúng ta phải tạo một đối tượng trống, khởi tạo nó và trả về nó. Cách làm tốt hơn là sử dụng một hàm tạo (constructor). Một hàm tạo đơn giản chỉ là một hàm được gọi bằng từ khóa new. Khi bạn gọi một hàm tạo, nó sẽ:
+
+1) Tạo ra một đối tượng mới.
+2) Liên kết this với đối tượng mới, để bạn có thể tham chiếu đến this trong mã hàm tạo của bạn.
+3) Chạy mã trong hàm tạo.
+4) Trả về đối tượng mới.
+
+```javascript
+function Person(name) {
+  this.name = name;
+  this.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+}
+
+const salva = new Person("Salva");
+salva.name;
+salva.introduceSelf();
+// "Hi! I'm Salva."
+
+const frankie = new Person("Frankie");
+frankie.name;
+frankie.introduceSelf();
+// "Hi! I'm Frankie."
+
+
+```
+
+# Object prototypes
+```javascript
+__defineGetter__
+__defineSetter__
+__lookupGetter__
+__lookupSetter__
+__proto__
+city
+constructor
+greet
+hasOwnProperty
+isPrototypeOf
+propertyIsEnumerable
+toLocaleString
+toString
+valueOf
+
+```
+- Mọi đối tượng trong JavaScript đều có một thuộc tính tích hợp sẵn gọi là prototype. Prototype chính nó là một đối tượng, vì vậy prototype sẽ có prototype riêng, tạo thành điều được gọi là dòng thời gian prototype. Dòng thời gian kết thúc khi chúng ta đạt đến một prototype có null cho prototype riêng.
+
+- Lưu ý: Thuộc tính của một đối tượng chỉ đến prototype của nó không được gọi là prototype. Tên của nó không chuẩn, nhưng thực tế tất cả các trình duyệt đều sử dụng __proto__. Cách chuẩn để truy cập prototype của một đối tượng là sử dụng phương thức Object.getPrototypeOf().
+
+- Khi bạn cố gắng truy cập một thuộc tính của một đối tượng: nếu thuộc tính không thể được tìm thấy trong chính đối tượng, prototype sẽ được tìm kiếm cho thuộc tính đó. Nếu thuộc tính vẫn không thể được tìm thấy, thì prototype của prototype sẽ được tìm kiếm, và cứ thế cho đến khi thuộc tính được tìm thấy hoặc cuối cùng của chuỗi đối tượng, trong trường hợp đó, undefined được trả về.
+
+- Vì vậy, khi chúng ta gọi myObject.toString(), trình duyệt:
+
+1) Tìm toString trong myObject.
+2) Không tìm thấy nó ở đó, nên tìm trong đối tượng prototype của myObject để toString.
+3) Tìm thấy nó ở đó và gọi nó.
+
+- Prototype cho myObject là gì? Để biết điều này, chúng ta có thể sử dụng hàm Object.getPrototypeOf():
+Object.getPrototypeOf(myObject); // Object { }
+
+- Đây là một đối tượng được gọi là Object.prototype, và nó là prototype cơ bản nhất, mà tất cả các đối tượng đều có mặc định. Prototype của Object.prototype là null, vì vậy nó ở cuối của dòng thời gian prototype
+
+# Dòng thời gian prototype
+```javascript
+const myDate = new Date();
+let object = myDate;
+
+do {
+  object = Object.getPrototypeOf(object);
+  console.log(object);
+} while (object);
+
+// Date.prototype
+// Object { }
+// null
+
+```
+
+- Đoạn mã này tạo một đối tượng Date, sau đó đi lên theo dòng thời gian prototype, ghi lại các prototype. Nó cho chúng ta thấy rằng prototype của myDate là một đối tượng Date.prototype, và prototype của nó là Object.prototype.
+
+Dòng thời gian prototype cho myDate:
+
+1) Date.prototype
+2) Object { }
+3) null
+
+# Shadowing properties
+```javascript
+const myDate = new Date(1995, 11, 17);
+
+console.log(myDate.getYear()); // 95
+
+myDate.getYear = function () {
+  console.log("something else!");
+};
+
+myDate.getYear(); // 'something else!'
+
+```
+
+# Thiết lập prototype:
+- Sử dụng Object.create() và constructors.
+- Phương thức Object.create() tạo một đối tượng mới và cho phép bạn chỉ định một đối tượng sẽ được sử dụng làm prototype cho đối tượng mới.
+```javascript
+const personPrototype = {
+  greet() {
+    console.log("hello!");
+  },
+};
+
+const carl = Object.create(personPrototype);
+carl.greet(); // hello!
+
+```
+# Sử dụng constructor cho prototype
+
+- Trong JavaScript, tất cả các hàm đều có một thuộc tính được gọi là prototype. Khi bạn gọi một hàm như một constructor, thuộc tính này được đặt làm prototype của đối tượng mới được xây dựng (theo quy ước, trong thuộc tính có tên là __proto__).
+
+- Vì vậy, nếu chúng ta đặt prototype của một constructor, chúng ta có thể đảm bảo rằng tất cả các đối tượng được tạo ra bằng constructor đó đều có prototype đó:
+
+```javascript
+const personPrototype = {
+  greet() {
+    console.log(`hello, my name is ${this.name}!`);
+  },
+};
+
+function Person(name) {
+  this.name = name;
+}
+
+Object.assign(Person.prototype, personPrototype);
+// or
+// Person.prototype.greet = personPrototype.greet;
+```
+# Ở đây, chúng ta tạo:
+- Một đối tượng personPrototype, có một phương thức greet().
+- Một hàm constructor Person() khởi tạo tên của người để tạo.
+const reuben = new Person("Reuben");
+reuben.greet(); // hello, my name is Reuben!
+
+- Điều này cũng giải thích tại sao chúng ta nói trước đây rằng prototype của myDate được gọi là Date.prototype: đó là thuộc tính prototype của hàm constructor Date.
+```javascript
+const irma = new Person("Irma");
+
+console.log(Object.hasOwn(irma, "name")); // true
+console.log(Object.hasOwn(irma, "greet")); // false
+
+```
+# Prototype và kế thừa:
+- Prototype là một tính năng mạnh mẽ và linh hoạt của JavaScript, giúp tái sử dụng mã và kết hợp các đối tượng.
+- Bạn có thể thấy rằng trong JavaScript, nếu các đối tượng Professor và Student có thể có prototype là Person, thì chúng có thể kế thừa các thuộc tính chung, trong khi thêm và định lại những thuộc tính cần phải khác biệt.
+
+# Các thuộc tính sở hữu (Own properties)
+- Các đối tượng mà chúng ta tạo bằng constructor Person ở trên có hai thuộc tính:
+
+- Một thuộc tính name, được đặt trong constructor, nên nó xuất hiện trực tiếp trên các đối tượng Person.
+- Một phương thức greet(), được đặt trong prototype.
+```javascript
+const irma = new Person("Irma");
+
+console.log(Object.hasOwn(irma, "name")); // true
+console.log(Object.hasOwn(irma, "greet")); // false
+
+```
+- Lưu ý: Bạn cũng có thể sử dụng phương thức không tĩnh Object.hasOwnProperty() ở đây, nhưng chúng tôi khuyến khích bạn sử dụng Object.hasOwn() nếu có thể.
+
+# Prototype và kế thừa:
+- Prototype là một tính năng mạnh mẽ và linh hoạt của JavaScript, giúp tái sử dụng mã và kết hợp các đối tượng.
+- Ví dụ, nếu chúng ta đang mô phỏng một trường học, chúng ta có thể có giáo sư và sinh viên: họ đều là người, nên có một số đặc điểm chung (ví dụ: họ đều có tên), nhưng mỗi người có thể thêm các đặc điểm phụ (ví dụ: giáo sư có môn học họ giảng dạy), hoặc có thể triển khai cùng một đặc điểm theo cách khác nhau. Trong một hệ thống OOP, chúng ta có thể nói rằng giáo sư và sinh viên đều kế thừa từ người.
+
+- Bạn có thể thấy rằng trong JavaScript, nếu các đối tượng Professor và Student có thể có prototype là Person, thì chúng có thể kế thừa các thuộc tính chung, trong khi thêm và định lại những thuộc tính cần phải khác biệt.
+
+# ba khái niệm chính: classes và instances, inheritance, và encapsulation.
+- Trù tượng, đa hình, kế thừa, đóng gói
+- Lưu ý: Để chính xác, các tính năng mà chúng ta mô tả ở đây thuộc một loại OOP cụ thể gọi là class-based hoặc "classical" OOP
+- Sau đó, trong JavaScript, chúng ta sẽ xem xét cách các constructor và chuỗi prototype liên quan đến các khái niệm OOP này và cách chúng khác nhau.
+
+## Classes và Instances:
+- Lập trình hướng đối tượng là về việc mô hình hóa một hệ thống dưới dạng một bộ sưu tập các đối tượng, trong đó mỗi đối tượng đại diện cho một khía cạnh cụ thể của hệ thống
+- Chúng ta tạo các định nghĩa trừu tượng đại diện cho các loại đối tượng chúng ta muốn có trong hệ thống của mình
+```javascript
+class Professor
+    properties
+        name
+        teaches
+    constructor
+        Professor(name, teaches)
+    methods
+        grade(paper)
+        introduceSelf()
+
+
+walsh = new Professor("Walsh", "Psychology");
+lillian = new Professor("Lillian", "Poetry");
+
+walsh.teaches; // 'Psychology'
+walsh.introduceSelf(); // 'My name is Professor Walsh and I will be your Psychology professor.'
+
+lillian.teaches; // 'Poetry'
+lillian.introduceSelf(); // 'My name is Professor Lillian and I will be your Poetry professor.'
+
+```
+- Điều này xác định một class Professor với:
+
++ Hai thuộc tính dữ liệu: name và teaches
++ Hai phương thức: grade() để đánh giá bài và introduceSelf() để tự giới thiệu.
+- Mỗi giáo sư cụ thể chúng ta tạo được gọi là một instance của class Professor.
+- Quá trình tạo một instance được thực hiện bởi một hàm đặc biệt gọi là constructor.
+Ví dụ 2:
+```javascript
+class Student
+    properties
+        name
+        year
+    constructor
+        Student(name, year)
+    methods
+        introduceSelf()
+
+```
+- Chúng ta bắt đầu bằng cách quan sát rằng sinh viên và giáo sư đều là con người, và con người có tên và muốn tự giới thiệu.
+- Chúng ta có thể mô hình hóa điều này bằng cách định nghĩa một lớp mới là Person, nơi chúng ta định nghĩa tất cả các thuộc tính chung của con người. Sau đó, Professor và Student có thể đều kế thừa từ Person, thêm vào đó các thuộc tính bổ sung của họ:
+```javascript
+class Person
+    properties
+        name
+    constructor
+        Person(name)
+    methods
+        introduceSelf()
+
+class Professor : extends Person
+    properties
+        teaches
+    constructor
+        Professor(name, teaches)
+    methods
+        grade(paper)
+        introduceSelf()
+
+class Student : extends Person
+    properties
+        year
+    constructor
+        Student(name, year)
+    methods
+        introduceSelf()
+
+
+walsh = new Professor("Walsh", "Psychology");
+walsh.introduceSelf(); // 'My name is Professor Walsh and I will be your Psychology professor.'
+
+summers = new Student("Summers", 1);
+summers.introduceSelf(); // 'My name is Summers and I'm in the first year.'
+
+```
+- Tính năng này - khi một phương thức có cùng tên nhưng có một triển khai khác nhau trong các lớp khác nhau - được gọi là đa hình
+- Khi một phương thức trong một subclass thay thế triển khai của superclass, chúng ta nói rằng subclass ghi đè phiên bản trong superclass.*
+- Đối tượng cung cấp một giao diện cho mã khác muốn sử dụng chúng nhưng duy trì trạng thái nội tại của chúng. Trạng thái nội tại của đối tượng được giữ riêng tư, có nghĩa là nó chỉ có thể được truy cập bởi các phương thức của đối tượng, không phải từ các đối tượng khác. Việc giữ trạng thái nội tại của đối tượng riêng tư, và nói chung tạo ra một phân chia rõ ràng giữa giao diện công khai và trạng thái nội tại riêng tư của nó, được gọi là encapsulation (đóng gói).
+- Đây là một tính năng hữu ích vì nó cho phép người lập trình thay đổi triển khai nội tại của một đối tượng mà không cần phải tìm và cập nhật toàn bộ mã sử dụng nó: nó tạo ra một loại tường lửa giữa đối tượng này và phần còn lại của hệ thống.
+
+- Ví dụ, giả sử sinh viên được phép học bắn cung nếu họ ở năm hai trở lên. 
+```javascript
+if (student.year > 1) {
+  // cho phép sinh viên tham gia lớp học
+}
+
+```
+
+- Sẽ tốt hơn nếu có một phương thức canStudyArchery() trên đối tượng Sinh viên, triển khai logic tại một nơi duy nhất:
+```javascript
+class Student : extends Person
+    properties
+       year
+    constructor
+       Student(name, year)
+    methods
+       introduceSelf()
+       canStudyArchery() { return this.year > 1 }
+
+
+if (student.canStudyArchery()) {
+  // cho phép sinh viên tham gia lớp học
+}
+
+```
+- Như vậy, nếu chúng ta muốn thay đổi quy tắc về việc học bắn cung, chúng ta chỉ cần cập nhật lớp Sinh viên, và tất cả mã sử dụng nó vẫn sẽ hoạt động.
+
+- Nếu thêm tính đóng gói vào
+```javascript
+class Student : extends Person
+    properties
+       private year
+    constructor
+        Student(name, year)
+    methods
+       introduceSelf()
+       canStudyArchery() { return this.year > 1 }
+
+student = new Student('Weber', 1)
+student.year // lỗi: 'year' là một thuộc tính riêng tư của Sinh viên
+
+```
+
+- Dây chuyền prototype giống như một cách tự nhiên để triển khai tính kế thừa. Ví dụ, nếu chúng ta có một đối tượng Sinh viên mà prototype của nó là Person, thì nó có thể kế thừa name và ghi đè introduceSelf().
+
+- Thứ nhất, trong OOP dựa trên lớp, các lớp và đối tượng là hai khái niệm riêng biệt, và đối tượng luôn được tạo ra dưới dạng các thể hiện của lớp. 
+
+# Classes và Constructors:
+```javascript
+class Person {
+  name;
+
+  constructor(name) {
+    this.name = name;
+  }
+
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name}`);
+  }
+}
+
+const giles = new Person("Giles");
+
+giles.introduceSelf(); // Hi! I'm Giles
+
+```
+
+# Kế thừa:
+```javascript
+class Professor extends Person {
+  teaches;
+
+  constructor(name, teaches) {
+    super(name);
+    this.teaches = teaches;
+  }
+
+  introduceSelf() {
+    console.log(
+      `My name is ${this.name}, and I will be your ${this.teaches} professor.`,
+    );
+  }
+
+  grade(paper) {
+    const grade = Math.floor(Math.random() * (5 - 1) + 1);
+    console.log(grade);
+  }
+}
+
+const walsh = new Professor("Walsh", "Psychology");
+walsh.introduceSelf(); // 'My name is Walsh, and I will be your Psychology professor'
+
+walsh.grade("my paper"); // some random grade
+
+```
+
+# JSON là gì?
+- JSON là một định dạng dữ liệu dựa trên văn bản theo cú pháp đối tượng JavaScript, được đưa ra nổi tiếng bởi Douglas Crockford. Mặc dù nó giống cú pháp đối tượng của JavaScript, nhưng nó có thể được sử dụng độc lập với JavaScript, và nhiều môi trường lập trình hỗ trợ khả năng đọc (phân tích) và tạo JSON.
+
+- JSON tồn tại dưới dạng một chuỗi — hữu ích khi bạn muốn truyền dữ liệu qua mạng.
+- Lưu ý: Chuyển đổi một chuỗi thành một đối tượng nguyên thuỷ được gọi là giải serial (deserialization), trong khi chuyển đổi một đối tượng nguyên thuỷ thành một chuỗi để có thể truyền qua mạng được gọi là serial (serialization).
+- Bạn có thể bao gồm các loại dữ liệu cơ bản giống như trong một đối tượng JavaScript tiêu chuẩn — chuỗi, số, mảng, boolean và các đối tượng chữ ký khác.
+```javascript
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+
+superHeroes.homeTown;
+superHeroes["active"];
+
+superHeroes["members"][1]["powers"][2];
+
+```
+- Bạn có thể xác nhận tính hợp lệ của JSON bằng cách sử dụng ứng dụng như JSONLint.
+
+# Fetch json
+```javascript
+async function populate() {
+  const requestURL =
+    "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+  const request = new Request(requestURL);
+
+  const response = await fetch(request);
+  const superHeroes = await response.json();
+
+  populateHeader(superHeroes);
+  populateHeroes(superHeroes);
+}
+
+function populateHeader(obj) {
+  const header = document.querySelector("header");
+  const myH1 = document.createElement("h1");
+  myH1.textContent = obj.squadName;
+  header.appendChild(myH1);
+
+  const myPara = document.createElement("p");
+  myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
+  header.appendChild(myPara);
+}
+
+function populateHeroes(obj) {
+  const section = document.querySelector("section");
+  const heroes = obj.members;
+
+  for (const hero of heroes) {
+    const myArticle = document.createElement("article");
+    const myH2 = document.createElement("h2");
+    const myPara1 = document.createElement("p");
+    const myPara2 = document.createElement("p");
+    const myPara3 = document.createElement("p");
+    const myList = document.createElement("ul");
+
+    myH2.textContent = hero.name;
+    myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
+    myPara2.textContent = `Age: ${hero.age}`;
+    myPara3.textContent = "Superpowers:";
+
+    const superPowers = hero.powers;
+    for (const power of superPowers) {
+      const listItem = document.createElement("li");
+      listItem.textContent = power;
+      myList.appendChild(listItem);
+    }
+
+    myArticle.appendChild(myH2);
+    myArticle.appendChild(myPara1);
+    myArticle.appendChild(myPara2);
+    myArticle.appendChild(myPara3);
+    myArticle.appendChild(myList);
+
+    section.appendChild(myArticle);
+  }
+}
+
+
+```
+- Để lấy JSON, chúng ta sử dụng một API được gọi là Fetch. API này cho phép chúng ta thực hiện các yêu cầu mạng để lấy tài nguyên từ máy chủ thông qua JavaScript (ví dụ: hình ảnh, văn bản, JSON, thậm chí là đoạn mã HTML), có nghĩa là chúng ta có thể cập nhật các phần nhỏ của nội dung mà không cần phải tải lại toàn bộ trang.
+
+
+- May mắn thay, hai vấn đề này thường xuyên xuất hiện trong phát triển web nên trình duyệt đã cung cấp một đối tượng JSON tích hợp, chứa hai phương thức sau:
++ parse(): Chấp nhận một chuỗi JSON làm tham số và trả về đối tượng JavaScript tương ứng.
++ stringify(): Chấp nhận một đối tượng làm tham số và trả về chuỗi JSON tương ứng.
+
+
+```javascript
+// stringify() hoạt động theo hướng ngược lại. 
+let myObj = { name: "Chris", age: 38 };
+myObj;
+let myString = JSON.stringify(myObj);
+myString;
+
+```

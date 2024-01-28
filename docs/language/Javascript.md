@@ -5,3 +5,7 @@ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#why_are_loops_useful
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#listening_for_other_events
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
