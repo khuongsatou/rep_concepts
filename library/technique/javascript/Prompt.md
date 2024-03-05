@@ -1993,3 +1993,947 @@ let myString = JSON.stringify(myObj);
 myString;
 
 ```
+
+# API Canvas
+- Đoạn mã này lấy tham chiếu đến phần tử <canvas>, sau đó gọi phương thức getContext() trên đó để cung cấp cho chúng ta một ngữ cảnh để bắt đầu vẽ. Hằng số kết quả (ctx) là đối tượng đại diện trực tiếp cho khu vực vẽ của canvas và cho phép chúng ta vẽ các hình dạng 2D trên đó.
+
+```javascript
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomRGB() {
+  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
+}
+
+class Ball {
+  constructor(x, y, velX, velY, color, size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+  }
+
+  update() {
+  if ((this.x + this.size) >= width) {
+    this.velX = -(this.velX);
+  }
+
+  if ((this.x - this.size) <= 0) {
+    this.velX = -(this.velX);
+  }
+
+  if ((this.y + this.size) >= height) {
+    this.velY = -(this.velY);
+  }
+
+  if ((this.y - this.size) <= 0) {
+    this.velY = -(this.velY);
+  }
+
+  this.x += this.velX;
+  this.y += this.velY;
+}
+
+}
+
+const testBall = new Ball(50, 100, 4, 4, "blue", 10);
+
+const balls = [];
+
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size,
+  );
+
+  balls.push(ball);
+}
+
+collisionDetect() {
+  for (const ball of balls) {
+    if (this !== ball) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
+      }
+    }
+  }
+}
+
+
+function loop() {
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
+
+  
+
+  requestAnimationFrame(loop);
+}
+
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
+      this.x -= this.velX;
+      break;
+    case "d":
+      this.x += this.velX;
+      break;
+    case "w":
+      this.y -= this.velY;
+      break;
+    case "s":
+      this.y += this.velY;
+      break;
+  }
+});
+
+
+```
+- Tất cả các chương trình tạo ra hiệu ứng chuyển động nói chung đều liên quan đến một vòng lặp hoạt ảnh
+
+# Asynchronous JavaScript
+- Promises
+- Workers
+- Lập trình bất đồng bộ là một kỹ thuật cho phép chương trình của bạn bắt đầu một nhiệm vụ có thể kéo dài thời gian và vẫn có thể phản ứng với các sự kiện khác trong khi nhiệm vụ đó đang chạy, thay vì phải đợi cho đến khi nhiệm vụ đó hoàn thành. Sau khi nhiệm vụ đó hoàn thành, chương trình của bạn được trình bày với kết quả.
+- Thực hiện các yêu cầu HTTP sử dụng fetch().
+- Truy cập camera hoặc micro của người dùng sử dụng getUserMedia().
+- Yêu cầu người dùng chọn file sử dụng showOpenFilePicker().
+- Nguyên nhân của vấn đề này là chương trình JavaScript này là đơn luồng
+- Bởi vì chương trình bao gồm một luồng duy nhất, nó chỉ có thể làm một việc một lúc: vì vậy nếu nó đang đợi cuộc gọi đồng bộ chạy lâu dài của chúng tôi trả lại, nó không thể làm bất cứ điều gì khác.
+```javascript
+const log = document.querySelector(".event-log");
+
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("loadend", () => {
+    log.textContent = `${log.textContent}Hoàn thành với mã trạng thái: ${xhr.status}`;
+  });
+
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
+  xhr.send();
+  log.textContent = `${log.textContent}Bắt đầu yêu cầu XHR\n`;
+});
+
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
+  document.location.reload();
+});
+
+```
+# Tại sao không dùng callBack Hell
+- Vì chúng ta phải gọi các hàm gọi lại bên trong các hàm gọi lại, chúng ta có một hàm doOperation() lồng sâu, rất khó đọc và gỡ lỗi. Đôi khi điều này được gọi là "địa ngục hàm gọi lại" hoặc "kim tự tháp của tuyệt vọng" (vì thụt lề giống như một kim tự tháp ngược).
+
+- Khi chúng ta lồng các hàm gọi lại như thế này, việc xử lý lỗi cũng trở nên khó khăn: thường bạn phải xử lý lỗi ở mỗi cấp độ của "kim tự tháp", thay vì chỉ có một cấp độ xử lý lỗi ở cấp độ cao nhất.
+- nền tảng của lập trình bất đồng bộ trong JavaScript là Promise (Hứa), và đó là đề tài của bài viết tiếp theo.
+
+# Để làm điều này, chúng ta sẽ thực hiện một yêu cầu HTTP đến máy chủ. 
+```javascript
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+console.log(fetchPromise);
+
+fetchPromise.then((response) => {
+  console.log(`Received response: ${response.status}`);
+});
+
+console.log("Started request…");
+
+```
+- Ngay sau đó, ghi log biến fetchPromise. Điều này nên xuất ra một cái gì đó giống như: Promise { <state>: "pending" }, nói với chúng ta rằng chúng ta có một đối tượng Promise, và nó có một trạng thái có giá trị là "pending". Trạng thái "pending" có nghĩa là hoạt động fetch vẫn đang diễn ra.
+
+# Gọi 2 hàm bất đồng bộ
+```javascript
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+fetchPromise.then((response) => {
+  const jsonPromise = response.json();
+  jsonPromise.then((data) => {
+    console.log(data[0].name);
+  });
+});
+
+```
+-> Sử dụng bên trên sẽ gây ra tình trạng callBack hell
+# Viết lại mã không dùng callBack
+```javascript
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+fetchPromise
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data[0].name);
+  });
+
+```
+
+# Catching errors
+- API fetch() có thể ném ra một lỗi vì nhiều lý do (ví dụ, do không có kết nối mạng hoặc URL bị định dạng sai cách) và chúng ta cũng ném một lỗi nếu máy chủ trả về một lỗi.
+- Để hỗ trợ xử lý lỗi, đối tượng Promise cung cấp một phương thức catch(). 
+```javascript
+const fetchPromise = fetch(
+  "bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+fetchPromise
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data[0].name);
+  })
+  .catch((error) => {
+    console.error(`Could not get products: ${error}`);
+  });
+
+```
+
+# Một promise có thể ở một trong ba trạng thái
+- pending (đang chờ): promise đã được tạo ra và hàm bất đồng bộ mà nó liên kết với vẫn chưa thành công hoặc thất bại. Đây là trạng thái của promise khi nó được trả về từ cuộc gọi fetch(), và yêu cầu vẫn đang được thực hiện.
+
+- fulfilled (đã thành công): hàm bất đồng bộ đã thành công. Khi một promise được thỏa mãn, bộ xử lý then() của nó được gọi.
+
+- rejected (bị từ chối): hàm bất đồng bộ đã thất bại. Khi một promise bị từ chối, bộ xử lý catch() của nó được gọi.
+
+# Kết hợp nhiều promises
+- Promise được trả về bởi Promise.all():
+- Được thỏa mãn khi và nếu tất cả các promises trong mảng được thỏa mãn. Trong trường hợp này, bộ xử lý then() sẽ được gọi với một mảng các phản hồi, theo thứ tự giống như promises được truyền vào all().
+- Bị từ chối khi và nếu bất kỳ promise nào trong mảng bị từ chối. Trong trường hợp này, bộ xử lý catch() sẽ được gọi với lỗi được ném bởi promise bị từ chối.
+```javascript
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found"
+);
+const fetchPromise3 = fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
+);
+
+Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
+  .then((responses) => {
+    for (const response of responses) {
+      console.log(`${response.url}: ${response.status}`);
+    }
+  })
+  .catch((error) => {
+    console.error(`Failed to fetch: ${error}`);
+  });
+
+```
+# Nếu muốn bắt kỳ promise nào được thỏa mãn điều trả về kết quả
+- bạn muốn sử dụng Promise.any(). Điều này giống như Promise.all(), ngoại trừ nó được thỏa mãn ngay khi bất kỳ promise nào trong mảng được thỏa mãn, hoặc bị từ chối nếu tất cả chúng đều bị từ chối
+
+# async và await
+- Đây là hàm bất đồng bộ có thể sử dụng await
+```javascript
+async function myFunction() {
+  // Đây là một hàm async
+}
+
+```
+
+- Đây là hàm fetch được viết lại
+```javascript
+async function fetchProducts() {
+  try {
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data[0].name);
+  } catch (error) {
+    console.error(`Could not get products: ${error}`);
+  }
+}
+
+fetchProducts();
+
+```
+
+# Lỗi sai xử lý bất đồng bộ
+```javascript
+async function fetchProducts() {
+  try {
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(`Could not get products: ${error}`);
+  }
+}
+
+const promise = fetchProducts();
+console.log(promise[0].name); // "promise" là một đối tượng Promise, vì vậy điều này sẽ không hoạt động
+
+```
+
+- Chỉnh lại cho đúng
+```javascript
+async function fetchProducts() {
+  try {
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(`Could not get products: ${error}`);
+  }
+}
+
+const promise = fetchProducts();
+promise.then((data) => console.log(data[0].name));
+
+```
+
+# Promises Base
+- Chúng ta sẽ sử dụng hàm setTimeout() để triển khai hàm alarm(). Hàm setTimeout() nhận vào một hàm callback và một khoảng thời gian chờ đợi, được tính bằng mili giây. Khi setTimeout() được gọi, nó khởi động một bộ hẹn giờ với khoảng thời gian chờ đợi đã cho, và khi thời gian hết, nó gọi hàm được chuyển vào.
+- Constructor Promise() nhận một hàm duy nhất như một đối số. Chúng ta sẽ gọi hàm này là executor.
+- Hàm executor này cũng nhận vào hai đối số, cũng là hai hàm, và thường được gọi là resolve và reject
+- Nếu hàm bất đồng bộ thành công, bạn gọi resolve, và nếu nó thất bại, bạn gọi reject. Nếu hàm executor ném ra một lỗi, reject sẽ tự động được gọi. Bạn có thể truyền một tham số duy nhất của bất kỳ kiểu nào vào resolve và reject.
+
+```javascript
+function alarm(person, delay) {
+  return new Promise((resolve, reject) => {
+    if (delay < 0) {
+      throw new Error("Thời gian chờ đợi của báo thức không được âm");
+    }
+    setTimeout(() => {
+      resolve(`Wake up, ${person}!`);
+    }, delay);
+  });
+}
+// Full Code
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
+
+function alarm(person, delay) {
+  return new Promise((resolve, reject) => {
+    if (delay < 0) {
+      throw new Error("Thời gian chờ đợi của báo thức không được âm");
+    }
+    setTimeout(() => {
+      resolve(`Wake up, ${person}!`);
+    }, delay);
+  });
+}
+
+button.addEventListener("click", () => {
+  alarm(name.value, delay.value)
+    .then((message) => (output.textContent = message))
+    .catch((error) => (output.textContent = `Không thể đặt báo thức: ${error}`));
+});
+
+// Sử dụng async và await
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
+
+function alarm(person, delay) {
+  return new Promise((resolve, reject) => {
+    if (delay < 0) {
+      throw new Error("Thời gian chờ đợi của báo thức không được âm");
+    }
+    setTimeout(() => {
+      resolve(`Wake up, ${person}!`);
+    }, delay);
+  });
+}
+
+button.addEventListener("click", async () => {
+  try {
+    const message = await alarm(name.value, delay.value);
+    output.textContent = message;
+  } catch (error) {
+    output.textContent = `Không thể đặt báo thức: ${error}`;
+  }
+});
+
+
+```
+
+# Worker
+- Web workers cung cấp khả năng chạy một số nhiệm vụ trong một luồng khác, giúp bạn bắt đầu nhiệm vụ, sau đó tiếp tục với xử lý khác (như xử lý các tương tác người dùng).
+- Để tránh những vấn đề này trên web, mã chính và mã worker không bao giờ có truy cập trực tiếp vào biến của nhau, và chỉ có thể thực sự "chia sẻ" dữ liệu trong các trường hợp cực kỳ cụ thể.
+- Workers và mã chính chạy trong các thế giới hoàn toàn riêng biệt và chỉ tương tác thông qua việc gửi nhau các thông điệp
+- Đặc biệt, điều này có nghĩa là workers không thể truy cập DOM (cửa sổ, tài liệu, các phần tử trang, và cả những thứ khác).
+# Có ba loại workers khác nhau:
+- Dedicated workers
+- Shared workers
+- Service workers
+
+# Decicated workers
+```javascript
+// Tạo một worker mới, đưa vào đó mã trong "generate.js"
+const worker = new Worker("./generate.js");
+
+// Khi người dùng nhấp vào "Generate primes", gửi một thông điệp đến worker.
+// Lệnh thông điệp là "generate", và thông điệp cũng chứa "quota",
+// là số nguyên tố cần tạo.
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
+  worker.postMessage({
+    command: "generate",
+    quota,
+  });
+});
+
+// Khi worker gửi một thông điệp trở lại luồng chính,
+// cập nhật hộp đầu ra với một thông điệp cho người dùng, bao gồm số lượng
+// số nguyên tố đã tạo, lấy từ dữ liệu thông điệp.
+worker.addEventListener("message", (message) => {
+  document.querySelector("#output").textContent =
+    `Finished generating ${message.data} primes!`;
+});
+
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
+  document.location.reload();
+});
+
+```
+- Đầu tiên, chúng ta tạo worker bằng cách sử dụng constructor Worker(). Chúng ta truyền cho nó một URL trỏ đến kịch bản worker. Ngay khi worker được tạo, kịch bản worker sẽ được thực thi.
+- Nhưng bây giờ, thay vì gọi hàm generatePrimes(), chúng ta gửi một thông điệp đến worker bằng cách sử dụng worker.postMessage(). Thông điệp này có thể nhận một đối số, và trong trường hợp này, chúng ta đang truyền một đối tượng JSON chứa hai thuộc tính:
+- command: một chuỗi xác định điều chúng ta muốn worker thực hiện (trong trường hợp worker của chúng ta có thể thực hiện nhiều công việc hơn một công việc).
+- quota: số lượng số nguyên tố cần tạo.
+- Tiếp theo, chúng ta thêm một trình xử lý sự kiện thông điệp cho worker. Điều này để worker có thể thông báo cho chúng ta khi nó đã hoàn thành và chuyển cho chúng ta bất kỳ dữ liệu kết quả nào. Trình xử lý của chúng ta lấy dữ liệu từ thuộc tính data của thông điệp và ghi nó vào phần tử đầu ra (dữ liệu giống như quota, vì vậy đây có vẻ hơi không có ý nghĩa, nhưng nó thể hiện nguyên tắc).
+```javascript
+// Listen for messages from the main thread.
+// If the message command is "generate", call `generatePrimes()`
+addEventListener("message", (message) => {
+  if (message.data.command === "generate") {
+    generatePrimes(message.data.quota);
+  }
+});
+
+// Generate primes (very inefficiently)
+function generatePrimes(quota) {
+  function isPrime(n) {
+    for (let c = 2; c <= Math.sqrt(n); ++c) {
+      if (n % c === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  const primes = [];
+  const maximum = 1000000;
+
+  while (primes.length < quota) {
+    const candidate = Math.floor(Math.random() * (maximum + 1));
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+
+  // When we have finished, send a message to the main thread,
+  // including the number of primes we generated.
+  postMessage(primes.length);
+}
+
+```
+# Các loại worker khác nhau
+- Worker chúng ta vừa tạo là điều được gọi là worker chuyên biệt. Điều này có nghĩa là nó được sử dụng bởi một thể hiện kịch bản duy nhất.
+
+- Tuy nhiên, cũng có các loại worker khác:
+
+- Shared workers: Có thể được chia sẻ bởi nhiều tập lệnh khác nhau chạy trong các cửa sổ khác nhau.
+
+- Service workers: Hoạt động giống như máy chủ proxy, lưu trữ tài nguyên để các ứng dụng web có thể hoạt động khi người dùng offline. Chúng là một thành phần chính của ứng dụng web tiến bộ (Progressive Web Apps).
+
+# API là gì?
+- Giao diện Lập trình Ứng dụng (APIs) là các cấu trúc được cung cấp trong các ngôn ngữ lập trình để cho phép nhà phát triển tạo ra các chức năng phức tạp một cách dễ dàng hơn. Chúng trừu tượng hóa mã nguồn phức tạp hơn, cung cấp một cú pháp dễ sử dụng hơn để thay thế.
+
+Ví dụ: Để hiểu rõ hơn, hãy nghĩ về nguồn điện trong nhà bạn. Khi bạn muốn sử dụng một thiết bị trong nhà, bạn cắm nó vào ổ cắm và nó hoạt động. Bạn không cố gắng kết nối trực tiếp vào nguồn điện
+
+# APIs trong JavaScript phía máy khách (client-side)
+- Browser APIs (APIs của trình duyệt): Được tích hợp sẵn trong trình duyệt web của bạn và có khả năng tiếp cận dữ liệu từ trình duyệt và môi trường máy tính xung quanh, thực hiện các nhiệm vụ phức tạp hữu ích với nó.
+Ví dụ: Web Audio API cung cấp các cấu trúc JavaScript để thao tác âm thanh trong trình duyệt — lấy một đoạn âm thanh, điều chỉnh âm lượng, áp dụng hiệu ứng, vv
+- Third-party APIs (APIs bên thứ ba): Không tích hợp sẵn trong trình duyệt theo mặc định, và thông thường bạn phải lấy mã và thông tin của chúng từ nơi nào đó trên web.
+Ví dụ: Google Maps API cho phép bạn thực hiện các thao tác như hiển thị bản đồ tương tác đến văn phòng của bạn trên trang web
+
+# Các loại API
+- APIs để Thao Tác Tài Liệu Được Tải Lên Trình Duyệt: Document Object Model
+- APIs để Truy Xuất Dữ Liệu Từ Máy Chủ để Cập Nhật Các Phần Nhỏ Của Trang Web: Fetch API, XMLHttpRequest, Ajax
+- APIs để Vẽ và Thao Tác Đồ Họa: Canvas, WebGL
+- APIs Âm Thanh và Video như HTMLMediaElement, Web Audio API, và WebRTC:  âm thanh, video, chú thích và phụ đề
+- APIs Thiết Bị: GPS của thiết bị để xác định vị trí người dùng thông qua Geolocation API
+- APIs Lưu Trữ Phía Máy Khách: Web Storage API, IndexedDB API
+
+# Các APIs Phổ Biến Từ Bên Thứ Ba
+- Map APIs: liên quan đến bản đồ trên trang web
+- Facebook Suite of APIs: đăng nhập ứng dụng bằng cách sử dụng đăng nhập Facebook, chấp nhận thanh toán trong ứng dụng, triển khai chiến dịch quảng cáo có geotargeting
+- Telegram APIs: nhúng nội dung từ các kênh Telegram trên trang web của bạn, cũng như hỗ trợ cho các bot.
+- YouTube API: YouTube vào trang web, tìm kiếm trên YouTube, xây dựng danh sách phát và nhiều tính năng khác
+- Pinterest API: ... quản lý bảng và pins trên Pinterest
+- Twilio API: ... chức năng gọi thoại và video
+- Disqus API: một nền tảng bình luận có thể tích hợp vào trang web
+- Mastodon API: Cho phép bạn thao tác các tính năng của mạng xã hội Mastodon theo cách lập trình
+- IFTTT API: Cho phép tích hợp nhiều APIs thông qua một nền tảng
+
+# Làm thế nào APIs hoạt động?
+- Dựa trên đối tượng: chúng hoạt động như các bộ chứa cho dữ liệu mà API sử dụng (chứa trong các thuộc tính của đối tượng) và chức năng mà API cung cấp (chứa trong các phương thức của đối tượng)
+- Ví dụ với Web Audio API
++ AudioContext
++ MediaElementAudioSourceNode
++ AudioDestinationNode
+
+# Ví dụ về API âm thanh 
+```javascript
+<audio src="outfoxing.mp3"></audio>
+
+<button class="paused">Play</button>
+<br />
+<input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
+```
+
+```javascript
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
+
+```
+-> đại diện cho nguồn âm thanh của chúng tôi
+
+```javascript
+const audioElement = document.querySelector("audio");
+const playBtn = document.querySelector("button");
+const volumeSlider = document.querySelector(".volume");
+
+const audioSource = audioCtx.createMediaElementSource(audioElement);
+
+```
+
+```javascript
+// play/pause audio
+playBtn.addEventListener("click", () => {
+  // kiểm tra xem ngữ cảnh có ở trạng thái "đình chỉ" không (chính sách tự động phát)
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
+  }
+
+  // nếu bản nhạc đã dừng, phát nó
+  if (playBtn.getAttribute("class") === "paused") {
+    audioElement.play();
+    playBtn.setAttribute("class", "playing");
+    playBtn.textContent = "Pause";
+    // nếu bản nhạc đang phát, dừng nó
+  } else if (playBtn.getAttribute("class") === "playing") {
+    audioElement.pause();
+    playBtn.setAttribute("class", "paused");
+    playBtn.textContent = "Play";
+  }
+});
+
+// nếu bản nhạc kết thúc
+audioElement.addEventListener("ended", () => {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Play";
+});
+
+// âm lượng
+const gainNode = audioCtx.createGain();
+
+volumeSlider.addEventListener("input", () => {
+  gainNode.gain.value = volumeSlider.value;
+});
+
+
+```
+-> sử dụng để phát và tạm dừng bản nhạc không phải là một phần của Web Audio API; chúng thuộc về HTMLMediaElement API, đây là một API khác nhưng có quan hệ chặt chẽ.
+
+```javascript
+// âm lượng
+const gainNode = audioCtx.createGain();
+
+volumeSlider.addEventListener("input", () => {
+  gainNode.gain.value = volumeSlider.value;
+});
+
+```
+
+-> Tiếp theo, chúng tôi tạo một đối tượng GainNode bằng phương thức AudioContext.createGain(), nó có thể được sử dụng để điều chỉnh âm lượng âm thanh đi qua nó,
+
+```javascript
+audioSource.connect(gainNode).connect(audioCtx.destination);
+
+```
+-> Điều cuối cùng để làm để có thể hoạt động là kết nối các nút khác nhau trong biểu đồ âm thanh, điều này được thực hiện bằng cách sử dụng phương thức AudioNode.connect() có sẵn trên mọi loại nút:
+
+
+-> Trong Web Audio API, điều này khá đơn giản — đó là đối tượng AudioContext, cần phải được sử dụng để thực hiện bất kỳ xử lý âm thanh nào.
+
+
+```javascript
+Ball.prototype.draw = function () {
+  ctx.beginPath();
+  ctx.fillStyle = this.color;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.fill();
+};
+
+```
+
+"JavaScript Libraries: Như jQuery, Mootools, React, chứa các chức năng tùy chỉnh để tăng tốc việc viết mã."
+
+# Tóm tắt Các Điểm Chính về API (Giao diện Lập trình Ứng dụng):
+Khái Niệm Cơ Bản:
+
+API là các tính năng lập trình giúp điều khiển các khía cạnh của trình duyệt, hệ điều hành, hoặc dữ liệu từ các trang web hoặc dịch vụ khác.
+Các Loại API:
+
+Browser APIs: Xây dựng sẵn trong trình duyệt, thao tác với môi trường trình duyệt.
+Third-party APIs: Được cung cấp bởi các dịch vụ bên thứ ba như Google Maps, Facebook, cho phép sử dụng các chức năng của họ trong ứng dụng web của bạn.
+Quan Hệ Giữa JavaScript và API:
+
+JavaScript là ngôn ngữ lập trình cao cấp được tích hợp vào trình duyệt.
+Browser APIs giúp thực hiện các chức năng một cách dễ dàng hơn thông qua JavaScript.
+Third-party APIs mở rộng chức năng của ứng dụng web thông qua JavaScript.
+Công Cụ JavaScript Liên Quan:
+
+JavaScript Libraries: Như jQuery, Mootools, React, chứa các chức năng tùy chỉnh để tăng tốc việc viết mã.
+JavaScript Frameworks: Như Angular và Ember, cung cấp các gói HTML, CSS, JavaScript để xây dựng toàn bộ ứng dụng web.
+Chức Năng Của Các APIs:
+
+Manipulating Documents: Sử dụng DOM API để thao tác với HTML và CSS.
+Fetching Data from Server: Sử dụng Fetch API để cập nhật phần nhỏ của trang mà không cần tải lại toàn bộ trang.
+Drawing and Manipulating Graphics: Sử dụng Canvas và WebGL APIs để vẽ và thao tác đồ họa.
+Audio and Video APIs: HTMLMediaElement, Web Audio API cho xử lý đa phương tiện.
+Device APIs: Sử dụng Geolocation API để truy cập thông tin vị trí của người dùng.
+Client-side Storage APIs: Web Storage API, IndexedDB API để lưu trữ dữ liệu trên máy khách.
+Third-party APIs Phổ Biến:
+
+Bao gồm Google Maps API, Facebook API, YouTube API, Twilio API, Disqus API, và nhiều API khác từ các dịch vụ lớn.
+Cơ Bản về Sử Dụng APIs trong JavaScript:
+
+Điểm Bắt Đầu: Đảm bảo có kiến thức cơ bản về HTML, CSS, và JavaScript.
+Các Điểm Nhất Quán: API thường có các điểm vào API như AudioContext, Document Object Model (DOM), hoặc các đối tượng giống như CanvasRenderingContext2D.
+Bảo Mật Trong APIs:
+
+Cơ Chế Bảo Mật Bổ Sung: Một số WebAPI yêu cầu kết nối an toàn qua HTTPS.
+Quyền Người Dùng: Một số API như Notifications API yêu cầu sự cho phép của người dùng.
+Chính Sách Tự Động Phát: Ngăn chặn tự động phát âm thanh trên các trang chưa được phép.
+Sự Quan Trọng Của Sự Kiện:
+
+Nhiều APIs sử dụng sự kiện để xử lý các thay đổi trạng thái, ví dụ như sự kiện click hoặc ended trong Web Audio API.
+Tổng Kết:
+
+Hiểu rõ về API là gì, cách chúng hoạt động, và cách sử dụng chúng trong mã JavaScript của bạn là cơ sở để tiếp tục khám phá và phát triển ứng dụng web của bạn.
+
+1. API Là Gì và Chức Năng Chính của Chúng?
+Yêu cầu định nghĩa và mô tả về API cũng như vai trò chính của chúng trong lập trình web.
+2. Sự Khác Biệt Giữa Browser APIs và Third-party APIs?
+Hỏi về sự khác biệt giữa API tích hợp sẵn trong trình duyệt và API của các dịch vụ bên thứ ba.
+3. Tại Sao JavaScript Cần APIs?
+Đặt câu hỏi về lý do JavaScript cần sử dụng APIs và làm thế nào chúng giúp mở rộng chức năng của ngôn ngữ này.
+4. Sự Quan Hệ Giữa JavaScript, Libraries, và Frameworks?
+Yêu cầu giải thích quan hệ giữa JavaScript, các thư viện (libraries), và các framework trong việc phát triển ứng dụng web.
+5. Những API Phổ Biến Nào Có Thể Bạn Sẽ Gặp Trong Trình Duyệt?
+Đặt câu hỏi về các API phổ biến tích hợp trong trình duyệt và mô tả chức năng của chúng.
+6. Phương Tiện Lưu Trữ Của Client-Side APIs Là Gì và Chúng Dùng Để Làm Gì?
+Hỏi về loại APIs sử dụng để lưu trữ dữ liệu ở phía máy khách và mục đích sử dụng của chúng.
+7. Cung Cấp Một Ví Dụ Cụ Thể về Sự Kiện Trong API?
+Yêu cầu một ví dụ cụ thể về cách sự kiện được sử dụng trong một API, ví dụ như Web Audio API.
+8. Tại Sao Một Số WebAPI Yêu Cầu Kết Nối An Toàn HTTPS?
+Hỏi về lí do mà một số API đòi hỏi kết nối an toàn thông qua HTTPS và ý nghĩa của điều này.
+9. Làm Thế Nào API Hỗ Trợ Bảo Mật Trong Ứng Dụng Web?
+Hỏi về các biện pháp bảo mật được tích hợp trong các API và tại sao chúng quan trọng.
+10. Giải Thích Vai Trò Của Entry Point Trong Một API?
+- Yêu cầu mô tả vai trò của entry point trong một API và ví dụ cụ thể về entry point trong Web Audio API hoặc DOM API.
+
+# Các Node trong HTML
+- Nút gốc (Root node)
+- Nút con (Child node)
+- Nút con cháu (Descendant node)
+- Nút cha (Parent node)
+- Nút anh chị em (Sibling nodes)
+
+# Tham chiếu biến
+```javascript
+const link = document.querySelector("a");
+link.textContent = "Mozilla Developer Network";
+link.href = "https://developer.mozilla.org";
+```
+- Document.getElementById()
+- Document.getElementsByTagName()
+
+```javascript
+const sect = document.querySelector("section");
+const para = document.createElement("p");
+para.textContent = "We hope you enjoyed the ride.";
+sect.appendChild(para);
+const text = document.createTextNode(
+  " — the premier source for web development knowledge.",
+);
+
+const linkPara = document.querySelector("p");
+linkPara.appendChild(text);
+
+```
+"Bạn có thể nghĩ rằng nó sẽ tạo một bản sao thứ hai của nó, nhưng điều này không phải là đúng — linkPara là một tham chiếu đến bản sao duy nhất của đoạn văn đó. Nếu bạn muốn tạo một bản sao và thêm nó vào cũng, bạn cần sử dụng Node.cloneNode() thay vào đó."
+"Việc xóa một nút cũng khá đơn giản, ít nhất khi bạn có một tham chiếu đến nút cần xóa và nút cha của nó. Trong trường hợp hiện tại của chúng ta, chúng ta chỉ cần sử dụng Node.removeChild(), như sau:"
+
+"Lưu ý cách viết kiểu JavaScript của các thuộc tính CSS được viết bằng chữ thường theo kiểu camelCase"
+"replace(), toLowerCase(), và template literal.".
+"khuyến nghị bạn sử dụng Fetch nếu có thể: đó là một API đơn giản"
+
+```javascript
+const request = new XMLHttpRequest();
+
+try {
+  request.open("GET", "products.json");
+
+  request.responseType = "json";
+
+  request.addEventListener("load", () => initialize(request.response));
+  request.addEventListener("error", () => console.error("XHR error"));
+
+  request.send();
+} catch (error) {
+  console.error(`XHR error ${request.status}`);
+}
+```
+
+# API bên thứ 3
+
+```javascript
+<script
+  src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"
+  defer></script>
+<link
+  rel="stylesheet"
+  href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+
+
+const audioCtx = new AudioContext();
+// …
+const audioElement = document.querySelector("audio");
+// …
+const audioSource = audioCtx.createMediaElementSource(audioElement);
+// v.v.
+
+
+const map = L.mapquest.map("map", {
+  center: [53.480759, -2.242631],
+  layers: L.mapquest.tileLayer("map"),
+  zoom: 12,
+});
+
+```
+
+# Bạn sẽ thấy một dòng tương tự như sau trong ví dụ API của Mapquest:
+
+```javascript
+=> L.mapquest.key = "YOUR-API-KEY-HERE";
+
+
+layers: L.mapquest.tileLayer("map");
+map.addControl(L.mapquest.control());
+map.addControl(L.mapquest.control({ position: "bottomright" }));
+
+L.marker([53.480759, -2.242631], {
+  icon: L.mapquest.icons.marker({
+    primaryColor: "#22407F",
+    secondaryColor: "#3B5998",
+    shadow: true,
+    size: "md",
+    symbol: "A",
+  }),
+})
+  .bindPopup("This is Manchester!")
+  .addTo(map);
+
+```
+
+```javascript
+// Sử dụng fetch() để thực hiện yêu cầu đến API
+fetch(url)
+  .then((response) => response.json())
+  .then((json) => displayResults(json))
+  .catch((error) => console.error(`Error fetching data: ${error.message}`));
+
+
+// Phân trang đơn giản
+function nextPage(e) {
+  pageNumber++;
+  fetchResults(e);
+}
+
+function previousPage(e) {
+  if (pageNumber > 0) {
+    pageNumber--;
+  } else {
+    return;
+  }
+  fetchResults(e);
+}
+
+```
+# Sử Dụng API Bên Thứ Ba để Nâng Cao Chức Năng Website
+- "Để sử dụng API bên thứ ba, cần kết nối đến chúng từ máy chủ thứ ba và thường yêu cầu sử dụng khóa API cho mục đích xác thực và theo dõi."
+- " tìm kiếm bài viết và hiển thị kết quả."
+- "Thực hiện chức năng phân trang đơn giản"
+- "Yêu cầu nhất định khi làm việc với các API như đọc tài liệu, lấy khóa API, và kết nối chúng đúng cách."
+# Các câu hỏi.
+- Trong bài viết, tại sao tác giả khuyên nên sử dụng Fetch API thay vì XMLHttpRequest?
+- Nêu rõ sự khác biệt giữa browser APIs và third-party APIs?
+- Tại sao third-party APIs thường yêu cầu việc sử dụng API keys?
+- Trong ví dụ về Mapquest, làm thế nào để kết nối và sử dụng API từ server của bên thứ ba?
+- Trình bày cách mở rộng ví dụ với Mapquest bằng cách thêm các tính năng mới?
+- Giới thiệu về cách sử dụng NYTimes API và cung cấp bước tiếp theo để tương tác với nó?
+
+
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+
+# Lấy Context của Canvas và Thiết Lập Cuối Cùng
+Chúng ta cần thực hiện một công việc cuối cùng trước khi coi mẫu canvas của chúng ta là hoàn chỉnh. Để vẽ lên canvas, chúng ta cần có một tham chiếu đặc biệt đến khu vực vẽ được gọi là context.
+
+ctx.fillStyle = "rgb(0 0 0)";
+ctx.fillRect(0, 0, width, height);
+
+ctx.fillStyle = "rgb(0 255 0)";
+ctx.fillRect(75, 75, 100, 100);
+
+- vì vậy bạn phải suy nghĩ cẩn thận về thứ tự bạn vẽ đồ họa.
+- ví dụ như sử dụng rgb(). "Kênh alpha" xác định mức độ trong suốt của màu.
+
+ctx.fillStyle = "rgb(255 0 255 / 75%)";
+ctx.fillRect(25, 100, 175, 50);
+
+# Vẽ Đường Đi
+- beginPath() — bắt đầu vẽ một đường dẫn tại điểm mà bút đang ở trên canvas. Trên một canvas mới, bút bắt đầu từ điểm (0, 0).
+- moveTo() — di chuyển bút đến một điểm khác trên canvas, mà không ghi lại hoặc vẽ theo đường dẫn; bút "nhảy" đến vị trí mới.
+- fill() — vẽ một hình đã đặc bằng cách điền vào đường dẫn bạn đã vẽ cho đến nay.
+- stroke() — vẽ một hình có đường viền bằng cách vẽ một nét dọc theo đường dẫn bạn đã vẽ cho đến nay.
+
+# Vẽ Đường Thẳng
+-  Rất hữu ích vì bất cứ khi nào bạn cần cung cấp một giá trị góc trong JavaScript, nó gần như luôn là radian
+```javascript
+function degToRad(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+
+ctx.fillStyle = "rgb(255 0 0)";
+ctx.beginPath();
+ctx.moveTo(50, 50);
+
+
+```
+# Bây giờ thêm các dòng sau vào cuối mã của bạn:
+```javascript
+ctx.lineTo(150, 50);
+const triHeight = 50 * Math.tan(degToRad(60));
+ctx.lineTo(100, 50 + triHeight);
+ctx.lineTo(50, 50);
+ctx.fill();
+
+```
+# Theo cơ bản, chúng tôi đang vẽ tam giác hướng xuống. Các góc trong một tam giác đều luôn là 60 độ; để tính chiều cao, chúng ta có thể chia nó thành hai tam giác vuông, mỗi cái có góc 90 độ, 60 độ và 30 độ
+- Cạnh dài nhất được gọi là đối diện
+- Cạnh gần góc 60 độ được gọi là kề — chúng tôi biết là 50 pixel, vì nó là một nửa của đường chúng tôi vừa vẽ.
+- Cạnh đối diện với góc 60 độ được gọi là đối diện, đó chính là chiều cao của tam giác chúng tôi muốn tính toán.
+
+
+
+
+```javascript
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+ctx.lineTo(200, 106);
+ctx.fill();
+```
+# Mẫu ở đây rất tương tự, nhưng có hai sự khác biệt:
+Chúng tôi đã đặt tham số cuối cùng của arc() thành true, có nghĩa là vòng tròn được vẽ ngược chiều kim đồng hồ, điều này có nghĩa là mặc dù vòng tròn được chỉ định bắt đầu từ -45 độ và kết thúc ở 45 độ, nhưng chúng tôi vẽ vòng tròn xung quanh 270 độ không phải trong phần này. Nếu bạn thay đổi true thành false và sau đó chạy lại mã, chỉ có phần cắt 90 độ của hình tròn sẽ được vẽ.
+Trước khi gọi fill(), chúng tôi vẽ một đường đến tâm của hình tròn. Điều này có nghĩa là chúng tôi có được một kiểu cắt đẹp giống như Pac-Man. Nếu bạn xóa dòng này (thử nó!), sau đó chạy lại mã, bạn sẽ chỉ nhận được một phần của hình tròn bị chặt giữa điểm bắt đầu và kết thúc của vòng cung. Điều này minh họa một điểm quan trọng khác của canvas — nếu bạn cố gắng điền vào một đường dẫn chưa hoàn chỉnh (tức là một đường dẫn không được đóng), trình duyệt sẽ điền vào một đường thẳng giữa điểm bắt đầu và điểm kết thúc và sau đó điền vào nó. Điều này kỳ diệu thể hiện một đường cong cắt ngang mà bạn không phải làm gì cả.
+
+# Nội dung canvas không thể tiếp cận được bởi các công cụ đọc màn hình. Văn bản được vẽ lên canvas không có sẵn trong DOM, nhưng phải được làm cho có sẵn để có thể tiếp cận.
+
+```javascript
+ctx.strokeStyle = "white";
+ctx.lineWidth = 1;
+ctx.font = "36px arial";
+ctx.strokeText("Chữ trên Canvas", 50, 50);
+
+ctx.fillStyle = "red";
+ctx.font = "48px georgia";
+ctx.fillText("Chữ trên Canvas", 50, 150);
+
+canvas.setAttribute("aria-label", "Chữ trên Canvas");
+
+
+image.addEventListener("load", () => ctx.drawImage(image, 20, 20));
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

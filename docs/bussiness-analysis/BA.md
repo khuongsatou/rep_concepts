@@ -18,7 +18,18 @@ Root Cause Analysis (Phân tích Nguyên nhân Gốc rễ): Phương pháp đư�
 User Acceptance Testing (UAT, Kiểm thử Chấp nhận của Người dùng): Quá trình kiểm tra để xác minh rằng một hệ thống hoặc sản phẩm đáp ứng các yêu cầu và làm việc như mong đợi từ quan điểm của người dùng cuối.
 Các thuật ngữ này không chỉ giúp BA giao tiếp hiệu quả trong dự án, mà còn giúp hiểu rõ hơn về quy trình và các yêu cầu kỹ thuật trong công việc của mình.
 
+https://chat.openai.com/c/8e65858f-1433-4c68-8f82-67f00fb4a5cc
 https://thinhnotes.com/category/chuyen-nghe-ba/page/6/
 https://thinhnotes.com/chuyen-nghe-ba/business-analyst-la-gi-va-lam-nhung-gi/
 https://thinhnotes.com/chuyen-nghe-ba/requirement-trong-business-analyst-duoc-xu-ly-the-nao/
-
+https://thinhnotes.com/chuyen-nghe-ba/nghe-cua-business-analyst/
+https://thinhnotes.com/chuyen-nghe-ba/moi-moc-thong-tin-doi-voi-business-analyst/
+https://thinhnotes.com/chuyen-nghe-ba/5-dieu-rut-ra-tu-cac-du-an-d365/
+https://thinhnotes.com/bang-quo/hoi-do-tui-hoc-he-thong-thong-tin-quan-ly/
+https://thinhnotes.com/chuyen-nghe-ba/nhung-gi-minh-biet-ve-crm-2/
+https://thinhnotes.com/chuyen-nghe-ba/luong-cua-business-analyst-2/
+https://thinhnotes.com/chuyen-nghe-ba/co-nen-di-hoc-khoa-hoc-ba/
+https://thinhnotes.com/chuyen-nghe-ba/uoc-muon-nho-nhoi-cua-ba/
+https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p1/
+https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p2/
+https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p3/

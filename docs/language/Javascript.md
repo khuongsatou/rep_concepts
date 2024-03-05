@@ -9,3 +9,10 @@ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics

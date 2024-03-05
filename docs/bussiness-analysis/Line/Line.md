@@ -1,0 +1,4 @@
+- Trình bày câu văn 30 chữ
+- Dài 45 chữ
+- Letter spacing: 21px cho 1 câu hoặc 2 câu cách với dòng dưới
+- Có thêm H1 cực lớn có đánh số thứ tự
