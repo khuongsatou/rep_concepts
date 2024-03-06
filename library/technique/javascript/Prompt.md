@@ -2923,6 +2923,166 @@ image.addEventListener("load", () => ctx.drawImage(image, 20, 20));
 
 ```
 
+# Animated Canvas
+```javascript
+ctx.translate(width / 2, height / 2);
+
+function degToRad(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+
+function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let length = 250;
+let moveOffset = 20;
+
+for (let i = 0; i < length; i++) {}
+
+ctx.fillStyle = `rgb(${255 - length} 0 ${255 - length} / 90%)`;
+ctx.beginPath();
+ctx.moveTo(moveOffset, moveOffset);
+ctx.lineTo(moveOffset + length, moveOffset);
+const triHeight = (length / 2) * Math.tan(degToRad(60));
+ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
+ctx.lineTo(moveOffset, moveOffset);
+ctx.fill();
+
+length--;
+moveOffset += 0.7;
+ctx.rotate(degToRad(5));
+
+function loop() {
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+loop();
+
+```
+
+# Trong nói chung, quy trình tạo hoạt ảnh trên canvas bao gồm các bước sau:
+1. Xóa nội dung của canvas (ví dụ: với fillRect() hoặc clearRect()).
+2. Lưu trạng thái (nếu cần) bằng cách sử dụng save() — điều này cần thiết khi bạn muốn lưu các thiết lập bạn đã cập nhật trên canvas trước khi tiếp tục, điều này hữu ích cho các ứng dụng phức tạp hơn.
+3. Vẽ đồ họa bạn đang tạo hoạt ảnh.
+4. Khôi phục các thiết lập bạn đã lưu trong bước 2, bằng cách sử dụng restore().
+5. Gọi requestAnimationFrame() để lên lịch vẽ khung tiếp theo của hoạt ảnh.
+
+# Ở cuối JavaScript, thêm dòng sau để đặt gốc tọa độ ở giữa canvas:
+- ctx.translate(width / 2, height / 2);
+
+```javascript
+const image = new Image();
+image.src = "walk-right.png";
+image.onload = draw;
+
+let sprite = 0;
+let posX = 0;
+
+// Chú ý rằng chúng ta phải chỉ định góc trên bên trái của hình chữ nhật là
+ctx.fillRect(-(width / 2), -(height / 2), width, height);
+
+// chúng ta sẽ vẽ hình ảnh của chúng ta bằng cách sử dụng drawImage — phiên bản 9 tham số. Thêm dòng sau:
+ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
+
+if (posX % 13 === 0) {
+  if (sprite === 5) {
+    sprite = 0;
+  } else {
+    sprite++;
+  }
+}
+
+
+if (posX > width / 2) {
+  let newStartPos = -(width / 2 + 102);
+  posX = Math.ceil(newStartPos);
+  console.log(posX);
+} else {
+  posX += 2;
+}
+
+window.requestAnimationFrame(draw);
+
+// Full Code
+function draw() {
+  ctx.fillRect(-(width / 2), -(height / 2), width, height);
+
+  ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
+
+  if (posX % 13 === 0) {
+    if (sprite === 5) {
+      sprite = 0;
+    } else {
+      sprite++;
+    }
+  }
+
+  if (posX > width / 2) {
+    let newStartPos = -(width / 2 + 102);
+    posX = Math.ceil(newStartPos);
+    console.log(posX);
+  } else {
+    posX += 2;
+  }
+
+  window.requestAnimationFrame(draw);
+}
+
+// Call draw() once to start the animation loop
+draw();
+
+
+let curX;
+let curY;
+let pressed = false;
+
+// cập nhật tọa độ con trỏ chuột
+document.addEventListener("mousemove", (e) => {
+  curX = e.pageX;
+  curY = e.pageY;
+});
+
+canvas.addEventListener("mousedown", () => (pressed = true));
+
+canvas.addEventListener("mouseup", () => (pressed = false));
+
+
+clearBtn.addEventListener("click", () => {
+  ctx.fillStyle = "rgb(0 0 0)";
+  ctx.fillRect(0, 0, width, height);
+});
+
+function draw() {
+  if (pressed) {
+    ctx.fillStyle = colorPicker.value;
+    ctx.beginPath();
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
+    ctx.fill();
+  }
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+
+```
 
 
 

@@ -33,3 +33,4 @@ https://thinhnotes.com/chuyen-nghe-ba/uoc-muon-nho-nhoi-cua-ba/
 https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p1/
 https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p2/
 https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p3/
+https://thinhnotes.com/chuyen-nghe-ba/omnichannel-va-case-study-ve-hoa-ban-food/

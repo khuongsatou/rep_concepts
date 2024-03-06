@@ -923,3 +923,169 @@ Thời hạn áp dụng: trong khoảng thời gian nào, bán xuyên suốt nă
 Tiền tệ: 1 bảng giá chỉ áp dụng 1 loại tiền tệ duy nhất. Không thể nào bảng giá vừa bán Đô Mỹ vừa bán Đô Sin được.
 Context: quy định bảng giá này phục vụ cho việc bán hàng, hay mua hàng từ Vendor hay chỉ là bảng giá quản lý giá COGS.
 Sản phẩm: cái này quan trọng nhất, bảng giá này gồm những sản phẩm gì, giá cả ra sao.
+
+Về quản lý giá bán, CRM sẽ hỗ trợ các bảng giá để quản lý giá sản phẩm, vào từng thời điểm và từng mục đích khác nhau. Gọi là Price List.
+
+# Price List bao gồm những thông tin cơ bản sau:
+
+Thời hạn áp dụng: trong khoảng thời gian nào, bán xuyên suốt năm, hay chỉ áp dụng trong dịp lễ Nô-en, hay chỉ để giám giá mùa Tết.
+Tiền tệ: 1 bảng giá chỉ áp dụng 1 loại tiền tệ duy nhất. Không thể nào bảng giá vừa bán Đô Mỹ vừa bán Đô Sin được.
+Context: quy định bảng giá này phục vụ cho việc bán hàng, hay mua hàng từ Vendor hay chỉ là bảng giá quản lý giá COGS.
+Sản phẩm: cái này quan trọng nhất, bảng giá này gồm những sản phẩm gì, giá cả ra sao.
+Nói về quản lý giá cả thì cũng không gì nhiều, nhưng có 1 chỗ khá rắc rối anh em cần nắm và tìm hiểu trước, đó là phần phương pháp tính giá. Các dự án mình làm thì cách tính giá của khách hàng cũng đơn giản, bảng giá nói giá bao nhiêu thì bán bấy nhiêu thôi.
+
+# 2.8. Customer Journey đối với Sales
+Ở phần cuối của module Sales, mình sẽ nói về 1 thứ, mà nó sẽ giúp anh em tóm lược lại từ đầu bài tới giờ. Đó là Customer Journey – Hành trình từ một người dưng xa lạ trở thành một khách hàng của mình 🙂
+
+Toàn bộ những gì mình trình bày từ đầu bài tới giờ, đều là Customer Journey. Hay nói cách khác, CRM giúp ghi nhận lại toàn bộ hành vi của khách hàng, từ lúc chưa mua hàng, đến khi họ đã mua hàng của mình.
+
+CRM giúp keep track được toàn bộ các hoạt động, từ việc gửi email, mở mail mấy lần, đăng ký form mấy lần. Đến việc họ gọi cho mình bao nhiêu cuộc điện thoại, tham gia event được mấy lần. Hay họ từ chối báo giá mấy lần, cụ thể các lần đó ra sao. Bên khách hàng thì ai là người contact làm việc với mình, họ có thay đổi nhân sự không, hay xuyên suốt quá trình mua hàng vẫn là 1 người.
+
+Những thông tin đó được CRM sắp xếp lại một cách khoa học, tạo thành 1 chặng hành trình của một đối tượng khách hàng cụ thể.
+
+Liên quan tới Customer Journey, một trong những thước đo được BOD quan tâm nhất khi làm CRM đó là: tỉ lệ Lead tạo ra đơn hàng thực tế là bao nhiêu phần trăm?
+
+Một khi câu hỏi này được trả lời một cách rõ ràng, hiệu quả công việc của Marketing và Sales sẽ được sáng tỏ. CRM sẽ giúp chuyển hóa điều này bằng những con số thực tế!
+
+ 
+
+TÓM TẮT
+Quản lý khách hàng: phân biệt rõ Account (khách doanh nghiệp) và Contact (khách lẻ hoặc người liên hệ của doanh nghiệp).
+Quản lý sản phẩm: danh mục sản phẩm và phân loại sản phẩm là 2 thứ quan trọng nhất. Ngoài ra cần phải tích hợp từ ERP để kiểm tồn kho (nếu có).
+Quản lý giá bán: anh em cần chú ý đến các phương pháp tính giá, ngoài ra còn phải tích hợp được mức discount từ ERP (nếu có).
+Customer Journey: CRM ghi nhận lại toàn bộ các hoạt động của khách hàng. Nhưng để các data này thực sự có giá trị, BA cần phải chuyển hóa nó thành các report thật sự value với BOD. Nội dung này mình sẽ nói ở 1 bài khác nhé. 
+ 
+
+# KẾT BÀI
+Những gì mình chia sẻ qua 3 bài về CRM này, phần nhiều anh em sẽ hình dung tới một doanh nghiệp sản xuất B2B nhiều hơn. Mỗi loại doanh nghiệp sẽ có cách làm Marketing và cách làm Sales khác nhau.
+
+Du lịch họ làm như thế nào, sản xuất nông sản làm như thế nào, tài chính, bảo hiểm, ngân hàng họ làm ra sao, vâng vâng và mây mây. Cũng là CRM, nhưng cách áp dụng vô mỗi loại hình doanh nghiệp thì rất nhiều.
+
+Do đó những gì mình chia sẻ mang tính chất tham khảo cho một số mô hình doanh nghiệp nào đó, không phải tuyệt đối toàn bộ.
+
+Hi vọng anh em đọc bài này sẽ nắm được những gì cơ bản nhất của Marketing và Sales. Từ đó lấy technology, lấy software (dù sẵn có hay tự build) hoặc thậm chí là lấy excel, áp một cách thật hiệu quả vào những hoạt động Sales & Marketing. Để khách hàng có cái gì đó automation hơn, hiệu quả hơn và tiết kiệm thời gian hơn!
+
+
+# Tóm tắt CRM.
+
+# Câu hỏi về CRM: Marketing
+1. Trong hình, có những thành phần chính nào và tại sao có sự tích hợp giữa CRM, ERP, Social Network, Call Center, Email và Website?
+2. CRM thường bao gồm những modules chính nào và mỗi module đó đại diện cho những khía cạnh nào của doanh nghiệp?
+3. Tại sao CRM thường được tích hợp nhiều nhất với ERP trong quy trình làm việc của doanh nghiệp?
+4. Ngoài Marketing, Sales, Customer Service, và Field Service, còn những khía cạnh nào khác của CRM có thể được thảo luận trong các bài viết sau?
+5. Đặc điểm chung của các hãng cung cấp CRM như Salesforce, Microsoft, SAP, Oracle, và Zoho là gì?
+6. Trong ví dụ về Marketing, bảo đảm rằng mọi tương tác với khách hàng được ghi nhận làm thế nào và tại sao quan trọng?
+7. Điều gì xác định mức độ hiệu quả của một chiến lược quảng cáo như trên Facebook?
+8. Tại sao việc ghi nhận đúng và theo dõi hiệu suất của mỗi chiến lược quảng cáo là quan trọng trong CRM?
+9. Làm thế nào CRM có thể giúp doanh nghiệp quyết định về việc đẩy mạnh, duy trì, hay loại bỏ các chiến lược quảng cáo?
+10. Trong ngữ cảnh của bài viết, làm thế nào CRM có thể hỗ trợ BOD (Ban Quản lý) trong việc ra quyết định và quản lý kinh doanh?
+
+# Câu hỏi về Sales:
+1. Sales trong đoạn văn được mô tả như thế nào và nó bao gồm những yếu tố nào từ Customer đến Price List?
+2. Opportunity trong Sales là gì? Làm thế nào nó được tạo ra từ các Lead?
+3. Sự khác biệt giữa Lead và Opportunity là gì? Cung cấp một số ví dụ để minh họa.
+4. Làm thế nào quá trình chuyển đổi từ Lead thành Opportunity có thể tăng tính hiệu quả của doanh nghiệp?
+5. Trong ví dụ về bán kem của bà Hai, Lead và Opportunity được xác định như thế nào và có những điểm gì quan trọng trong quá trình lọc?
+6. Trong trường hợp phát tờ rơi ở KTX sinh viên, tại sao Campaign không nhất thiết phải tạo ra Lead, mà có thể tạo thẳng thành Opportunity?
+7. Tại sao việc quản lý Opportunity là quan trọng trong quá trình bán hàng và làm thế nào nó giúp tối ưu hóa doanh thu?
+8. Mô tả cụ thể về quá trình "điều tra và đánh giá chất lượng" của bà Hai trong việc lọc Lead thành Opportunity.
+9. Làm thế nào Opportunity có thể được tùy chỉnh để phản ánh điều kiện và yêu cầu cụ thể của từng doanh nghiệp?
+10. Cụ thể về quản lý cơ hội kinh doanh, làm thế nào Opportunity giúp hình thành một phễu lọc hiệu quả trong quá trình bán hàng?
+
+# Câu hỏi về Quản lý bán hàng
+Câu hỏi về Quản lý Bán hàng (Sales):
+1. Account và Contact trong bán hàng là gì? Mối quan hệ giữa chúng như thế nào?
+
+2. Trong ví dụ về bán kem của bà Hai, khi ông Sáu Quỡn đặt 200 hộp kem, bà Hai nên tạo mới một Account hay sử dụng Contact đã tạo trước đó? Tại sao?
+
+3. Giải thích khái niệm Account Hierarchy và tại sao nó quan trọng trong quản lý bán hàng?
+
+4. Tại sao việc quản lý danh mục sản phẩm, nhóm sản phẩm, và các loại sản phẩm là quan trọng trong CRM?
+
+5. Giải thích khái niệm Bundle và Kit trong quản lý sản phẩm. Cho một ví dụ cụ thể trong ngữ cảnh bán kem của bà Hai.
+
+6. Làm thế nào CRM hỗ trợ Up Selling, Cross Selling, Accessory, và Substitute? Cung cấp một ví dụ.
+
+7. Mô tả về quản lý giá bán (Price List) trong CRM. Tại sao việc quản lý giá là quan trọng trong quá trình bán hàng?
+
+8. Phương pháp tính giá có thể được quản lý như thế nào trong CRM, và tại sao nó quan trọng đối với một số khách hàng?
+
+9. Làm thế nào CRM hỗ trợ quản lý các chương trình khuyến mãi và tích hợp thông tin từ ERP?
+
+10. Khái niệm Customer Journey là gì và tại sao nó quan trọng trong quản lý bán hàng? Làm thế nào CRM giúp theo dõi và tổ chức thông tin về Customer Journey?
+
+# 1. Multichannel là gì?
+- Trước khi nói về Omnichannel thì phải nhắc tới Multichannel một tí. Multi có nghĩa là nhiều, vậy Multichannel có nghĩa là đa kênh, tiếp thị đa kênh, that’s it!
+- Ví dụ nhãn hiệu Hoa Ban Food chuyên bán đặc sản Tây Bắc đang áp dụng Multichannel marketing. Cụ thể họ marketing và tương tác với khách hàng qua nhiều kênh. Cụ thể họ có:
+1. 1 website bán hàng là hoabanfood.com
+2. 1 kênh youtube giới thiệu sản phẩm và văn hóa Tây Bắc là Hoa Ban Food
+3. 1 hộp mail liên hệ đặt hàng
+4. 2 số hotline đặt hàng trực tiếp
+5. 1 fanpage quảng cáo sản phẩm
+6. Và 1 cửa hàng ở Hà Nội
+
+- Đếm sơ sơ thì Hoa Ban Food có đến 6 kênh tương tác với khách hàng. Mục đích là để họ tiếp cận được nhiều khách hàng hơn và để khách hàng tiếp cận họ tiện hơn. 
+
+# 2. Omnichannel là gì?
+- Cuối tháng 8 vừa rồi, bà chị mình có gửi cho mình đường link của 1 shop bán đồ thể thao nam đang sales dữ dội. Mình cũng tính mua mấy bộ đồ thể thao mặc ở nhà cho mát, nên bấm vào xem.
+
+- Lúc đó mình lên website xem sản phẩm, rồi add 2 cái quần, 2 cái áo vô giỏ hàng luôn. Lúc đó mình có chat với shop hỏi có mua lẻ 1 áo 1 quần riêng được không. Chat qua facebook messenger được tích hợp trên website.
+
+- Chat một hồi xong tắt máy ăn cơm, chiều lên facebook thì thấy toàn quảng cáo của shop đó. Không những chỉ shop đó, mà còn của mấy shop thể thao khác nữa. Đó là dấu hiệu của Omnichannel. Dấu hiệu để nhận diện thôi chứ chưa hẳn là Omnichannel.
+
+
+- Thế là click liền vô “Get my coupon now” và tiếp tục shopping. Mình đăng nhập vô Hawkhost, add gói sản phẩm primary hosting vào giỏ hàng và điền thông số đầy đủ hết. Đến đoạn payment mình chọn trả bằng credit card. Nhưng kẹt cái thanh toán gặp lỗi, chả hiểu sao. Chán đời quá đi ngủ luôn, chiều tính tiếp.
+
+- Chiều mở máy lên check mail tự nhiên thấy có 1 email gửi đến từ Hawkhost hỏi: Hình như bạn đang gặp khó khăn trong bước thanh toán đúng không? Có cần tụi tui giúp đỡ gì không?
+
+- Woaaaaa, y như rằng 1 phút 30 giây sau khi thanh toán không được, Hawkhost đã biết và support mình ngay. Mà lại còn gửi mail hỏi thăm tận tình nữa. Quá good!
+
+- Nhờ Hawkhost support, mình biết rằng thẻ credit của mình không available khi thanh toán trên Hawkhost. Và phải thông qua Paypal mình mới proceed payment được. Ví dụ này cũng là một dấu hiệu của Omnichannel.
+
+- Vậy túm cái váy lại Omnichannel là gì?
+
+# Các Omnichannel
+- Integrate
+- Cross-channel
+- orchestrated to cooperate
+
+# Kênh tương tác
+- Engagement channel
+"Miễn là có tương tác với khách hàng (dù online hay offline) và đặc biệt là làm tăng mức độ hài lòng của khách hàng là được "
+
+Vậy, Multichannel là nhiều kênh tương tác với khách hàng. Nhưng các kênh này đứng riêng lẻ, độc lập với nhau, không ăn nhậu gì với nhau hết.
+VD: Ví dụ như Hoa Ban Food. Mình lên Youtube xem nát kênh Hoa Ban Food luôn. Nhưng rồi lên fanpage cũng thấy bình thường, không gì xảy ra hết. Lên website cũng tương tự, chả có gì đáng chú ý cả. Mình cũng chỉ là một người khách bình thường, tự chọn sản phẩm rồi tự thanh toán online như mọi người khác.
+
+
+# Nhưng Omnichannel thì khác!
+Thứ nhất nó giống với Multichannel ở chỗ nó có nhiều kênh.
+
+Thứ hai nó khác với Multichannel ở chỗ là các kênh này được tích hợp lại với nhau, trên cùng một nền tảng.
+
+Ví dụ như shop bán đồ thể thao nam mình có nói ở trên. Mình mua hàng trên website của họ, chat với người ta ở trển luôn. Mà tự nhiên lên facebook thấy quảng cáo của shop đó quá trời.
+
+Ở đây xuất hiện 2 kênh, kênh website và kênh facebook. Mình tương tác trên website, mà tự nhiên trên facebook nhận diện được nhu cầu muốn mua đồ thể thao của mình. Để từ đó hiển thị quảng cáo của shop. Không những của riêng shop đó, mà còn nhiều shop thể thao nam khác nữa.
+
+Chính xác là có sự “integrate” giữa Website và Facebook Ads của shop này. Thực tế là mình chưa order trên website, chỉ mới bỏ sản phẩm vô giỏ hàng thôi. Chat một hồi quên đặt hàng luôn. Rồi chiều lên facebook thấy quảng cáo, nhớ lại chưa đặt hàng với thanh toán nên lên lại website để tiến hành đặt hàng. Điều này làm tăng trải nghiệm người dùng của mình rất nhiều. Vì nếu không nhìn thấy quảng cáo chắc cũng quên béng luôn rồi.
+
+Ở ví dụ này, thứ nhất là nó đa kênh (2 kênh website và facebook). Thứ hai là 2 kênh này thông tin dữ liệu được cho nhau. Và thứ ba là nó giúp tăng trải nghiệm khách hàng. Do đó có thể xem shop thể thao này đang áp dụng Omnichannel ở mức độ đơn giản.
+
+Còn lúc mua hàng ở Hawkhost. Mình gặp khó ngay khâu thanh toán trên website. Cái chiều ngủ dậy thấy email của Hawkhost gửi tới hỏi: có cần tụi tui sụp-pọt gì hông? Dễ thương quá chừng.
+
+Mà hay cái là tự nhiên đang gặp vấn đề trên website, mà Hawkhost liên lạc với mình qua email để cho tiện. Vì họ biết chắc là: chắc gì mình đã nhớ mà vô lại website hoàn thành thanh toán tiếp, liên lạc qua email là chắc cú nhất. Đã vậy còn cho coupon giảm giá ngay từ đầu nữa chứ 🙂
+
+Đó là Omnichannel. Khi kênh website và email được tích hợp với nhau, để tăng trải nghiệm khách hàng. Trải nghiệm ở đây là mình thấy rất tiện lợi, giống như được phục vụ tận răng vậy.
+
+Rõ ràng có rất nhiều sản phẩm được đóng gói sẵn. Như của Perxtech, Applivon, Zendesk hay Magento. Hàng Việt Nam thì có giải pháp Omnichannel của Haravan và Sapo là nổi trội nhất.
+
+Điều này cho thấy rõ nhu cầu áp dụng Omnichannel là rất lớn. Từ các doanh nghiệp bự, đến SME hay đơn thuần là các nhãn hiệu bán lẻ như Juno, Bitis, The Face Shop hay The Coffee House. Hay thậm chí là các shop thời trang bình dân nữa.
+
+Nhu cầu ngày càng cao, solution cũng được đóng gói sẵn để dễ triển khai, dễ áp dụng, không cần customize quá cầu kỳ và giá thành cũng rất ok nữa. Đó đều là những điểm mạnh của các solutions này.
+
+Còn nói về cách hoạt động của các Omnichannel Solution thì mình sẽ không đề cập ở bài này. Vì thứ nhất nó nghiêng nhiều về kỹ thuật, mà cái BA cần quan tâm hơn hết là: Omnichannel là gì và giúp giải quyết được bài toán gì? Thứ hai là mình cũng chưa làm bất kỳ dự án triển khai Omnichannel hoặc sử dụng bất kỳ solution Omnichannel nào. Nên cũng không dám chém ?
+
+Nhưng hứa, nếu có cơ hội tìm hiểu thực tế, mình sẽ viết 1 bài về cách các solutions này combine data từ nhiều nguồn và tích hợp các channels lại với nhau như thế nào ?
+
+
+
+
