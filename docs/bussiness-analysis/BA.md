@@ -34,3 +34,13 @@ https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p1/
 https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p2/
 https://thinhnotes.com/chuyen-nghe-ba/crm-hoat-dong-nhu-the-nao-p3/
 https://thinhnotes.com/chuyen-nghe-ba/omnichannel-va-case-study-ve-hoa-ban-food/
+https://thinhnotes.com/chuyen-nghe-ba/truyen-ngan-cuoi-tuan-cach-ba-lam-hai-long-mot-developer-gao-coi/
+https://thinhnotes.com/chuyen-nghe-ba/the-nao-la-mot-cong-ty-tot/
+https://thinhnotes.com/chuyen-doc-sach/review-sach-code-dao-ky-su/
+https://thinhnotes.com/chuyen-nghe-ba/moi-ra-truong-khong-kinh-nghiem-sao-lam-ba/
+https://thinhnotes.com/chuyen-nghe-ba/bpmn-va-su-loi-hai-cua-no/
+https://thinhnotes.com/chuyen-nghe-ba/customer-services-co-gi-o-trong/
+https://thinhnotes.com/chuyen-nghe-ba/muon-neo-duong-ba-p1/
+https://thinhnotes.com/chuyen-nghe-ba/quay-toi-ben-voi-bpmn/
+https://thinhnotes.com/chuyen-nghe-ba/giai-ngo-cac-ky-hieu-bpmn/
+https://thinhnotes.com/chuyen-nghe-ba/muon-neo-duong-ba-p2/

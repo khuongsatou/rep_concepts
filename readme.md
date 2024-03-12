@@ -40,7 +40,12 @@ STT | Thư mục | Ghi chú | Khác
 --- | --- | --- | --- 
 5 | Pricing | -- |---
 --- | --- | --- | --- 
-
+6 | Relationship | -- |---
+--- | --- | --- | --- 
+7 | Money | -- |---
+--- | --- | --- | --- 
+8 | Template | -- |---
+--- | --- | --- | --- 
 
 # Patch and Minor and Major
 - Bản phát hành Patch: 1.0 hoặc 1.0.x hoặc ~1.0.4

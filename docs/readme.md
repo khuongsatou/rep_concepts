@@ -22,6 +22,16 @@ Ví dụ:
 - Ghi lại các câu hỏi sau phần tóm tắt.
 -> Câu trả lời.
 
+# Nếu không trả lời được thì đọc lại
+- loop
+# Đến khi trả lời được thì sẽ qua bài mới.
+
+# Tóm tắt lại những gì đã học.
 
 # Giải thích các vấn đề gặp được và dùng chatGPT check lại
 
+# Hệ thống lại vào note của apple
+
+Bước -> Nội dung tóm tắt
+
+# Một bài viết thì luôn thấy có phần References

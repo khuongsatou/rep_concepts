@@ -1087,5 +1087,748 @@ Còn nói về cách hoạt động của các Omnichannel Solution thì mình s
 Nhưng hứa, nếu có cơ hội tìm hiểu thực tế, mình sẽ viết 1 bài về cách các solutions này combine data từ nhiều nguồn và tích hợp các channels lại với nhau như thế nào ?
 
 
+# Trước khi bắt đầu thì mình sẽ nói sơ qua về channels một chút. Ở thời điểm hiện tại, anh em có thể chia channel thành 3 nhóm sau:
+- Digital: như là Website, Marketplace (sàn Shoppee, sàn Tiki, sàn Taobao, Amazon…), Email hoặc Phone Call.
+- Social: chắc chắn là Facebook, Zalo, Instagram, Pinterest hoặc thậm chí là Linkedin.
+- Physical: cửa hàng truyền thống (hay còn gọi là brick-and-mortar, tức là vôi-và-gạch-vữa :v ).
+
+(1) Một hôm có một khách hàng tên Toản, xem clip ăn thịt trâu gác bếp trên kênh Youtube Hoa Ban Food thấy hấp dẫn quá. Nên ảnh vào website hoabanfood.com để đặt hàng mua thịt trâu gác bếp.
+
+(2) Ảnh add 2 kg thịt trâu gác bếp vào giỏ hàng với tổng tiền là 1,700,000đ. Nhưng trong tích tắc 1 giây đồng hồ, ảnh bỏ đi và không mua tiếp nữa. Vì lý do tháng này đang hết tiền uống cà phê. Vợ cho có 50k một ngày thôi nên nếu mua là bị lố ngân sách.
+
+(3) Tối đó, sau khi ăn cơm với gia đình xong, ảnh nhận được email gửi đến từ Hoa Ban Food với nội dung: “Hoa Ban Food xin chào anh Toản, tụi em thấy anh đang có 2kg thịt trâu gác bếp trong giỏ hàng, nhưng không tiến hành thanh toán. Anh có gặp khó khăn gì không để tụi em giúp đỡ. Nhân tiện, Hoa Ban Food tặng anh voucher 99k cho khách hàng mua hàng lần đầu tiên tại Hoa Ban Food, mong anh nhận cho tụi em zuiii ? “.
+
+Đọc mail xong, mặc dù ghiền lắm, nhưng anh Toản vẫn kiên quyết không mua vì hết tiền và ignore email đó luôn.
+
+(4) Tối trước khi ngủ, ảnh lên Facebook dạo mấy vòng thì thôi rồi, lướt vài ba cái là đã thấy quảng cáo giảm 99k trong lần mua đầu tiên của Hoa Ban Food. Sợ bị cám dỗ nên ảnh nhảy qua Instagram chơi thì cũng thấy i chang, lên Zalo cũng bị dính. Chán đời, ảnh lên Youtube xem, thì thôi rồi cứ 5 phút là quảng cáo, mà toàn quảng cáo của Hoa Ban Food mới dễ ghiền chứ.
+
+Ghiền quá mà không làm gì được, anh Toản đành tắt smartphone, leo lên giường ôm vợ ngủ cho qua cơn thèm thuồng thịt trâu gác bếp.
+
+Trong khi đó bên phía Hoa Ban Food, sau khi tấn công anh Toản liên tục trong 1 đêm, Hoa Ban Food mới buông tha cho ảnh được 1 tuần. Nhưng sau đó quay trở lại với một chiêu bài quảng cáo mới, độc hơn.
+
+(5) Một banner từ Google Ads xuất hiện chành dành trên góc phải màn hình khi anh Toản đang lướt bongda.com.vn. “Cùng Hoa Ban Food chung tay quyên góp sách vở và áo quần cho trẻ em nghèo Tây Bắc để có một cái tết Trung Thu thật no ấm!!!”. Một quảng cáo mang tính xã hội rất nhẹ nhàng, chả liên quan gì tới bán hàng hết.
+
+(6) Thấy quảng cáo nhớ lại Hoa Ban Food, anh Toản mới lọ mọ lên website để xem còn sản phẩm nào khác mà giá ok hơn không. Sau một hồi tìm kiếm thì ảnh chấm được 2 hủ gia vị Mắt Khén và Hạt Dổi. Loại này mua về ướp thịt nướng lên cũng ngon, không cần thịt trâu gác bếp nữa.
+
+Nhưng đang lướt web thì bị vợ bắt lau nhà, nên ảnh tắt máy và vẫn chưa mua hàng được.
+https://thinhnotes.com/chuyen-nghe-ba/omnichannel-va-case-study-ve-hoa-ban-food/
+...
+
+Thông qua các kênh: website, email, tin nhắn sms, facebook, zalo, showroom (POS), Hoa Ban Food đã hoàn toàn chinh phục được anh Toản. Một khách hàng rất khó chinh phục, một cách tự động!
+"Để từ đó toàn bộ touchpoints từ online đến offline mới có thể phối hợp và vận hành trơn tru được."
+# 5. Tại sao phải áp dụng Omnichannel?
+# 5.1. Automation
+Website Hoa Ban Food có tổng cộng 298,660 lượt truy cập.
+
+Youtube Hoa Ban Food có tổng cộng 691,211,087 lượt xem.
+
+Fanpage Hoa Ban Food có tổng 119,876 lượt theo dõi.
+
+Giá thành thấp nhất cho một sản phẩm của Hoa Ban Food là Sâm Rừng 200,000đ/kg.
+
+Với ngần ấy lượt visit, nếu đi qua chặng hành trình phễu lọc để ra được đơn hàng (với giá trị nhỏ nhất 200,000đ) thì chắc hẳn Hoa Ban Food giờ đã giàu to rồi 🙂 Và chi phí nhân công cho Marketing là vô cùng thấp.
+
+Đó là lợi ích đầu tiên của việc áp dụng Omnichannel. Các channels được integrated với nhau. Từ đó giúp tối ưu hóa quy trình bán hàng, tiết kiệm chi phí và bám sát khách hàng hơn.
+
+# 5.2. Data
+- Lợi ích lớn nhất của việc áp dụng Omnichannel chính là nằm ở data thu thập về.
+- Anh Toản thường xuyên tới lui ở kênh nào nhất? Data cho thấy ảnh khoái xem Youtube và rất ít khi check mail (mail gửi đi với tỉ lệ opened là zero tròn trĩnh).
+- Một là Omnichannel cho phép tiếp cận khách hàng trên nhiều kênh, một cách NHẤT QUÁN và CÓ Ý ĐỒ, MỤC ĐÍCH hơn. Việc tiếp cận khách hàng nhiều rất quan trọng, ai cũng biết. Bữa mình đọc đâu đó 1 thống kê nói rằng: Để mua hàng từ nhãn hàng A, người ta phải gặp nhãn hàng A này ít nhất đến 21 lần, rồi mới nảy sinh ý định mua hàng. (mới nảy sinh ý định thôi nhé anh em).
+- Hai là quá trình tiếp cận khách hàng này sẽ sinh ra rất nhiều data về behaviour của khách hàng đối với các kênh tiếp cận (Engagement Channels).
+
+### Câu hỏi về OmniChannel:
+
+1. **Khái niệm OmniChannel là gì? Tại sao nó quan trọng trong lĩnh vực kinh doanh và dịch vụ khách hàng?**
+
+2. **Điều gì tạo nên sự khác biệt giữa OmniChannel và MultiChannel?**
+
+3. **Làm thế nào hệ thống OmniChannel hỗ trợ tích hợp giữa các kênh giao tiếp khác nhau, chẳng hạn như trực tuyến, cửa hàng, điện thoại, và mạng xã hội?**
+
+4. **Tại sao việc cung cấp trải nghiệm mượt mà và đồng bộ trên nhiều kênh quan trọng đối với doanh nghiệp?**
+
+5. **Làm thế nào OmniChannel giúp cải thiện tương tác với khách hàng và tạo ra trải nghiệm mua sắm liền mạch?**
+
+6. **Nêu rõ các thách thức mà doanh nghiệp có thể gặp khi triển khai chiến lược OmniChannel?**
+
+7. **Làm thế nào dữ liệu khách hàng được tích hợp và chia sẻ trong môi trường OmniChannel?**
+
+8. **Giải thích cách tích hợp và đồng bộ hóa dữ liệu tồn kho và đơn hàng qua các kênh khác nhau trong môi trường OmniChannel?**
+
+9. **Làm thế nào quản lý kho và dịch vụ giao hàng được tối ưu hóa trong hệ thống OmniChannel?**
+
+10. **Tại sao doanh nghiệp cần đảm bảo tính bảo mật và tuân thủ quy định khi triển khai chiến lược OmniChannel?**
+
+# 1. Bà con anh chị em trong công ty
+# 1.1. Chọn công ty có… nhiều người tốt
+a) Tham khảo các trang review
+- Tham khảo itviec, hoặc haymora.com, hoặc bất kỳ trang review nào khác mà anh em biết.
+- Ăn uống thì có Foody, Lozi review, phim ảnh thì có IMDb, sách vở thì có Goodreads. Tương tự là công ty, đặc biệt là công ty IT thì có itviec, haymora review.
+- Itviec cho phép nhân viên các công ty lên nhận xét, đánh giá về công ty mình. Cho các hậu bối có niềm tin mà apply vào.
+- Thiếu lương, chậm lương, xù bonus, auto OT vắt kiệt sức lao động của các thanh niên mới chập chững ra trường, còn nhiều bỡ ngỡ. Có đủ hết. Khen thì cũng có, và đa phần mình thấy khen đúng những cái đáng khen.
+
+b) Mò facebook mấy ông phỏng vấn
+- Trường hợp này cũng vậy, anh em lên facebook, để xem những người phỏng vấn mình. Người mà sẽ trở thành đồng nghiệp tương lai của mình, họ sống sao. Có sống lỗi hay sống lầy quá không ?
+
+- Gom hết những cái này lại, anh em sẽ có bức tranh tổng quát về họ, dù còn hơi mờ mờ ảo ảo.
+- Chưa hết, khi có facebook một người, chúng ta sẽ dễ dàng lần mò sang những người khác, đồng bọn của người này. Tức là team tương lai của mình.
+- Một thằng hám gái sẽ suốt ngày thấy news feed nó toàn đi like hình gái. Một đứa ăn nói cọc lốc, thô lỗ sẽ thấy rõ trên các comment. Không dễ để nhìn nhận một người, nhưng đó là những dấu hiệu đầu tiên về người này.
+- Anh em có thể search facebook dựa theo email, số điện thoại cá nhân, hoặc bạn chung.
+
+# c) Lân la hỏi thăm
+- Đây là cách cơ bản nhất, nhưng cũng quan trọng nhất. Anh em phải hỏi thăm xem con người ở đó ra sao, môi trường ở đó thế nào.
+
+- Hỏi ai? Hỏi bất kỳ ai có thể hỏi. Bạn bè, ba má, anh chị em. Hoặc lên cộng đồng hỏi, forum, group facebook.
+
+- Đây là cách cơ bản nhất, nhưng cũng quan trọng nhất. Anh em phải hỏi thăm xem con người ở đó ra sao, môi trường ở đó thế nào.
+
+- Hỏi ai? Hỏi bất kỳ ai có thể hỏi. Bạn bè, ba má, anh chị em. Hoặc lên cộng đồng hỏi, forum, group facebook.
+
+- Phải chịu khó hỏi, và nghiên cứu thật kỹ. Vì đây là công việc, là sự nghiệp của mình. Không ai lo cho mình bằng tự mình lo cho chính mình hết. Nên đừng lười nhé anh em.
+- Văn hóa, cách làm việc cũng là yếu tố cực kỳ quan trọng cần phải hỏi. Làm với Nhật khác, làm với Ấn khác, làm với Tây balo khác.
+- Nên anh em cố gắng gầy dựng network và để lại tiếng tăm tốt. Trước khi nghỉ công ty nào thì cố gắng đừng để lại tàn dư nhiều quá, anh em ở lại đổ vỏ đuối lắm.
+
+# 1.2. Quẩy tới bến trong mọi môi trường
+- Vì để làm được điều này thì anh em phải thực sự rất… KIÊN ĐỊNH. Điều này không dành cho ai dễ mủi lòng và không có chính kiến.
+
+- Vì sao? Vì trong môi trường công sở, có rất nhiều ý kiến. Tốt có xấu có, tốt với mình có, xấu với mình có.
+
+- Vô công ty làm vì tiền, thì cứ cố gắng cày cho xong dự án để thưởng bonus. Vô công ty làm vì muốn học hỏi, trải nghiệm thì ở đâu có training, sharing thì bay vào, có dự án khó xung phong nhận liền.
+
+- Đó là cái mình muốn, và cố gắng tập trung làm những cái gì liên quan thôi. Chứ đừng có ai nói gì cũng nhảy vào nghe, ai nói gì cũng làm, xấu cũng làm, tốt (mà hổng dính dáng tới mình hoặc team của mình) cũng làm. Zậy cũng hổng ổn.
+
+- Người kiên định là họ nghe và hiểu thôi, nhưng những gì họ nghe được không làm ảnh hưởng tới mục tiêu và những gì họ đang làm.
+
+- Lên công ty chỉ có làm, làm và làm thôi. Không giao du, chém gió với mọi người thì đâu có được.
+
+- Ít ra cũng phải tham gia hoạt động này kia với anh em trong team, hoặc tệ nhất cũng phải đi ăn trưa, nói chuyện với nhau.
+
+- Tuyệt đối, không bao giờ được lắng nghe từ một phía!
+
+# 2. Đồ nghề để nghịch bậy
+- Nếu không có những phúc lợi này thì mình có bị thiệt gì không, có bị buồn hay bị cản trở công việc gì không?
+- Cá nhân mình sẽ tự tin trả lời là KHÔNG. Vì đó chỉ là những phúc lợi làm mình happy hơn mức bình thường mà thôi.
+
+- Không có nó, cũng chẳng sao.
+
+# Ví dụ mình làm về các giải pháp của Microsoft, thì điều tuyệt vời không gì bằng là được tận tay trải nghiệm hết các giải pháp của Microsoft, trong một hệ sinh thái đầy đủ nhất của nó.
+- Đối với anh em làm về Oracle, điều tuyệt vời nhất là tận tay mày mò trên hệ thống của Oracle để cảm nhận và hiểu được nó ra sao. SAP cũng vậy, Salesforce cũng vậy, vâng vâng và mây mây.
+
+- Như mình, hồi đó mình không biết nghiệp vụ Customer Service có những gì. Thế là vào hệ thống mày mò theo case study. Đó là một trong những cách tuyệt vời nhất để mình hiểu system hoạt động, và hoạt động theo nghiệp vụ như thế nào.
+
+- Nhưng nói zậy thôi chứ đâu dễ ăn của ngoại. Mặc dù là bây giờ thế giới đã đưa lên Cloud, khá dễ để đăng ký một hệ thống trial vào vọc. Nhưng với một số hệ thống mới, đặc thù như Field Service, hay Advanced Marketing thì phải cần Subscription, License để vào được.
+
+- Thế là tốn tiền.
+
+- Đó cũng là cách để trả lời cho câu hỏi công nghệ trên thế giới đã phát triển đến đâu rồi?
+
+- Nãy giờ mình hổng nhắc tới chuyện lương bổng. Sẽ có 2 option cho anh em tự suy diễn như sau.
+
+- Người theo trường phái chết vì đam mê, à nhầm sống vì đam mê sẽ cho rằng đi làm là để học hỏi, phát triển, để nâng cao bản thân. Nên chuyện tiền bạc chỉ cần đủ xài, và không quá bận tâm có cao hay không.
+
+- Trường phái này hàng xịn cũng có, mà hàng đểu cũng có. Nhưng nếu thật sự suy nghĩ được như vầy, thì mình thật sự nể.
+
+# 10 câu hỏi.
+1. Làm thế nào để chọn một công ty có nhiều người tốt?
+2. Tại sao việc tham khảo các trang review như itviec, haymora.com là quan trọng?
+3. Mô tả cách tìm kiếm thông tin về những người phỏng vấn trên Facebook và tại sao nó quan trọng?
+4. Tại sao việc hỏi thăm và nghiên cứu về môi trường công ty là quan trọng?
+5. Làm thế nào để xây dựng mạng lưới và để lại ấn tượng tích cực trước khi rời công ty?
+6. Điều gì là cần thiết để "quẩy tới bến" trong mọi môi trường công sở?
+7. Tại sao việc kiên định và tập trung vào mục tiêu là quan trọng trong công việc?
+8. Mô tả những điều cần kiểm tra về đồ nghề và phúc lợi trong công ty.
+9. Tại sao trải nghiệm thực tế trên các giải pháp của Microsoft, Oracle, SAP, Salesforce quan trọng?
+10. Nhận xét về quan điểm về lương bổng và đam mê trong công việc.
+
+# Kinh nghiệm về JD
+- Nhà tuyển dụng viết JD là để anh em dòm vào đó, một cách cẩn thận. Rồi từ từ suy xét xem: Kinh nghiệm của mình có làm được những việc này hay không? Chứ hổng phải: Mình đã từng làm những việc này hay chưa?
+
+- Do đó, để làm BA (hoặc bất kỳ công việc nào khác), đầu tiên anh em phải hiểu công việc đó làm gì cái đã. Cái này đơn giản, bỏ qua.
+- Ngâm cứu Job Description >> Chiêm nghiệm >> Phân tích >> Kết luận
+- Giữa kinh nghiệm và yêu cầu công việc, nó phải có gì đó ăn nhậu với nhau. Chứ trớt quớt quá thì fail là cái chắc. Do đó, biết mình biết ta, trăm trận không thua. Khi đó anh em mới dám mạnh dạn tự tin mà đi phỏng vấn được.
+- Hiểu được điều cơ bản trên, anh em sẽ tự vạch ra cho mình những nước đi đúng đắn nhất từ thời sinh viên. Cái mình cần ở đây là kinh-nghiệm-liên-quan-tới-yêu-cầu-công-việc của BA.
+
+# 1.2. Yêu cầu công việc của BA
+# TUYỂN DỤNG BUSINESS ANALYST
+# Mô tả công việc
+
+Thu thập yêu cầu từ khách hàng.
+Làm Gap Analysis
+Viết tài liệu dự án, đặc tả yêu cầu.
+Thiết kế UX/UI, database.
+Làm việc trực tiếp với SCRUM team.
+Thực hiện các buổi UAT, Training khách hàng.
+…không kinh nghiệm sao làm BA
+# Yêu cầu
+
+Có tình yêu nghề… say đắm
+Có bằng tiến sỹ các ngành kinh doanh/ công nghệ.
+Thành thạo tiếng Anh, nói được tiếng Nhật và đọc được tài liệu tiếng Pháp.
+Có domain knowledge về ngành sản xuất, y tế, giáo dục, nhân sự, tài chính, ngân hàng,…nói chung là biết tuốt.
+Hiểu tường tận về blockchain là một lợi thế.
+Thuần thục Agile/ Scrum.
+Có khả năng multitask, như vừa lấy yêu cầu, vừa document ngay tại chỗ luôn.
+Yêu cầu năng suất làm việc cao, có thể làm việc liên tù tì từ 9 giờ sáng tới 9 giờ tối mà không lèm bèm, càm ràm gì hết.
+…
+Đó, ví dụ về một Job Description. Mặc dù nghe giống tuyển siêu nhân hơn là tuyển BA. Nhưng không sao, anh em c  hỉ cần để ý tới phần mô tả công việc thôi.
+
+Đó là những công việc mà một người BA sẽ làm. Do đó, mình cần phải build up những kinh nghiệm liên quan tới các đầu việc này. Phân tích một tí về các công việc đặc trưng của BA thì gồm 2 nhóm kỹ năng.
+
+# Kỹ năng mềm
+- Thu thập yêu cầu từ khách hàng ==> Kỹ năng giao tiếp, thuyết phục, thuyết trình, đặt câu hỏi, lắng nghe, thấu hiểu…
+- Viết tài liệu dự án ==> Kỹ năng và kiến thức về Word, Excel, Power Point, kỹ năng đánh máy, tối ưu công việc, làm sao cho nhanh, cho hiệu quả.
+- Làm việc với các stakeholders (khách hàng, Dev, PM, QA, QC…) ==> Kỹ năng làm việc nhóm, xử lý xung đột, kiểm soát cảm xúc, tư duy logic…
+- Lên kế hoạch công việc ==> Kỹ năng planning, time management.
+
+# Kỹ năng cứng
+- Viết tài liệu dự án ==> Kiến thức và thực hành về UML, BPMN và các loại document có trong dự án.
+- Hiểu nghiệp vụ ==> Hiểu các nghiệp vụ về Sales, Kế toán, Sản xuất, Marketing, Customer Service, Field Service, Supply Chain…
+- Domain Knowledge ==> Hiểu về đặc thù các ngành nghề như Banking, Finance, Insurance, Manufacture, Horeca (hotel-restaurant-cafe), Retail, Human Resource, Real Estate, Education…
+- Thiết kế database ==> Kiến thức và thực hành về database, hiểu về SQL…
+Có kiến thức về công nghệ ==> Hiểu cách một application, web app hay mobile app hoạt động. Đối với làm triển khai thì hiểu công nghệ của các hãng (như Microsoft, SAP, Oracle…). Hoặc hiểu về các khái niệm như API, Web Service…
+- Thiết kế mockup, prototype ==> Kiến thức căn bản về UX/UI và thực hành trên các tool như Visio, Balsamiq Mockup, Axure…
+- Hiểu quy trình làm việc ==> Kiến thức về Agile/ Scrum, Waterpark, à nhầm, Waterfall, hoặc các development management tool như TFS, GitHub, SVN, Jira…
+
+# 2. Your next step
+-  cụ thể gồm 6 con đường cơ bản sau:
+1. Tham gia các CLB trong trường
+2. Tham gia các hoạt động tình nguyện
+3. Đi làm thêm, đi làm “pặc-tham”
+4. Xung phong thuyết trình
+5. Học theo nhóm, làm đồ án, làm bài tập theo nhóm
+6. Và cuối cùng là đi thực tập.
+
+# 2.1. Chiêm nghiệm
+Mình có thằng bạn, hồi năm nhất đại học nó toàn chơi game rồi ngủ. Sang năm hai thấy chán quá nên nó mới quyết định “try something new” bằng cách tham gia điên dại vào các CLB sinh viên trong trường lúc đó.
+
+Mà các CLB này thì hoạt động phải nói là muôn màu phong phú. Từ tổ chức sự kiện, đến đi thiện nguyện, tham gia các cuộc thi, tổ chức training, bán hàng…, nói chung là tùm lum tùm la hết.
+
+Còn trên lớp thì thằng này được cái rất chịu khó làm việc nhóm. Đối tượng thuyết trình chính luôn là nó. Không đẩy nó lên, thì cũng tự nó xung phong, nên anh em trong team đỡ vả lắm.
+
+Ngoài ra, nó cũng chịu khó tham gia các cuộc thi, kiếm tiền đi phượt. Mà được cái nó biết chọn lọc, không phải cuộc thi nào cũng tham gia. Nó chỉ tham gia những cuộc thi liên quan đến ngành nó học thôi, may sao cũng ruồi ruồi được 1-2 giải nhỏ.
+
+Nó cũng chịu khó tham gia mấy tổ chức lợi nhuận phi giáo dục, ủa lộn, mấy tổ chức giáo dục phi lợi nhuận.
+
+Đi dạy mấy đứa nhỏ cấp 1 ở mấy trường dưới Bình Triệu. Nhờ đó mà kỹ năng chém gió của nó cũng lên được kha khá.
+
+Mình để ý là thằng này cũng khá tốt trong việc giao cấu với bạn bè, đồng bọn mới. Kèo đá banh đá bóng gì là đều do nó cầm đầu hết.
+
+# 2.2. Phân tích
+Sơ bộ thì thằng bạn mình cũng có đủ các kỹ năng mềm để làm BA chứ hả anh em. Nhưng đó chỉ là một nửa câu chuyện. Nửa còn lại là kỹ năng cứng thì để mình ngó xem nó có gì ?
+
+Vì thằng này là một thằng hay quan sát nên lâu lâu nó hay ba láp ba xàm về mấy thứ xung quanh nó. Như cái máy quẹt thẻ giữ xe nó hoạt động ra sao chẳng hạn.
+
+Nó cũng chịu khó đọc sách. Mà sách nó đọc thì cũng nhiều loại, xàm cũng có, mà cực xàm cũng có.
+
+Nói về chuyện thực tập thì nghe kể đâu nó apply tới tận mười mấy công ty. Mà có đúng 2-3 công ty gì đó là chịu nhận nó.
+
+Chưa kể lúc thực tập về, nó còn làm khóa luận nữa. Hồi đó nghe nói nó làm đề tài về thiết kế hệ thống vận hành dữ liệu đầu vào gì đó cho công ty nghiên cứu thị trường.
+
+Lăn lê bò trường với khóa luận khoảng hơn 3 tháng, nó cũng thu hoạch được khá nhiều vốn liếng. Từ kiến thức nền tảng chung về IT, đến các kiến thức về phân tích, thiết kế hệ thống thực tế.
+
+Chưa kể vì nhiều lần đau thương với Microsoft Word nên nó cũng rút kinh nghiệm nhiều khi làm Word. Nó còn kể lúc thực tập, vì được làm Vlookup nhiều nên Excel nó tự tin lắm.
+
+# 2.3. Kết luận
+Cuối cùng, gom góp lại những gì nó từng trải, từng làm, ngồi chiêm nghiệm một hồi. Thấy kỹ năng mềm của nó quá hợp với BA đi chứ. Kỹ năng cứng là thứ nó không tự tin, nhưng đó là những gì nó có thể làm để chuẩn bị cho một buổi phỏng vấn BA. ==> Mức độ tự tin khoảng 85%
+
+- "Phải thử rồi mới biết".
+- "Bắt đầu nhỏ và thất bại nhỏ".
+- "Cái gì không biết thì con người nó tự tin lắm".
+
+
+# 1. BPMN là gì?
+- BPMN là viết tắt của Business Process Modeling Notation. “Notation” nghĩa là ký hiệu. Tức BPMN là tập hợp các ký hiệu chuẩn để mô tả quy trình của doanh nghiệp. Hay để mô hình hóa quy trình của doanh nghiệp.
+
+# 2. UML?
+- UML là Unified Modeling Language – ngôn ngữ mô hình thống nhất. Tên tiếng Việt dịch ra nghe hơi chuối, nên thôi anh em cứ đọc là UML cho chắc. Nôm na, UML là tập hợp các diagram và các ký hiệu để mô tả phần mềm. Nôm na là như vậy.
+
+Trong khi BPMN hướng tới quy trình nghiệp vụ,
+
+thì UML hướng tới việc xây dựng phần mềm.
+
+- Cụ thể, BPMN tiếp cận theo hướng process-oriented, còn UML thì tiếp cận theo hướng object-oriented.
+
+- Còn Object-oriented tập trung cho việc mổ xẻ một đối tượng theo nhiều góc nhìn, chiều kích khác nhau để rõ ràng hơn cho việc thiết kế và xây dựng hệ thống.
+
+
+- Do đó, để có nhiều góc nhìn khác nhau, thì UML có hẳn một bộ các diagram khác nhau. Mỗi diagram có một chức năng riêng. Ví dụ lấy đối tượng Customer ra mổ xẻ. Anh em có thể mô hình hóa được đối tượng Customer này (bằng UML) ở nhiều khía cạnh khác nhau:
+
+- Customer có những thuộc tính gì, mối quan hệ giữa đối tượng Customer và các đối tượng khác ra sao (Class Diagram).
+- Customer có thể làm được những tính năng gì, tương tác với hệ thống và các đối tượng khác ra sao (Use Case Diagram).
+- Hoạt động của Customer theo trình tự thời gian là như thế nào (Sequence Diagram).
+Và còn rất nhiều khía cạnh với nhiều diagram khác nữa, mình sẽ nói ở bài sau nhé anh em.
+- Còn BPMN, như anh em thấy chỉ có 1 diagram duy nhất. Bởi vì nó chỉ có 1 mục đích duy nhất: thể hiện được quy trình nghiệp vụ.
+
+# 5. BPMN cứu rỗi đời mình như thế nào?
+- Quy trình giấy
+Trước khi kết thúc bài này thì mình sẽ kể cho anh em nghe một câu chuyện hư cấu có thật.
+
+Đó là lần team dự án mình gặp phải một kèo chua cay như gói mì hảo hảo.
+
+Đây là một khách hàng B2B, vừa sản xuất vừa bán B2B luôn. Mà bán B2B thì quy trình duyệt giá cho một đơn hàng khá phức tạp. Vì giá trị đơn hàng là rất lớn, và phải luôn đảm bảo giá tốt nhất cho khách mua hàng.
+
+Lần đó team mình qua phải 3, 4 lần gì mới lấy được requirement cụ thể cho quy trình làm báo giá này. Nó qua rất nhiều bước.
+
+Từ lúc Salesperson nhận một yêu cầu hỏi hàng, sau đó sẽ làm báo giá cho khách hàng. Đa phần các báo giá đều sẽ được áp các mức chiết khấu mặc định, phụ thuộc vào khách hàng và số lượng sản phẩm khác nhau.
+
+Nếu Salesperson không muốn giảm giá gì thêm thì họ sẽ gửi báo giá cho khách hàng duyệt. Nếu khách hàng đồng ý thì nhập ngày giao hàng (mà khách yêu cầu), rồi kiểm tồn kho (check on hand), và cuối cùng là làm Order. Nếu không đồng ý thì Salesperson phải deal lại ngày giao hàng.
+
+Còn nếu Salesperson muốn có một mức giá tốt hơn mức giá chuẩn (tức là discount nhiều hơn mức discount chuẩn cho phép), thì Salesperson phải xin giá. Mà để xin giá thì phải raise yêu cầu cho Team Leader.
+
+Tức là Salesperson sẽ nhập mức discount họ mong muốn. Sau đó chuyển qua Team Leader để duyệt giá chặng một. Team Leader sẽ dựa vào mức discount mà Salesperson đề xuất để duyệt giá.
+
+Nếu mức discount làm cho giá trị của từng line sản phẩm vẫn cao hơn hoặc bằng giá vốn hàng bán (COGS), Team Leader sẽ tự cân đối revenue trong quý mà duyệt hoặc không.
+
+Nếu mức discount mà Salesperson yêu cầu cao quá, làm cho giá trị của từng line sản phẩm thấp hơn cả giá vốn hàng bán (tức là bán chịu lỗ, không để mất khách) thì Team Leader không có quyền duyệt, mà phải đẩy lên Sales Manager để duyệt giá chặng hai. Anh sếp ảnh cho thì bán, không thì phải xin giá lại từ đầu.
+
+Đó chỉ mới là bán hàng OBL (Own Brand Labelling), tức là hàng chuẩn, hàng mình tự sản xuất rồi bán. Còn bán hàng OEM thì phức tạp hơn. OEM là Orginal Equipment Manufacturing, tức là mình sản xuất theo thiết kế, yêu cầu đặc thù của khách hàng.
+
+Ví dụ sản xuất 5000 cái bô dài 50 cm, rộng 40 cm, cao 30 cm, có in hình mặt cười nham nhở chẳng hạn.
+
+Đối với hàng OEM thì phải đưa yêu cầu thiết kế qua bên R&D, rã ra BOM (bill of materials), rồi chạy Pilot (làm hàng mẫu). Nếu fail ở bước nào, thì quy trình trả về Salesperson, yêu cầu trao đổi lại với khách hàng.
+
+Chạy Pilot xong mà khách hàng ok mẫu mã này nọ xong xuôi, thì tiếp tục tới phần giá như ở trên. Nhưng đâu dễ ăn của ngoại.
+
+Vì là hàng OEM, nên cần phải phân rã BOM ra và đưa qua bộ kế toán để xin giá vốn hàng bán (vì là sản phẩm mới toanh nên đâu biết giá gốc bao nhiêu đâu mà bán).
+
+
+Kể mệt quá, nghỉ xíu anh em.
+
+Tức là cái bô có thành bô, miệng bô, thân bô. Mỗi bộ phân bao nhiêu tiền, ghép lại thành một cái bô, sẽ ra được giá gốc là bao nhiêu tiền. Rồi gom góp các loại chi phí sản xuất, môi trường, nhân công, điện nước này nọ. Ra được một mức giá, gọi là giá vốn hàng bán (COGS). Rồi mới đưa cái cục giá đó cho ông Salesperson, ổng sẽ lấy mức giá này để bắt đầu deal với khách hàng. Rồi đoạn deal phía sau, sẽ tiếp tục quy trình báo giá cho sản phẩm OBL như phía trên.
+
+Đó là tóm tắt quy trình của khách hàng, bằng chữ. Anh em thấy quá mệt đúng không. Đưa một mớ này vô document chắc chả ai thèm đọc hết.
+
+Khi đó, BPMN xuất hiện như một vị cứu tinh. Những notation của BPMN đều cover được hết quy trình bên trên.
+
+Bấm hình dưới đây xem chi tiết nhé anh em.
+
+Do đó, không có BPMN, mình cũng chả biết transfer lại quy trình này cho team như thế nào cho hiệu quả. Mặc dù mình vẫn có thể chế ra các ký hiệu để vẽ vời, miễn đáp ứng được yêu cầu trên.
+
+Nhưng khi deliver tài liệu cho bất kỳ một stakeholders nào khác, chẳng lẽ lại phải mất công giải thích: cái ô vuông nghĩa là A, cái hình chữ nhật nghĩa là B. Như vậy rất tốn thời gian. Trong khi BPMN đã là một cái chuẩn, vẽ con mèo là mọi người hiểu ngay con mèo, không thể nào hiểu ra con chó được.
+
+# Kết
+Mình sẽ tạm dừng bài 1 về BPMN ở đây. Qua bài này hi vọng anh em nắm được:
+
+BPMN là gì? (Business Process Modeling Notation)
+Tại sao nó lại quan trọng? (giúp BA document và transfer thông tin hiệu quả hơn)
+Dành cho đối tượng nào? (hầu hết là mọi người)
+BPMN khác với UML ra sao? (một ông làm về process, còn một ông làm về software)
+Ở bài sau chúng ta sẽ đi chi tiết vào “BPMN in action”. BPMN gồm những thành phần gì và các nguyên tắc khi vẽ BPMN.
+
+Nếu cảm thấy “con hàng” BPMN này có thể giúp ích nhiều được cho mình trong công việc, thì anh em có thể mạnh dạn tham khảo các khoá học BPMN ngắn hạn nhé.
+
+Nó sẽ giúp anh em luyện cách nắm bắt thông tin và tạo điều kiện để có thể luyện tập vẽ ngày vẽ đêm, hết quy trình này đến quy trình khác. Phải luyện từ các quy trình thực tế, bài toán thực tế, mô hình thực tế như vầy thì mới lên tay được. Anh em có thể tham khảo khoá học BPMN từ Trung tâm BAC như mình đã có review ở đây nhé.
+
+
+# Câu hỏi về BPMN
+
+1. **BPMN là viết tắt của gì và nó được sử dụng để mục đích gì trong lĩnh vực quản lý doanh nghiệp?**
+
+2. **Mục đích chính của BPMN là gì và làm thế nào nó hỗ trợ trong quản lý quy trình kinh doanh?**
+
+3. **Điều gì là một "hoạt động" trong BPMN và nó được biểu diễn như thế nào trong biểu đồ quy trình?**
+
+4. **Khái niệm "Gateway" trong BPMN là gì và nó được sử dụng để làm gì trong biểu đồ quy trình?**
+
+5. **Biểu đồ BPMN có những loại sự kiện nào và chúng được biểu diễn như thế nào?**
+
+6. **Chức năng của các biểu tượng như hình chữ L và hình oval (hoặc hình tròn) trong BPMN là gì?**
+
+7. **Làm thế nào BPMN hỗ trợ biểu diễn quy trình "Subprocess" và nó được sử dụng trong tình huống nào?**
+
+8. **Khái niệm "Data Object" trong BPMN là gì và nó được sử dụng như thế nào trong biểu đồ quy trình?**
+
+9. **Các khái niệm "Pool" và "Lane" trong BPMN làm thế nào liên quan đến việc biểu diễn quy trình kinh doanh?**
+
+10. **Làm thế nào BPMN hỗ trợ biểu diễn quy trình đồng thời (Parallel) và quy trình tuần tự (Sequential) trong một tổ chức hoặc hệ thống?**
+
+
+# Customer services
+- Tóm lại, mục đích thì anh em đã rõ. Giúp chăm sóc khách hàng tốt hơn >> Khách hàng nhớ tới mình >> Tăng tỉ lệ mua hàng.
+
+# 2.1. Yêu cầu support
+- Khách hàng có thể raise yêu cầu support qua nhiều kênh. Từ digital như website thương mại điện tử. Cho đến các mạng xã hội như Facebook, Instagram, Zalo. Hoặc raise trực tiếp tại cửa hàng.
+
+- Rõ ràng, đa phần khách hàng thích gọi điện hơn. Vừa nhanh, vừa gọn, vừa lẹ. Tuy nhiên không cần thiết phải làm nguyên một hệ thống Call Center chi cho hoành tráng. Đối với các shop nhỏ lẻ chỉ cần để số Hotline kèm logo Skype hoặc Zalo vô là êm rồi :3
+
+"Không cần làm hoành tráng".
+
+Yêu cầu support được raise từ nhiều kênh, nhiều nơi. Nhưng các yêu cầu này phải được tập trung về 1 nơi duy nhất để quản lý và đánh giá.
+
+“Nơi này” có thể là một cuốn sổ tay tổng hợp các yêu cầu. Hoặc các file excel phân chia theo kênh. Nhưng tối ưu nhất, nó sẽ được lưu vào các hệ thống như CRM, E-commerce. Để sau này còn lấy dữ liệu đó ra làm những chuyện “kinh thiên động địa” khác, kaka.
+
+# 2.3. Đưa vào hàng chờ
+# Đúng người đúng việc thì mới hiệu quả được.
+Sau khi các yêu cầu support được đưa vào 1 chỗ, tiếp đến nó sẽ được xếp vào… các hàng chờ. Tại sao lại như vậy?
+
+Vì cùng một lúc có cả hàng chục, hàng trăm yêu cầu gửi đến. Nào là gửi đến từ phone, từ email, từ fanpage, từ website. Chưa kể mỗi yêu cầu gửi đến là một lĩnh vực khác nhau. Có ông thì hỏi về điện thoại Asus, có ông hỏi về iPhone, có ông lại hỏi về chính sách đối trả. Nói chung là tùm lum tùm la hết.
+
+Do đó các yêu cầu này (dưới đây mình sẽ gọi là case) cần phải được sắp xếp và tổ chức hợp lý.
+
+Case nào từ phone thì đưa vào hàng chờ của phone. Case nào từ email thì đưa vào hàng chờ email. Case nào hỏi về chính sách đối trả thì đưa vào hàng chờ chính sách. Case nào liên quan tới sản phẩm thì đưa vào hàng chờ của bộ phận kỹ thuật. Vâng vâng và mây mây.
+
+
+# Tại sao phải tự động.
+Một điểm nữa là các bước nãy giờ đều phải được làm tự động. Tức là từ việc thu thập các Case từ email, phone, fanpage hay website đều phải để hệ thống chạy tự động và tập trung data về 1 chỗ. Chứ đâu ai rảnh mà ngồi copy từng cái rồi dán vào excel, hay tạo thủ công trên hệ thống đúng không.
+
+Để chạy được tự động thì cần phải có trigger. Tức là điều kiện chạy, khi nào thì tạo. Để hệ thống hiểu thì nó mới chạy theo ý mình được.
+
+
+Ví dụ lúc anh em vào TGDĐ mua đồ. Hành động thò chân vào cửa chính là trigger để nhân viên ở đó biết mà bay lại phục vụ. Có ai đã từng mua hàng ở TGDĐ mà khi bước vào cửa hàng không được ai hỏi thăm chưa? Never. Vì những cái này đã được training kỹ càng cho nhân viên thành một cái gì đó quán tính, tự động luôn rồi.
+
+Hoặc khi có một email gửi về hộp thư cskh@thegioididong.com mà trong nội dung email có bao gồm chữ “hỗ trợ” hoặc “giúp tui zới” thì ngay lập tức, hệ thống sẽ tự động tạo ngay một case.
+
+Có thêm keyword “iPhone” thì đưa case đó vào hàng queue của đội kỹ thuật iOS. Có keyword “Samsung” thì đưa vào hàng queue của đội Android. Ví dụ zậy.
+
+Mỗi Service Agent đều đã được phân công vào các Queue trước đó. Ai phụ trách lĩnh vực gì thì phải được phân chia rõ ràng. Khi các Cases đã được route tự động vô các Queues rồi, thì nhiệm vụ của các bạn Service Agent là chỉ việc chui vào trong Queue của mình, bốc từng Case ra giải quyết thôi.
+
+# 2.4. Ngâm cứu
+- Và tất nhiên, phải có cái gì đó hỗ trợ anh em Service Agent giải quyết vấn đề. Chứ không thể khơi khơi mà để con người ta tự thân vận động vậy được :3 Có hai thứ sẽ giúp Service Agent giải quyết vấn đề hiệu quả hơn.
+
+- Một là Knowledge Base Article. Hai là một cái Desk.
+
+# Knowledge Base Article
+Knowledge Base Article nôm na là những kho tàng kiến thức, được tổng hợp lại theo từng chủ đề. Mà các Service Agent dựa vào đó để giải quyết vấn đề nhanh hơn và chính xác hơn.
+
+Những Knowledge Article này được lưu trữ trên các hệ thống CRM, hoặc các hệ thống khác (mà mình hông biết).
+
+Khi bạn Service Agent mở một Case ra để giải quyết, hoặc nhận một cuộc điện thoại từ khách hàng. Bạn này sẽ đọc hoặc lắng nghe khách hàng mô tả vấn đề.
+
+Nếu biết cách giải quyết thì quất luôn, giải quyết luôn tại chỗ. Còn nếu không biết thì bạn đó chỉ cần search một vài từ khóa liên quan đến vấn đề của khách hàng. Hệ thống sẽ trả ra các Knowledge Article có liên quan. Bạn này chỉ việc dựa vào Knowledge Article này để trả lời khách hàng thôi.
+
+
+# Ví dụ có một khách hàng gọi điện tới TGDĐ. Service Agent nhấc máy. Ông khách trả lời:
+“À lố. Tui nè. Nhớ tui hôn. Nhớ à. Nãy tui mua hàng nè? Sao tui mới mua cái ốp lưng gắn zô mà giờ điện thoại không chụp hình được zậy cà?”
+
+Bạn Service Agent khẽ bối rối trong vài giây, nhưng sau đó kịp lấy lại bình tĩnh, cô trả lời lại ông khách:
+
+“Dạ xin lỗi, em có thể xin tên của anh được không ạ. Sau khi anh nói tên anh xong, thì em phải hỏi tiếp ngày tháng năm sinh, chứng minh nhân dân, mã khách hàng, số đo 3 vòng, à nhầm, số điện thoại của anh để xác thực. Cụ thể là em phải dò hết các thông tin này trên hệ thống, để xem thử thực sự anh có tồn tại không. Nếu không tồn tại thì anh là khách hàng mới. Mà là khách hàng mới thì em có kiểu chăm sóc khác. Còn nếu anh là khách hàng cũ thì em phải mò… thông tin của anh xem thử anh có phải khách hàng VIP không. Nếu mà anh là khách hàng VIP thì em còn chăm sóc đặc biệt hơn nữa. Chứ còn nếu là kh…”
+
+Ông khách: “tút, tút, tút…”
+
+Anh em hiểu vấn đề chưa 😀
+
+Cụ thể, anh em cần có 1 cái desk, tức là một cái bàn đủ rộng, để có thể chứa đầy đủ hồ sơ thông tin của bất kỳ người khách nào cần support.
+
+
+Không phải cái bàn này, mà là cái bàn ở dưới
+
+Cái desk này có thể là một desktop application, web application hoặc thậm chí là một mobile application. Mà nó có khả năng tập trung data khách hàng từ bất kỳ hệ thống nào và show lên cái desk này. Từ thông tin khách hàng, đơn hàng, lịch sử mua hàng, lịch sử chăm sóc khách hàng, abc, xyz…
+
+Khi một khách hàng gọi đến tổng đài. Hệ thống sẽ bắt được số điện thoại gọi đến là số nào. Sau đó tự động quét trên hệ thống để dò được ai là người gọi đến. Cuối cùng là show ra màn hình cho Service Agent làm nốt phần việc còn lại.
+
+Điều này tương tự với Email, Profile Facebook, Instagram, LinkedIn, vâng vâng. Hệ thống sẽ dựa vào những thông tin này và tự động tra được “người ấy” là ai.
+
+Do đó, Service Agent chỉ cần 1-2 cú click chuột là đã có ngay thông tin mình cần. Mà không phải switch qua bất kỳ một ứng dụng nào khác, một tab khác. Hay tệ hơn là phải… hỏi ngược lại xin thông tin từ khách hàng.
+
+# 2.5. Giải quyết
+Sau khi đã có đầy đủ đạo cụ trong tay, Service Agent sẽ tiến hành giải quyết các Case, và nhận phản hồi từ phía khách hàng. KPI của Service Agent thường sẽ được tính theo SLA (Service Level Agreement – mức độ cam kết chất lượng dịch vụ).
+
+Ví dụ anh Trung là khách hàng VIP, thì Service Agent phải đảm bảo giải quyết vấn đề cho ảnh trong vòng tối đa 5 nốt nhạc. Sang nốt nhạc thứ 6 là thấy hổng zui rồi.
+
+Còn anh Hải là khách bình thường, thì các vấn đề của ảnh cũng giải quyết ở mức thời gian bình thường, không vội vã, cũng không lâu la.
+
+SLA thường được đo theo 2 tiêu chí:
+
+Thời gian phản hồi (First Response By)
+Thời gian giải quyết vấn đề (Resolve By)
+Ví dụ anh Trung là khách hàng xịn, thì từ lúc ảnh gửi yêu cầu đến khi ảnh nhận được phản hồi từ phía nhân viên công ty thì chỉ cho phép tối đa trong vòng 30 phút thôi. Sau đó vấn đề của ảnh phải được giải quyết ngay trong vòng 24 giờ đồng hồ.
+
+
+Phần này cũng không có gì nhiều để chém gió với anh em. Đơn thuần chỉ là hệ thống tự động gửi một bảng khảo sát cho khách hàng qua email. Khách hàng làm khảo sát trong vòng 5 giây và nhấn submit. Hệ thống nhận kết quả và tính KPI cho các bạn Service Agent.
+
+Tuy nhiên, cái hay ở đây là xây dựng bảo khảo sát sao cho phù hợp và hiệu quả. Đó là cả một nghệ thuật sắp xếp câu chữ, dẫn dắt ý đồ dựa trên hàng loạt các câu hỏi vô cùng nguy hiểm 😎
+
+ 
+
+Túm cái váy lại, một hệ thống Customer Service sẽ hoạt động theo cơ chế sau.
+
+Số 1, 2, 3 được thực hiện hoàn toàn tự động
+Màn hình bự chảng bên phải là ví dụ cho một cái Desk.
+
+- Khách hàng gửi yêu cầu support >> Công ty nhận yêu cầu support >> Đưa vào hàng chờ >> Service Agent ngâm cứu >> Service Agent giải quyết vấn đề >> Gửi và nhận khảo sát đánh giá chất lượng.
+
+- Xuyên suốt quá trình này sẽ có 1 vài đối tượng quan trọng trong hệ thống Customer Service:
+
+Case: các yêu cầu support được raised từ nhiều nguồn khác nhau.
+Queue: các hàng chờ được sắp xếp theo nhiều tiêu chí.
+Knowledge Base Article: kho tàng tri thức để Service Agent giải quyết vấn đề.
+Desk: một cái “bàn đủ rộng” để có thể chứa được toàn bộ data liên quan tới khách hàng.
+SLA: mức độ cam kết chất lượng dịch vụ với khách hàng.
+Survey: khảo sát đánh giá chất lượng phục vụ.
+
+# 10 Câu Hỏi về Dịch Vụ Khách Hàng
+
+1. **Khái niệm "Customer Service" là gì và tại sao nó quan trọng đối với một doanh nghiệp?**
+
+2. **Điều gì làm nên một dịch vụ khách hàng xuất sắc và làm thế nào nó có thể tạo ra sự hài lòng cho khách hàng?**
+
+3. **Phương thức chính để đo lường hiệu suất của một bộ phận Customer Service là gì và tại sao nó quan trọng?**
+
+4. **Làm thế nào một hệ thống tự động hóa (automation) có thể cải thiện hiệu suất của dịch vụ khách hàng?**
+
+5. **Phương tiện giao tiếp nào phổ biến nhất trong dịch vụ khách hàng và làm thế nào chúng có thể được tối ưu hóa?**
+
+6. **Làm thế nào để xử lý một khách hàng không hài lòng và giải quyết vấn đề của họ một cách hiệu quả?**
+
+7. **Khái niệm "Customer Journey" là gì và tại sao việc hiểu rõ nó quan trọng đối với dịch vụ khách hàng?**
+
+8. **Làm thế nào để đào tạo nhân viên Customer Service để họ có thể cung cấp dịch vụ tốt nhất?**
+
+9. **Làm thế nào để đo lường mức độ hài lòng của khách hàng đối với dịch vụ khách hàng?**
+
+10. **Tại sao việc xây dựng một cộng đồng trực tuyến (online community) có thể là một chiến lược hiệu quả cho dịch vụ khách hàng?**
+
+
+# 3. Công ty Product | Product Owner?
+- Thứ nhất là Product Owner.
+- Ngắn gọn, Product là “sản phẩm”, Owner là “sở hữu”. Product Owner là Người sở hữu sản phẩm. Mà khi một người sở hữu cái gì thì họ thường có trách nhiệm đảm bảo cho cái đó được hoàn thiện, được phát triển và được mọi người đón nhận.
+- Nhưng sản phẩm ở đây là một sản phẩm công nghệ. Ví dụ:
+
+Các website thương mại điện tử như: Tiki, Lazada, hay Giaohangnhanh.
+Các mobile app như: Grab, Zalo, Foody, Camera 360, hay Money Lover.
+Hoặc các nền tảng như: WordPress (content management system), Wix (tương tự + web designer), hoặc nền tảng thiết kế trực tuyến Design Bold.
+
+# Thế nào là công ty Product?
+- Anh em có thể hiểu nôm na, công ty Product là công ty cung cấp các sản phẩm công nghệ trực tiếp cho người dùng cuối, ví dụ: Tiki, Lazada, Money Lover, Momo, Zalo…
+- Và đứng sau những sản phẩm này đều có bàn tay của BA nhúng vào, nhưng với cái tên khác: Product Owner 😎
+
+# Tại sao nói Product Owner vẫn đang làm công việc Business Analyst?
+
+hực tế thì một người Product Owner sẽ có những trách nhiệm sau:
+
+Tìm hiểu, nghiên cứu, và nhận phản hồi từ thị trường xem họ nghĩ gì, cần gì từ sản phẩm của mình.
+Từ đó đảm bảo cải tiến, phát triển sản phẩm nhằm đạt được KPIs đề ra (traffic, CPI, CPC, tỉ lệ hoàn thành đơn hàng…).
+Anh em có thể tham khảo thêm: Bài viết về người thật việc thật từ ITVIEC.COM về Product Owner.
+
+# Công việc thực tế của chị Tủn – một Product Owner trong công ty ông Hải.
+Chị Tủn tiết lộ về công việc hằng ngày của chỉ như sau:
+
+“Chào các bạn, mình là Tủn, hiện tại mình đang làm PO trong dự án phát triển một sản phẩm Mobile App, giúp khách hàng có thể đặt xe trực tuyến…
+
+Hằng ngày mình sẽ là người phân loại, đánh giá mức độ ưu tiên cho các chức năng. Xem thử chức năng nào cần làm đầu tiên, tiếp theo sẽ là chức năng gì.
+(Vì mình thuộc công ty Hải Motor Ôm mà, nên mình sẽ tiếp cận được khách hàng của công ty mình muốn gì, cần gì. Khi đó, mình mới đánh giá được cái gì cần build trước).
+Từ đó, mình sẽ quản lý danh sách các item cần làm (các hạng mục công việc) trong một cái list, gọi là Product Backlog.
+Ngoài ra, mình cũng phải viết document cho dự án nữa, từ User Stories, đến Acceptance Criteria (và 1 số loại documents khác).
+Hằng ngày cũng phải họp hành các kiểu với các Stakeholder, Development Team.
+So với các anh em BA, thì công việc của mình chủ yếu focus vào khách hàng để hoàn thiện sản phẩm, hơn là focus vào quy trình.
+Mình sẽ liên tục nhận feedback từ khách hàng, và ra quyết định về roadmap của sản phẩm Mobile App khi hoàn thành (tất nhiên là có tham khảo ý kiến của síp Hải, hehe).”
+Ô kê, cảm ơn chị Tủn!
+
+# BPMN giải thích các kí hiệu
+1. Swimlane
+- Pool thể hiện một tổ chức, một bộ phận, một phòng ban, một vai trò hoặc một hệ thống nào đó.
+- Lane thể hiện các cá nhân riêng lẻ, người sẽ làm các hoạt động cụ thể.
+
+- Đó là tổng quan về 4 loại Activity:
+
++ Task: ô hình chữ nhật bình thường
++ Sub-Process: ô hình chữ nhật nét đứt, có dấu cộng ở giữa
++ Transaction: ô hình chữ nhật có 2 nét bao ngoài
++ Call Activity: ô hình chữ nhật có 1 nét bao ngoài rất đậm.
+
+# 2.2. Các đồ nghề trang điểm khác
+- Loop
+- Sub-Process
+- Multi-Instance
+- Hành động duyệt các report này được thể hiện bằng một Task (tạm gọi là Evaluate Report), lặp đi lặp lại nhiều lần.
+- BPMN 2.0 hơi màu mè hoa lá hẹ một chút là nó chia Multi-Instance ra làm 2 loại: song song (parallel) và tuần tự (sequential).
+
++ Song song tức là lặp đi lặp lại nhưng làm đồng thời, cùng một lúc. Ví dụ như ông sếp cùng một lúc duyệt các report.
++ Còn tuần tự là xong cái này, mới tới cái khác. Ví dụ ông sếp duyệt report cho Manager A rồi mới tới duyệt report cho Manager B.
+
+
+Ví dụ ở bước Edit Draft, thay vì anh em phải tự edit lặp đi lặp lại nhiều lần, thì anh em có thể nhờ bạn bè, đồng bọn edit dùm.
+
+Điều này có nghĩa: khi mỗi người bạn sửa dùm, họ sẽ gửi lại bản nháp mà họ sửa, tức đó là một data. Mỗi người bạn là mỗi bản nháp khác nhau, là mỗi data khác nhau. Các data này gộp lại sẽ thành một bộ data set gồm các bản nháp khác nhau.
+
+Khi dùng MI Parallel, tức là cùng một lúc gửi cho cả 1 đống đứa cùng sửa.
+
+Còn MI Sequential là gửi cho thằng A sửa, rồi lấy cái bản nháp của thằng A, gửi cho thằng B sửa, thằng A xong thì mới tới thằng B. Tiếp tục như vậy, sẽ gửi cho thẳng C, thằng D…
+
+Để chi tiết hơn thì anh em có thể note vào quy trình, lặp lại bao nhiêu lần (hoặc một điều kiện bất kỳ) thì mới cho phép quy trình chuyển qua bước tiếp theo.
+
+# Ad Hoc
+- Ad hoc tức là được hình thành khi cần thiết và dành cho một mục đích cụ thể nhất định. Bà con hay gọi nôm na là “tùy cơ ứng biến”.
+
+Cái này thì cũng không khó hiểu, nghĩa sao dịch vậy. Ad hoc tức là được hình thành khi cần thiết và dành cho một mục đích cụ thể nhất định. Bà con hay gọi nôm na là “tùy cơ ứng biến”.
+
+Vậy Ad Hoc Task sẽ thể hiện các task đặc biệt, có một mục đích chuyên dụng cụ thể.
+
+Ví dụ một dealer bán xe, họ có quy trình làm việc với các ngân hàng rất rõ ràng. Nhưng riêng với ngân hàng BuTaLo-BaTaCho thì lại có quy trình làm việc khá đặc biệt, chỉ dành riêng cho ngân hàng này.
+
+Do đó, anh em sẽ đưa quy trình này thuộc diện Ad Hoc. Và thường thì nó sẽ nằm trong một Sub-Process.
+
+# Compensation
+- Cái tên nói lên quá rõ. Compensation = Đền bù. Tức là phải có cái gì đó, thì mới đền bù.
+
+- Compensation task cũng chỉ là một task bình thường. Nhưng nó khác task bình thường ở chỗ: chỉ duy nhất xảy ra sau một task cụ thể nào đó.
+
+- Ví dụ: ăn bánh thì phải trả tiền. Task trả tiền là compensation, luôn xảy ra ngay sau task ăn bánh. Quay trở lại với ví dụ ban nãy.
+
+- Tóm váy lần một, Activity Marker giúp anh em thể hiện được hành vi khi thực hiện một hành động nào đó. Ví dụ thực hiện hành động một cách lặp đi lặp lại (Loop), hoặc chỉ thực hiện khi có một hành động cụ thể trước đó (Compensation).
+
+# Send Task/ 
+- Cái này thì quá rõ. Một task thể hiện sự nhận/ gửi thông tin, tài liệu, hoặc một data object.
+
+# User Task
+- User Task là task được thực hiện bởi người dùng, trên hệ thống và không thể tách nhỏ ra được nữa.
+
+# Manual Task
+- Manual Task là task được thực hiện bởi người dùng, ngoài hệ thống và được thực hiện một cách thủ công. 
+
+# Service Task
+- Service Task là task được thực hiện tự động bởi hệ thống.
+
+# Script Task
+- Script Task là task được thực hiện dựa trên một engine nào đó của hệ thống. Từ “script” ở đây có nghĩa là một đoạn code được viết ra để engine có thể parse đoạn code này chạy và thực hiện công việc.
+
+# Business Rule Task
+- Lại một lần nữa, cái tên nói lên quá rõ. Business Rule Task thể hiện một task, mà task đó dựa vào một cái rule nào đó. Anh này thì cũng mới có trong BPMN 2.0 thôi. Ví dụ một phát cho nóng.
+
+# Business Rules Task
+- Tóm váy lần hai, Task Type giúp anh em thể hiện được tính chất, bản chất của các hoạt động. Biết được: à, task này làm trong hệ thống hay ngoài hệ thống (user task hay manual task). Hoặc task này chạy tự động hay user sẽ làm (service task hay user task).
+
+# 3. Flow
+- Sequence Flow
+- Default Flow
+- Message Flow
+- Condition Flow
+
+# 4. Gateways
+- Gateway nghĩa là cái cổng, mà khi qua cái cổng này, luồng đi của hệ thống sẽ bị thay đổi tùy vào các điều kiện khác nhau.
+
+# 4.1. Exclusive Gateway
+- Exclusive, hay còn gọi là XOR Gateway. Nó thể hiện: nhánh này hoặc nhánh kia, nhưng chỉ được phép một trong hai (hoặc nhiều) nhánh.
+
+# 4.2. Inclusive Gateway
+- Inclusive Gateway cũng tương tự Exclusive Gateway, nhưng khác ở chỗ nó cho phép xảy ra nhiều nhánh, chứ không duy nhất một nhánh như XOR. Tuy nhiên một khi các nhánh được activate, nó phải được complete hết trước khi merge lại.
+
+# 4.3. Parallel Gateway
+- Parallel Gateway nghĩa là các nhánh phải cùng xảy ra song song với nhau. Chỉ cần một trong các nhánh chưa được complete thì các nhánh khác không thể merge lại, và quy trình không thể đi tiếp được.
+
+# 4.4. Event-Driven Gateway
+- Event-Driven, tức là dựa vào Event, hướng theo Event mà chạy. Về cơ bản, Event-Driven Gateway khá giống với Exclusive Gateway (XOR) vì hai tụi này chỉ cho phép một nhánh chạy duy nhất.
+- Nhưng nó khác ở chỗ Exclusive Gateway thì dựa vào điều kiện để chạy, còn Event-Driven Gateway dựa vào event để chạy. Tức là khi có một sự kiện nào đó xảy ra thì nó sẽ kích nhánh của sự kiện đó chạy.
+
+
+Condition: thường đơn giản, và nó trả lời cho câu hỏi ở task trước đó. Ví dụ về quê thì về quê bằng máy bay hay về quê bằng tàu lửa? It’s very simple.
+Event: còn event thường phức tạp hơn. Các event được gán vào các nhánh sẽ trả lời chi tiết hơn về các thông tin như: thời gian, ai là người làm, làm như thế nào… Hay nói nôm na là trả lời cho câu hỏi: sự việc gì xảy ra? 
+
+# 5. Events
+Như ở trên mình có nói thì Event diễn tả một sự việc xảy ra trong quy trình, thường mang yếu tố bên ngoài. Chứ không phải một việc gì đó được chủ đích làm bởi user (vì nếu vậy thì nó là Activity mất rồi). Event được chia làm 3 giai đoạn:
+
+Start: bắt đầu
+Intermediate: ngay tức thì/ ở giữa
+End: kết thúc.
+
+# Mặc dù Event có rất nhiều loại, nhưng không phải lúc cũng sử dụng đủ các loại này hết.
+Message Event: diễn tả sự việc gửi và nhận thông tin, có đầy đủ Start, Intermediate và End.
+Time Event: diễn tả một sự việc liên quan đến thời gian, nhưng chỉ có Start và Intermediate, không có End.
+- Một điểm nữa anh em cần chú ý là phải phân biệt được các Start Event, Intermediate Event và End Event.
+Task Subprocess A có dính một Boundary Event. Nghĩa là khi quy trình chạy tới task này, nếu trong thời gian X và hành động Y xảy ra, thì quy trình sẽ đi theo nhánh tới task Handle Timeout. Còn nếu không thì quy trình sẽ qua task Subprocess B.
+
+Cách dùng như vầy trực diện và đơn giản hơn rất nhiều so với dùng Event-Drivent Gateway.
+
+Mình nói Boundary Event, để bắc cầu qua một loại Event khác, đó là: Interrupting Event và Non-Interrupting Event. Vì 2 loại event này đều phải được dùng dưới dạng Boundary Event. Tức là event phải được vẽ dính liền với hình chữ nhật bao quanh task.
+
+Interrupting Event là khi task Subprocess A đạt được điều kiện trong thời gian A và hành động Y xảy ra, thì khi đó quy trình chuyển qua nhánh Handle Timeout. Và dừng toàn bộ task Subprocess A.
+
+Còn Non-Interrupting Event cũng tương tự. Nhưng khi chuyển qua nhánh Handle Timeout, task Subprocess A vẫn diễn ra bình thường.
+
+
+# 6. Information Artifact
+
+# Tại sao đọc lại quên ngay
+"Vì vậy, để học, chúng ta cần phải tự mình suy nghĩ.” Khi đọc một cuốn sách mà không dừng lại để suy ngẫm, phân tích thì thông tin cũng chỉ là thông tin, sẽ không đúc kết và áp dụng được điều gì."
+
+
+
+BPMN gồm 6 thành phần chính.
+
+Swimlane: linh hồn của BPMN, thể hiện hành động theo các vai trò một cách rõ ràng.
+Activity: thể hiện hành động.
+Flow: thể hiện luồng đi của hành động.
+Gateway: thể hiện các cổng điều kiện có trong quy trình.
+Event: thể hiện sự việc xảy ra trong suốt quy trình.
+Information Artifact: thể hiện các dữ liệu liên quan.
+
+# Tóm tắt
+
+# Viết lại
+
+# Câu Hỏi về BPMN
+
+1. **Làm thế nào Swimlane đóng vai trò quan trọng trong BPMN và nó thể hiện điều gì?**
+   
+2. **Activity là thành phần chính nào trong BPMN và nó đại diện cho điều gì?**
+
+3. **Flow trong BPMN có ý nghĩa gì và nó thể hiện điều gì trong quy trình?**
+
+4. **Gateway là gì trong BPMN và vai trò của nó là gì trong quy trình?**
+
+5. **Event trong BPMN biểu thị điều gì và làm thế nào nó được sử dụng trong quy trình?**
+
+6. **Information Artifact là thành phần nào trong BPMN và chức năng của nó là gì?**
+
+7. **Làm thế nào BPMN giúp cải thiện sự hiểu biết về luồng công việc trong tổ chức?**
+
+8. **Có những loại Swimlane nào trong BPMN và chúng được sử dụng như thế nào trong quy trình?**
+
+9. **Làm thế nào các Gateway có thể được sử dụng để kiểm soát luồng trong một quy trình BPMN?**
+
+10. **Event trong BPMN được phân thành những loại nào và mỗi loại biểu thị điều gì trong quy trình?**
+
+
+# 4. Công ty Giải pháp
+- Công ty Outsource (chủ yếu làm Software Development)
+- Công ty Services (chủ yếu làm Software Implementation, Software Maintenance, và 1 nùi các loại service khác).
+
+-> Outsource nghĩa là gia công. Nghĩa là: thay vì mình làm, thì mình đi thuê thằng khác làm cho mình, chứ mình hổng làm.
+
+Vì thằng khác nó chuyên làm cái đó,
+nó làm tốt hơn mình,
+và giá nhân công nó rẻ hơn mình.
+
+Tuy nhiên vì giá chát quá, nên ổng phải tìm qua một thị trường khác có giá nhân công rẻ hơn Việt Nam để làm, là Campuchia.
+
+- Mình chỉ muốn nói rõ cho anh em đỡ lẫn lộn giữa 2 vai trò.
+
+Product Owner tập trung trả lời câu hỏi nghiêng về Product, là làm gì, tại sao phải làm và làm khi nào?
+Còn Business Analyst tập trung trả lời câu hỏi nghiêng về Requirement, là làm như thế nào?
+
+
+# 4.2. Functional Consultant trong Công ty Services?
+- Thế nào là software implementation
+- công ty Outsourcing thì làm giải pháp khi chưa có gì hết, phải build ngay từ đầu, start from scratch. Bà con hay gọi là Software Development.
+- công ty Services thì giải pháp họ cung cấp là một sản phẩm đã có sẵn.
+
+BA trong software development thì tập trung sức lực vào build solution là nhiều.
+Còn BA trong software implementation thì tập trung vào khách hàng, vào người dùng nhiều hơn.
+
+# Ngoài những dự án triển khai mới ra, Functional Consultant còn có thể xuất hiện trong các dự án sau:
+- Software Maintenance – Các dự án bảo trì phần mềm
+- Security – Các dự án bảo mật hệ thống
+- Software Upgrade – Các dự án nâng cấp phần mềm
+- Integration – Các dự án chuyên về tích hợp các sản phẩm phần mềm.
+
+# Chốt hạ
+- Do đó anh em phải tìm hiểu thật kỹ. Chức danh có thể tạm gác qua 1 bên, nhưng Job Description thì tuyệt đối phải đọc kỹ.
+
+# 4.3. Bridge System Engineer trong công ty Outsourcing?
+- BrSE là kỹ sư cầu nối. Cái tên nói lên tất cả.
+
+# 5. Công ty Tư Vấn | Business Consultant?
+Và vai trò cuối cùng là Business Consultant, và cũng là trùm cuối trong nghề BA. Hay nói đúng hơn, vai trò này có thể là Technology Business Consultant hoặc Principle Business Analyst. Nói chung là chúa tể của những BA.
+
+- Các công ty mà chuyên tư vấn giải pháp CNTT thì mình không biết nhiều, đếm trên đầu ngón tay thì có: PAT Consultant, PwC, Deloitte, KPMG hay E&Y.
+
+# Best Practices
+- khách hàng họ sẽ chủ động liên hệ với các công ty tư vấn CNTT trước.
+
+
+
+
+
+
 
 
