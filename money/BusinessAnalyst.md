@@ -1826,7 +1826,148 @@ Và vai trò cuối cùng là Business Consultant, và cũng là trùm cuối tr
 - khách hàng họ sẽ chủ động liên hệ với các công ty tư vấn CNTT trước.
 
 
+# 10 Câu Hỏi về Functional Consultant trong Công ty Dịch vụ
 
+1. **Functional Consultant làm những công việc chính gì trong một Công ty Dịch vụ?**
+
+2. **Nhiệm vụ cụ thể của Functional Consultant trong việc triển khai các giải pháp công nghệ cho khách hàng là gì?**
+
+3. **Làm thế nào Functional Consultant tương tác với khách hàng để hiểu rõ yêu cầu và nhu cầu của họ?**
+
+4. **Functional Consultant có vai trò như thế nào trong việc thiết kế và tối ưu hóa các quy trình kinh doanh cho khách hàng?**
+
+5. **Làm thế nào Functional Consultant đối phó với thách thức tích hợp giải pháp vào môi trường hiện tại của khách hàng?**
+
+6. **Functional Consultant có vai trò trong việc đào tạo người sử dụng cuối và đảm bảo họ sử dụng hiệu quả giải pháp đã triển khai không?**
+
+7. **Làm thế nào Functional Consultant đối mặt với các thay đổi trong yêu cầu của khách hàng giữa quá trình triển khai?**
+
+8. **Functional Consultant làm thế nào để đảm bảo rằng giải pháp triển khai đáp ứng được các tiêu chí chất lượng và hiệu suất?**
+
+9. **Làm thế nào Functional Consultant hỗ trợ trong việc xây dựng và duy trì mối quan hệ lâu dài với khách hàng?**
+
+10. **Functional Consultant đóng góp như thế nào vào quá trình phát triển và cải tiến dịch vụ của Công ty trong lĩnh vực chuyên ngành của họ?**
+
+
+# KT là gì
+- KT là Knowledge Transfer, tức là bàn giao, chuyển giao công việc nhé anh em, nói KT cho nó nguy hiểm
+- KT không phải 1 ngày, 1 buổi, mà là cả quá trình. Cần phải xác định rõ thời gian tổ chức KT là gồm bao nhiêu buổi. Mỗi buổi từ mấy giờ đến mấy giờ.
+
+# handover là gì
+- Handover được hiểu là quá trình chuyển giao công việc hay bàn giao công việc, dự án, trách nhiệm từ nhân viên hoặc một nhóm
+
+# 2. Những thứ phải chuẩn bị trước
+# 2.1. Thời gian
+- KT không phải 1 ngày, 1 buổi, mà là cả quá trình. Cần phải xác định rõ thời gian tổ chức KT là gồm bao nhiêu buổi. Mỗi buổi từ mấy giờ đến mấy giờ.
+
+# 2.2. Thành phần tham gia
+- thông tin mới được trong suốt và minh bạch.
+
+# 2.3. Nội dung
+- Nếu anh em là người đi KT cho người khác thì chắc chắn anh em phải chuẩn bị thật kỹ nội dung: KT những mục gì, nội dung gì, nội dung theo các buổi ra sao.
+
+# 2.4. Pho mồ
+- Đối với người nhận KT, anh em hãy cố gắng làm buổi KT trở nên formal hết sức có thể. Vì sao?
+
+# Anh em hãy cứ nghiêm túc, làm theo đúng quy trình của công ty. Nếu công ty không có quy trình rõ ràng thì hãy hỏi những anh chị Senior trong team:
+
+- Cần vạch ra bức tranh tổng quan như thế nào?
+- Master data cần có?
+- Checklist gồm những gì?
+- Handover document, ký tá ra sao?
+- Nhóm thông tin bên phía khách hàng?
+- Tài liệu dự án đã có đủ?
+
+# 3. Hai thứ phải nắm trong lòng bàn tay
+Đó là: Data và Buttons.
+
+Anh em để ý thử xem, 100% tất cả các requirement đều liên quan đến 2 thứ này.
+
+# 3.1. Data
+- Tức là anh em phải hiểu hết các chức năng cần có trên hệ thống. Hay nói cách khác, anh em phải nắm rõ được, nắm rõ được: Hệ thống này giúp ích được gì cho công việc của user?
+
+- Cụ thể, anh em cần phải nắm rõ được: trường dữ liệu này ý nghĩa gì, để làm gì, lấy dữ liệu đầu vào từ đâu, dữ liệu đầu ra đi đâu. Phải hiểu được hết 100% toàn bộ hệ thống.
+
+# Vì xuyên suốt từ đầu dự án đến khi anh em nhận KT, mình không chắc được rằng:
+- Team hiện tại có quản lý tốt requirement hay không?
+- Họ có trace lại những gì thay đổi hay không (changeability)?
+- Tài liệu Change Request có cung cấp đủ thông tin hay không?
+
+# Anh em nên nhớ đây là giai đoạn để mình hiểu HIỆN TRẠNG của hệ thống. Anh em cần nắm rõ:
+- Hệ thống đang có gì?
+- Hệ thống đang được thiết kế ra sao?
+
+# Thì mới nói tới chuyện:
+- Hệ thống có đang đi đúng yêu cầu hay không?
+- Vấn đề hiện tại đang nằm ở chỗ nào?
+- Đâu sẽ là story tốn nhiều effort nhất?
+- Thiết kế như vậy đã đúng hay chưa?
+
+Và hàng ngàn câu hỏi khác nhằm: xác định những bước đi tiếp theo khi nhận dự án.
+
+Như lúc trước mình chỉ đọc trong bộ tài liệu thiết kế yêu cầu. Và biết được rằng: à nó có 5 quy trình, đối tượng này, đối tượng kia, có dữ liệu này, dữ liệu kia. 
+
+# 3.2. Buttons
+- User dùng hệ thống để giải quyết vấn đề của họ (lưu trữ cái gì đó, tự động hóa cái gì đó…).
+
+- Do đó hãy dành thời gian ngồi list down ra các nút bấm có trên hệ thống khi anh em nhận bất kỳ một dự án nào đang dang dở.
+
+# 4. Xác định rủi ro của dự án
+- Ví dụ sắp tới cái chị Contact Point bên phía khách hàng… nghỉ đẻ thì sao?
+
+# 5. Xác định rõ stakeholders
+- Đây cũng là một điểm rất quan trọng. Xác định ở đây không chỉ là biết được người này, người kia đóng vai trò gì trong dự án. Mà còn phải hiểu về cách làm việc của họ nữa.
+- Anh Contact Point này trước giờ có theo sát dự án không?
+- Background của ảnh là gì, mindset của ảnh ra sao?
+- Chị PM này có thật sự hiểu về dự án đang làm hay không?
+- Users bên phía khách hàng có hợp tác, niềm nở hay không?
+- Trước giờ đã có scandal gì chưa, impact ra sao?
+- Mức độ hỗ trợ của anh Manager này, chị Manager kia như thế nào?
+- Và hàng ngàn câu hỏi khác cần quan tâm đến những người giữ vai trò quan trọng trong dự án.
+
+- Tuy nhiên, anh em cần phải nắm rõ được: những ai là người có ảnh hưởng lớn đến dự án, đến chuyện ký tá trong dự án. Đó không nhất thiết là CEO, mà thường là các Manager ở các bộ phận, và PM của dự án.
+
+
+- Khi tiếp nhận dự án mới, biết được họ cần gì, muốn gì, sẽ giúp anh em dễ dàng tiếp cận và trao đổi công việc với họ được thuận tiện hơn.
+
+- Cái này thì anh em có thể trao đổi riêng với người KT: hỏi về các thành viên còn lại trong team, từ Dev, QC và đến cả PM nữa. Hỏi để nắm được “phong thái, thần thái” làm việc :3
+
+
+# 6. Kiểm tra những thứ “ràng buộc”
+- Check dependencies, đặc biệt là về kỹ thuật.
+- Như mình bữa nhận được một case: sáng thứ Bảy đẹp trời, user dùng hệ thống mà không thực hiện lấy tồn kho được (chức năng tích hợp với hệ thống của khách hàng). Thế là quy trình bị đứng một cục.
+
+# 7. Khi nào biết đã KT xong?
+- Anh em có thể tự tin xác định được: cái gì in scope, cái gì out of scope.
+- Hay nói cách khác, là anh em phải biết được: Mình đã đi được tới đâu, và mình cần phải đi đâu? 
+- Do đó, nếu không biết rõ mình đang ở đâu, và mình muốn đi đâu, thì anh em sẽ rất dễ bị dắt vào những đường vòng, mà cứ ngỡ đó là đường tắt.
+
+# 8. Sau cùng là phải “warm up” ngay
+- Và một điều cực kỳ quan trọng cần lưu ý là: khi khách hàng đã quen với mình, có thiện cảm với mình, thì mọi thứ làm việc sau này sẽ vô cùng thuận lợi và dễ dàng.
+- Do đó, một trong những điều đầu tiên mà phần lớn mọi người hay quên (kể cả mình), là không chịu giao tiếp, liên lạc với họ thường xuyên để giữ mối quan hệ, đặc biệt là với các key-users.
+
+
+# 10 Câu Hỏi về Knowledge Transfer
+
+1. **Knowledge Transfer là gì và tại sao nó quan trọng trong môi trường doanh nghiệp?**
+
+2. **Quy trình Knowledge Transfer bao gồm những bước chính nào?**
+
+3. **Làm thế nào để xác định và đánh giá nhu cầu Knowledge Transfer trong một tổ chức?**
+
+4. **Knowledge Transfer được thực hiện như thế nào giữa các thành viên trong nhóm làm việc?**
+
+5. **Làm thế nào để hiệu quả chia sẻ kiến thức và kinh nghiệm giữa các bộ phận khác nhau trong công ty?**
+
+6. **Knowledge Transfer có thể được thực hiện thông qua những phương tiện và công cụ nào?**
+
+7. **Làm thế nào để đánh giá hiệu suất của quá trình Knowledge Transfer?**
+
+8. **Thách thức phổ biến nhất mà các tổ chức gặp phải khi thực hiện Knowledge Transfer là gì và làm thế nào để vượt qua?**
+
+9. **Làm thế nào để duy trì và cập nhật kiến thức sau quá trình Knowledge Transfer ban đầu?**
+
+10. **Knowledge Transfer ảnh hưởng như thế nào đến hiệu suất và sự phát triển của tổ chức trong dài hạn?**
 
 
 

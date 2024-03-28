@@ -35,3 +35,7 @@ Ví dụ:
 Bước -> Nội dung tóm tắt
 
 # Một bài viết thì luôn thấy có phần References
+
+# Đọc sơ tài liệu trước khi thực hành bằng cách xem lướt hết từ trên xuống dưới tránh việc học hết tốn thêm thời gian chỉ học những phần nào phù hợp cho yêu cầu của mình
+
+# Tập trung vào các tài liệu cần đọc. => Note lại link.

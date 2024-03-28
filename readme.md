@@ -18,6 +18,7 @@ Ví dụ: "Chúng thực hiện chức năng tương tự như bộ kits nội t
 "Vì thời đại giờ là dùng generator ai nên bạn hãy học prompt thay vì học thuộc code, nó sẽ code dự án nhanh hơn gấp chục lần".<br/>
 
 # Hướng dẫn sử dụng
+"Chủ yếu là giúp anh em tóm tắt được các promo từ các trang chính official trong ngành IT".
 Bước 0. npm install res_reponsitory mở projects <br/>
 Bước 1. Mở visual studio code tìm node_modules/res_reponsitory <br/>
 Bước 2. Ví dụ tôi muốn tìm shift() để hỏi xem chức năng nó là gì, ghi shift vào search của visual studio code<br/>
@@ -101,7 +102,7 @@ STT | Thư mục | Ghi chú | Khác
 ...
 
 
-# Xử lí các vấn đề
+# Các bước để tạo ra dự án này
 - Javascript concepts gồm những gì?
 - Giờ hãy cho tôi biết kiến trúc của javascript?
 - Giờ tôi muốn xây dựng một cái kho dùng để lưu trữ các dự án dưới local và dùng github làm nơi lưu kho trên server. Khi tôi muốn làm dự án sẽ tiến hành tìm task giống với task tôi yêu cầu và lấy xuống, bạn hãy cho tôi quy trình làm?
@@ -125,6 +126,18 @@ STT | Thư mục | Ghi chú | Khác
 - Kết hợp 2 kiến trúc bên trên thành một dự án?
 - Giờ từ dự án trên bạn hãy tạo thư mục lớn hơn là thư viện?
 - ...
+
+# Xử lí thêm các vấn đề mới
+- Các bước bắt đầu
+- Các quy trình
+- Các bước thực hiện
+- Các bước triển khai
+- Các bước tối ưu
+- Các biến thể
+- Các cách kiếm tiền từ việc áp dụng nó
+- Các bước xử lý nhanh vấn đề
+- Các template mẫu
+- Sự phát triển của công nghệ để dự án này không đưa vào archive
 
 # Các vấn đề và câu hỏi
 - Làm sao để dùng dự án này?

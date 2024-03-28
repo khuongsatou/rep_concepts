@@ -1,0 +1,1 @@
+https://querymonitor.com/wordpress-debugging/how-to-use/

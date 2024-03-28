@@ -44,3 +44,4 @@ https://thinhnotes.com/chuyen-nghe-ba/muon-neo-duong-ba-p1/
 https://thinhnotes.com/chuyen-nghe-ba/quay-toi-ben-voi-bpmn/
 https://thinhnotes.com/chuyen-nghe-ba/giai-ngo-cac-ky-hieu-bpmn/
 https://thinhnotes.com/chuyen-nghe-ba/muon-neo-duong-ba-p2/
+https://thinhnotes.com/chuyen-nghe-ba/nhung-luu-y-khi-kt-du-an/
